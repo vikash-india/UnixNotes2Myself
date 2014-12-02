@@ -1,0 +1,7 @@
+Host jupiter
+     HostName jupiter
+     User dilbert
+     IdentityFile /path/to/private/keyfile/my-ssh-key
+     Port 22
+     ServerAliveInterval 30
+     ServerAliveCountMax 120
