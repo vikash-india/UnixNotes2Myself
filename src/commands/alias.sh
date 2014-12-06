@@ -33,7 +33,9 @@ alias ls -a /etc                    # Call to aliases can include other switches
 \ls                                 # Disable alias temporarily to call a core command. Use a backslash without spaces.
 
 # Cool Tricks
-# None
+# 1. Quicker move to move to parent
+alias ..='cd ..'
+alias ...='cd ../..'
 
 # TODO
 # 1. None
