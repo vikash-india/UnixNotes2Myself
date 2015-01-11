@@ -1,7 +1,7 @@
 # Description: WriteHere
 
 # Notes
-# 1. None
+# None
 
 # Common Examples
 
