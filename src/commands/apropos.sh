@@ -1,6 +1,6 @@
 # Description: apropos - Search the manual page names and descriptions
 
-# Notes:
+# Notes
 # 1. The apropos command got its name from the equivalent English word with the same spelling and pronunciation.
 # 2. Apropos means relevant.
 # 3. Apropos does not actually search the man pages directly. Instead it searches a database that contains just

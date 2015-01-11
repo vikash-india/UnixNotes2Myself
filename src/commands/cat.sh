@@ -1,7 +1,7 @@
 # Description: cat - Concatenate files and print on the standard output
 
-# Notes:
-# 1. None
+# Notes
+# None
 
 # Common Examples
 cat file_name

@@ -1,6 +1,6 @@
 # Description: alias - Abbreviate a regularly used command, or add default arguments to an existing system command.
 
-# Notes:
+# Notes
 # 1. The alias command is built into most of the shells on Linux systems and is a way of customising a shell.
 # 2. Aliases are recognised only by the shell in which they are created, and apply only for the user who created it.
 # 3. The alias name and the replacement text can contain any valid shell input except for the equals sign (=).
@@ -38,4 +38,4 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 # TODO
-# 1. None
+# None

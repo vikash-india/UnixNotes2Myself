@@ -1,6 +1,6 @@
 # Description: cal, ncal - Displays a calendar and the date of Easter
 
-# Notes:
+# Notes
 # 1. The ncal command is similar to cal and offers an alternative layout, more options and the date of Easter.
 #    The new format is a little cramped but it makes a year fit on a 25x80 terminal.
 # 2. Not all options can be used together. For example, the options -y, -3, and -1 are mutually exclusive. If
