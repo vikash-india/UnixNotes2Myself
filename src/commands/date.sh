@@ -26,6 +26,7 @@ date +%Z            # Timezone name. Eg. IST.
 date +%_5Y          # 5-digit Year with space padded. Eg <Space>2010.
 date +%-5Y          # Year without padding. Eg 2010.
 date +%05Y          # 5-digit Year with 0 padded. Eg 02010.
+date +%d-%m-%Y      # Display date in DD-MM-YYYY format.
 
 # Cool Tricks
 # None
