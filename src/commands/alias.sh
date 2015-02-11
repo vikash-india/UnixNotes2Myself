@@ -37,5 +37,8 @@ alias ls -a /etc                    # Call to aliases can include other switches
 alias ..='cd ..'
 alias ...='cd ../..'
 
+# 2. Add the output of unix command date (in DD-MM-YYYY) as part of an alias definition.
+alias logs="tail -f /home/dilbert/logs/error.`date +%d-%m-%Y`.logs`"
+
 # TODO
 # None
