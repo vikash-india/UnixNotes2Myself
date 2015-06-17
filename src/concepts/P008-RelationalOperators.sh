@@ -1,11 +1,12 @@
 # Description: WriteHere in Unix Shell Script
 
-# Note
+# Relational Operators
 # 1. The relational operators are evaluated using [ ].
 # 2. If the relational condition is true then $? is set to 0, otherwise it is set to 1.
 # 3. Use echo $? after these relation operators to test.
-[ 10 == 10 ]       # == checks for equal to.
-[ 10 != 10 ]       # != checks for NOT equal to.
+
+[ 10 == 10 ]        # == checks for equal to.
+[ 10 != 10 ]        # != checks for NOT equal to.
 
 [ 10 -eq 10 ]       # -eq checks for equal to.
 [ 10 -ne 11 ]       # -ne checks for not equal to.
