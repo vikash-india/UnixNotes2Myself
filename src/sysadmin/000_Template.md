@@ -1,6 +1,11 @@
 # Description: WriteHere Administration on Ubuntu
 
-### WriteHere
+### Install WriteHere
+```
+Code goes here...
+```
+
+### Setup WriteHere
 ```
 Code goes here...
 ```
