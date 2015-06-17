@@ -63,6 +63,7 @@
 #     command you can put it in backticks. Ex. `date +\%Y-\%m-\%d`.
 
 # Common Examples
+00 08 * * *              /home/dilbert/Personal/Workspace/ShellScriptProject/src/commands/cron_sample.sh
 
 # Examples with details
 # Note: Type crontab -e and enter these details

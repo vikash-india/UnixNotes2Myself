@@ -13,7 +13,7 @@ cd ~                # Same as above.
 cd ..               # Moves to the parent directory.
 cd -                # Moves the previous directory.
 cd dilbert          # Moves to dilbert directory (Under present working directory). Uses RELATIVE path.
-cd /user/dilber     # Moves to dilbert directory. Uses ABSOLUTE path.
+cd /user/dilbert    # Moves to dilbert directory. Uses ABSOLUTE path.
 cd                  # Define CDPATH to define the base directory for cd command. Eg export CDPATH=/etc
 
 # Cool Tricks

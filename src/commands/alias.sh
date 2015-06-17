@@ -25,7 +25,7 @@ alias rm="rm -i"                    # Define an alias to increase the safety of 
 alias rm='rm -i'                    # Double or single quotes can be used to create an alias.
 alias lh='cd /home/dilbert; ls'     # Multiple commands can be included in a single alias using semicolons.
 alias p="pwd"; l="ls -al"           # Multiple aliases can be created simultaneously.
-alias eb='pwd; vim .bashrc'         # Alias definition may include calls to other aliases also.
+alias eb='wd; vim .bashrc'          # Alias definition may include calls to other aliases also.
 alias                               # Prints all alias in the form of name=value.
 alias -p                            # Same as above.
 alias wd                            # Prints details of the alias "wd".
