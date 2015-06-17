@@ -64,6 +64,6 @@ sudo gvim /usr/share/applications/gnome-terminal.desktop
 - System Settings - Security & Privacy - Click on the Search tab, and toggle the "Include online search results" option
   to Off.
 
-#### Redirect all mailto link to Gmail in Firefox
+#### Redirect All mailto Link to Gmail in Firefox
 - Go to Firefox - Tools > Options > Applications > (Search for) mailto > Set it to Gmail
 
