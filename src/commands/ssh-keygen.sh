@@ -39,7 +39,7 @@ ssh-keygen -qf my-ssh-key   # Use the -q option to silence ssh-keygen.
 ssh-keygen -y -f my-ssh-key # Generate PUBLIC key from the private key.
 
 # Cool Tricks
-# None
+# 1. Add a note here
 
 # TODO
 # 1. Explore the usage of DSA, ECDSA etc.
