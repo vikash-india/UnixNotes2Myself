@@ -27,4 +27,4 @@ smbclient //mars/dilbert -U=[dilbert]
 ```
 
 ### TODO
-* None
+* Windows users should enter \\mars\dilbert on Run prompt. Enter WORKGROUP\dilbert and password when prompted for password.
