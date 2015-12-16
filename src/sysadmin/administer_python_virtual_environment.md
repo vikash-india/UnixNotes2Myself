@@ -8,6 +8,12 @@ sudo pip install virtualenv                     # Install Virtual Environment
 sudo pip install virtualenvwrapper              # Install Virtual Environment Wrapper
 
 # Create Virtualenv aliases or copy the existing aliases from .bashrc
+```
+# Virtualenv installation details for python
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+
+# Aliases
 alias v='workon'
 alias v.deactivate='deactivate'
 alias v.make='mkvirtualenv --no-site-packages'
