@@ -14,7 +14,6 @@
     3. Click on Create Security Group button.
     4. Enter 'Security group name'(say sg-1), description, select VPC if needed otherwise leave it blank.
     5. Click on Add Rule to modify inbound rules based on the need.
-
         | Type              | Protocol      | Port Range    | Source    |
         | ----------------- | ------------- |-------------- |---------- |
         | HTTP              | TCP           | 80            | 0.0.0.0/0 |
