@@ -15,13 +15,13 @@
     4. Enter 'Security group name'(say sg-1), description, select VPC if needed otherwise leave it blank.
     5. Click on Add Rule to modify inbound rules based on the need.
 
-| Type              | Protocol      | Port Range    | Source    |
-| ----------------- | ------------- |-------------- |---------- |
-| HTTP              | TCP           | 80            | 0.0.0.0/0 |
-| HTTPS             | TCP           | 443           | 0.0.0.0/0 |
-| All ICMP          | All           | N/A           | 0.0.0.0/0 |
-| Custom TCP Rule   | TCP           | 1234          | 0.0.0.0/0 |
-| Custom TCP Rule   | TCP           | 1254          | 0.0.0.0/0 |
+        | Type              | Protocol      | Port Range    | Source    |
+        | ----------------- | ------------- |-------------- |---------- |
+        | HTTP              | TCP           | 80            | 0.0.0.0/0 |
+        | HTTPS             | TCP           | 443           | 0.0.0.0/0 |
+        | All ICMP          | All           | N/A           | 0.0.0.0/0 |
+        | Custom TCP Rule   | TCP           | 1234          | 0.0.0.0/0 |
+        | Custom TCP Rule   | TCP           | 1254          | 0.0.0.0/0 |
 
     6. Click on Create button to create Security Group.
 * Launch Instance
