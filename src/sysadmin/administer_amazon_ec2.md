@@ -22,7 +22,6 @@
         | All ICMP          | All           | N/A           | 0.0.0.0/0 |
         | Custom TCP Rule   | TCP           | 1234          | 0.0.0.0/0 |
         | Custom TCP Rule   | TCP           | 1254          | 0.0.0.0/0 |
-
     6. Click on Create button to create Security Group.
 * Launch Instance
     1. Step 1: Choose an Amazon Machine Image (AMI)
