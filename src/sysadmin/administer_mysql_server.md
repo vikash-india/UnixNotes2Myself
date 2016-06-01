@@ -37,6 +37,21 @@ sudo gvim usr.sbin.mysqld           # Edit usr.sbin.mysqld file
 sudo service apparmor restart
 ```
 
+- Make MySQL Server accessible from remote machines.
+
+```
+# Expose MySQL to remote machines other than localhost by uncommenting  the following line in /etc/mysql/my.cnf
+bind-address        =  0.0.0.0
+
+# Replace 127.xxx.xxx.xxx with a particular IP Address or 0.0.0.0
+
+# Restart MySQL Service
+sudo service mysql restart
+
+# Grant access
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION;
+```
+
 ### Customize MySQL prompts
 - [Read details here](http://www.thegeekstuff.com/2010/02/mysql_ps1-6-examples-to-make-your-mysql-prompt-like-angelina-jolie/)
 

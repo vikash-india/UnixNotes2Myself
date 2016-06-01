@@ -10,7 +10,7 @@
 # 3. The search is recursive and it will search all subdirectories.
 
 # Common Examples
-
+find . -name foo* 2>/dev/null
 
 # Examples with details
 find                                    # Display the pathnames of all files in the current directory recursively.
