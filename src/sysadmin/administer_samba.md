@@ -2,7 +2,8 @@
 
 ### Install WriteHere
 ```
-TODO
+sudo apt-get update
+sudo apt-get install samba
 ```
 
 ### Add a NEW Samba user
@@ -19,7 +20,7 @@ sudo service smb restart
 
 # Test the service from Unix Command Line
 # Syntax: smbclient //hostname/aservice -U=[username] where aservice is username if homedirectory exists
-smbclient //mars/dilbert -U=[dilbert]
+smbclient //mars/dilbert -U=dilbert
 
 # Finally access the share from a remote Windows machine
 \\mars\share
