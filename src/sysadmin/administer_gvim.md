@@ -6,7 +6,7 @@ sudo apt-get install vim-gtk
 OR
 sudo apt-get install vim-gnome
 ```
-* Note: Use any of the above commands to install gvim.
+* Note: Use the first one as it does not give any errors when started. Ideally, one can use any of the above commands to install gvim.
 
 ### Configure Gvim
 - Set Gvim as the default text editor

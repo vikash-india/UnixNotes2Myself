@@ -9,8 +9,10 @@
 # 4. It’s faster than scp (Secure Copy) because rsync uses remote-update protocol which allows to transfer just
 #    the differences between two sets of files. First time, it copies the whole content of a file or a directory
 #    from source to destination but from next time, it copies only the changed blocks and bytes to the destination.
-# 5. Rsync consumes less bandwidth as it uses compression and decompression method while sending and receiving data both
-#    ends.
+# 5. Rsync consumes less bandwidth as it uses compression and decompression method while sending and receiving data
+#    both ends.
+# 6. If source is a directory WITHOUT trailing spaces then it will be created in the destination directory otherwise
+#    it wont be.
 
 # Common Examples
 rsync -avs --delete --dry-run -i dir1/ backup/

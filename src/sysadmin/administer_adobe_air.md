@@ -1,6 +1,12 @@
-# Description: WriteHere Administration on Ubuntu
+# Description: Adobe Air Administration on Ubuntu
 
-### Install Adobe Air
+### Install Adobe Air Through
+- Download the 32 bit (Yes even for your 64 bit Ubuntu) Adobe Air Binary from [here](http://update.devolo.com/linux/apt/pool/main/a/adobeair/adobeair_2.6.0.19170-devolo1_i386.deb).
+  The 64 bit package on the same site is a repackaged version of the 32 bit. If you have a problem using 64-bit then install the
+  32-Bit package.
+- Open in software center, click Install.
+
+### Install Adobe Air [Deprecated]
 ```
 # Install i386 libraries, that are required for successful installation and running of Adobe Air and air applications.
 sudo apt-get install libxt6:i386 libnspr4-0d:i386 libgtk2.0-0:i386 libstdc++6:i386 libnss3-1d:i386 lib32nss-mdns libxml2:i386 libxslt1.1:i386 libcanberra-gtk-module:i386 gtk2-engines-murrine:i386

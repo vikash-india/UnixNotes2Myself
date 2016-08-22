@@ -40,24 +40,42 @@ sudo service apparmor restart
 - Make MySQL Server accessible from remote machines.
 
 ```
-# Expose MySQL to remote machines other than localhost by uncommenting  the following line in /etc/mysql/my.cnf
-bind-address        =  0.0.0.0
+# Expose MySQL to remote machines other than localhost by commenting the following line in /etc/mysql/my.cnf
+bind-address = 127.0.0.1
 
-# Replace 127.xxx.xxx.xxx with a particular IP Address or 0.0.0.0
+# Note
+# 1. This will take care of the issue "ERROR 2003 (HY000): Can't connect to MySQL server on 'host' (111).
+# 2. Alternatively, replace 127.xxx.xxx.xxx with a particular IP Address or 0.0.0.0
+
+# Grant all access to the root user
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION;
+# Note
+# 1. Change 'PASSWORD' to appropriate passord before executing the above grant statement.
+# 2. This will take care of the issue "ERROR 1130 (HY000): Host '192.X.X.X' is not allowed to connect to this MySQL server"
 
 # Restart MySQL Service
 sudo service mysql restart
-
-# Grant access
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION;
 ```
 
 ### Customize MySQL prompts
 - [Read details here](http://www.thegeekstuff.com/2010/02/mysql_ps1-6-examples-to-make-your-mysql-prompt-like-angelina-jolie/)
 
-### Uninstall MySQL Server along with data and the configuration file
+### Uninstall MySQL Server along with data and the configuration files
 ```
+sudo service mysql stop
+sudo killall -9 mysql
+sudo killall -9 mysqld
+
 sudo apt-get remove --purge mysql-server mysql-client mysql-common
+sudo apt-get remove --purge mysql-server-core-5.5 mysql-client-core-5.5
+sudo apt-get purge mysql-server-core-5.5
+sudo apt-get purge mysql-client-core-5.5
+sudo apt-get remove --purge mysql*
+
 sudo apt-get autoremove
 sudo apt-get autoclean
+
+sudo deluser mysql
+sudo rm -rf /var/lib/mysql
+sudo rm -rf /etc/mysql
 ```

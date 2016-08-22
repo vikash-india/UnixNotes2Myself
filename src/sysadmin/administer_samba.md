@@ -13,10 +13,10 @@ sudo vim /etc/samba/smb.conf
 # Add the username to the valid_user list, save the file and exit.
 
 # Set Samba Password
-smbpasswd -a <username>
+sudo smbpasswd -a <username>
 
 # Restart the service
-sudo service smb restart
+sudo service smbd restart
 
 # Test the service from Unix Command Line
 # Syntax: smbclient //hostname/aservice -U=[username] where aservice is username if homedirectory exists
