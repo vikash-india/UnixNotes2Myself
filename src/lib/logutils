@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Description: Log Utilities Library
+
+function log () {
+
+    if [ $# -ne 4 ]
+    then
+        echo "Error: Invalid number of arguments!"
+        echo "Usage: 'log path/to/log/file' 'script_name' '[INFO|WARNING|ERROR]' 'Log message'"
+        echo "Example: log '/home/dilbert/logs/file.log' 'INFO' 'logger.sh' 'Log file content'"
+    fi
+
+    log_filepath=$1
+    log_level=$2
+    log_tag=$3
+    log_message=$4
+
+    echo "`date '+%F %H:%M:%S'`	$log_level	$log_tag	$log_message" >> "$log_filepath"
+}
