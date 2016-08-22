@@ -7,6 +7,9 @@ LOG_LEVEL_INFO="INFO"
 LOG_LEVEL_WARNING="WARNING"
 LOG_LEVEL_ERROR="ERROR"
 
+# Log Tag is the script name
+LOG_TAG="$0"
+
 function check_if_directory_exists () {
 
     if [ $# -ne 1 ]
