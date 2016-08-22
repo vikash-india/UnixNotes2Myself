@@ -1,0 +1,60 @@
+# A shell script to call the remote_executer fab file
+
+#BEGINHELP#
+#
+#Usage:
+#       remote_executer Host1[,Host2...] execute_commands "UNIX_COMMANDS"
+#       remote_executer Host1[,Host2...] shutdown
+#       remote_executer Host1[,Host2...] uname
+#Example:
+#       v perfios; remote_executer leopard,panda,mongoose shutdown; v.deactivate
+#ENDHELP#
+
+usage()
+{
+    sed -n '/^#BEGINHELP#/,/^#ENDHELP#/p' $0 | sed -e 1d -e '$d' -e 's/^#//' 1>&2
+    exit 1
+}
+
+# Validate command line arguments
+if [[ $# < 2 ]]
+then
+    echo "Error: Invalid arguments!"
+    usage
+    exit 1;
+fi
+
+# Read HOSTS, PYTHON_FUNCTION and UNIX_COMMAND from command line
+HOSTS="$1"
+shift
+FUNCTION="$1"
+shift
+COMMANDS="$@"
+
+echo "HOSTS   : $HOSTS"
+echo "FUNCTION: $FUNCTION"
+echo "COMMANDS: $COMMANDS"
+echo ""
+
+# Change to appropriate directory
+CURRENT_DIR=`pwd`
+cd /home/vikash/Personal/Workspace/UnixProject/src/scripts
+
+# Execute the command using the fab file
+if [[ "$FUNCTION" = "shutdown" || "$FUNCTION" = "uname" ]]
+then
+    fab --fabfile remote_executer_fabfile.py -H $HOSTS $FUNCTION
+    exit 0
+fi
+
+if [[ "$FUNCTION" = "execute_commands" ]]
+then
+    fab --fabfile remote_executer_fabfile.py -H $HOSTS $FUNCTION:command="$COMMANDS"
+else
+    echo "Error: Invalid PYTHON_FUNCTION_NAME!"
+    usage
+    exit 1;
+fi
+
+# Change back to the original directory
+cd $CURRENT_DIR

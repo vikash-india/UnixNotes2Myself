@@ -1,6 +1,6 @@
 # Description: Logger
 
-log () {
+function log () {
 
     if [ $# -ne 3 ]
     then
