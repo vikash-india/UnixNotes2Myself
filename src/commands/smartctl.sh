@@ -7,6 +7,8 @@
 
 # Common Examples
 sudo smartctl -a /dev/sda
+sudo smartctl -a -d sat /dev/sdb
+
 sudo smartctl -t short /dev/sda
 sudo smartctl -t long /dev/sda
 sudo smartctl -l selftest /dev/sda
@@ -19,6 +21,9 @@ sudo smartctl -i /dev/sda                   # Check if your drive is actually SM
 sudo smartctl -s on /dev/sda                # Enable SMART service. It does nothing if it is already enabled.
 
 sudo smartctl -a /dev/sda                   # Print drive health data, attributes, and available test results.
+sudo smartctl --all /dev/sda                # Same as above
+sudo smartctl --all -d sat /dev/sdb         # Same as above but for USB external drives
+
 sudo smartctl -H /dev/sda                   # Print ONLY health data. Backup if errors are reported.
 
 sudo smartctl -c /dev/sda                   # Reports the kinds of tests that can be performed apart from other statistics.
