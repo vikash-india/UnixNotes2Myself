@@ -10,6 +10,7 @@ basename -a -s .ext filename1.ext filename2.ext
 
 # Examples with details
 basename /path/to/filename.ext                              # Outputs filename.txt.
+basename /path/to/directory/                                # Outputs directory
 basename /path/to/filename.ext .ext                         # Outputs filename. The second argument .ext removes the
                                                             # suffix from the first argument along with path info.
 basename -a /path/to/filename1.ext /path/to/filename2.ext   # The -a switch supports multiple arguments and treat each
