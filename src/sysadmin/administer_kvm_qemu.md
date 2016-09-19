@@ -5,13 +5,20 @@
   hypervisor.
 - KVM functions by utilizing the CPU virtualization technology extensions on modern Intel and AMD processors, known as
   Intel-VT and AMD-V.
+- KVM adds a driver for Intel's hardware virtualization extensions for x86 architecture. The driver adds a character 
+  device (/dev/kvm) that exposes the virtualization capabilities to user space. Using this driver, a process can run a 
+  virtual machine (a 'guest') in a fully virtualized PC containing its own virtual hard disk, network adapters, and 
+  display.
+- Using this KVM driver, one can start multiple virtual machines on a host. Each virtual machine is a process on the 
+  host; a virtual CPU is a thread in that process. The commands like kill, nice, top works as expected.
 - Using a kernel module loaded into memory, KVM utilizes the processor and, via user-mode driver based on modified
-  QEMU, it emulates a hardware layer upon which virtual machines can be created and run.
+  QEMU, it emulates a hardware layer upon which virtual machines can be created and run. In short, QEMU can be treated
+  as a KVM Client.
 - KVM can also be executed without the CPU extensions, but then, it will run in a pure emulation mode using QEMU,
   resulting in a significant performance penalty.
 - KVM can be managed either via a graphical management tool, similar to VMware products or VirtualBox, or via command
   line tools.
-- The most popular GUI tool is called Virtual Machine Manager (VMM), developed by RedHat. The tool is also know by its
+- The most popular GUI tool is called Virtual Machine Manager (VMM), developed by RedHat. The tool is also known by its
   generic package name virt-manager. It comes with a number of supporting tools, including virt-install, virt-clone,
   virt-image, and virt-viewer, which are used to provision, clone, install, and view virtual machines, respectively.
 - The generic KVM command line tool is provided by virsh. Specifically, one can use the supporting tools, like
@@ -28,7 +35,8 @@
       machines, without downtime.
 - Disadvantage
     - If a CPU does not support virtualization, KVM is a big waste of time VMs will be running in an extremely slow
-      and inefficient emulation mode. KVM is also known to conflict with Virtualbox.
+      and inefficient emulation mode. 
+    - KVM is also known to conflict with Virtualbox.
 
 ## Prerequisites
 ##### 1. Make sure that virtualization technology is enabled in BIOS.
@@ -39,7 +47,7 @@
 ```
 egrep -c '(vmx|svm)' /proc/cpuinfo
 
-# An output of 1 or more means virtualization is supported but one still needs
+# An output of 1 or more means virtualization is supported but one still needs 
 # to make sure that virtualization is enabled in the BIOS
 ```
 
@@ -58,8 +66,9 @@ kvm-ok
 
 ##### 5. Check if a 64-bit Linux kernel is running on a 64-bit processor.
 ```
-# Check if it's a 64-bit processor.
+# Check if it's a 64-bit processor by looking for 'lm' in the flags list.
 egrep -c ' lm ' /proc/cpuinfo
+# An output of greater than 0 means it's a 64-bit processor. 
 
 # Check if it's a 64-bit Linux kernel.
 uname -m
@@ -93,6 +102,7 @@ sudo apt-get install virt-manager
 - After this, one needs to relogin to ensure that the user becomes an effective member of the libvirtd group.
 
 ```
+# Add the current user (id -un) to libvirtd
 ssh username@kvm-host-name
 sudo adduser `id -un` libvirtd
 
@@ -127,8 +137,8 @@ status libvirt-bin
 cd /opt
 sudo mkdir ISOs
 cd ISOs/
-mv ~/ubuntu-14.04.4-server-amd64.iso .
-sudo chown libvirt-qemu:kvm ubuntu-14.04.4-server-amd64.iso
+mv ~/ubuntu-14.04.5-server-amd64.iso .
+sudo chown libvirt-qemu:kvm ubuntu-14.04.5-server-amd64.iso
 ```
 
 ##### 5. Create a Storage Pool in KVM for ISOs
@@ -152,7 +162,7 @@ iface br0 inet dhcp
    bridge_fd 0
 
 # Reboot the machine to check if br0 network has got IP and is connected to Internet
-ifconfig
+ifconfig    
 ```
 
 ##### 7. Create Virtual Machines
@@ -163,13 +173,17 @@ ifconfig
   Select Ubuntu 14.04 Server - Click Choose Volume.
 - __Specify Harddisk:__ Click Forward - Select Enable Storage for this virtual machine - Select managed or other existing Storage -
   Click on Browse - Select 'default' under Storage Pools - Click New Volume - Enter Name as guest-name and format as
-  'raw' - Under Storage Volume Quota, set Max Capacity and Allocation as the same value.
-
+  'raw' - Under Storage Volume Quota, set Max Capacity and Allocation as the same value. Click on Select Volume.
   Note
     - The allocation size is the actual size for your disk which will be allocated immediately from your physical disk
       after finishing the steps.
     - This is an important technology in storage administration field which called “thin provision”. It used to allocate
       the used storage size only, NOT all of available size.
+-  __Customize before Installation:__ Select the checkbox Customize before installation and click on finish.
+    - Description: Click on Overview. Add Description. Click on Apply
+    - Set Disk Driver to Virtio: Click on Disk 1 - Advanced Options - Disk bus - Select Virtio - Click on Apply.
+    - Set Network Driver to Virtio: Click on NIC - Device Model - Select Virtio - Click on Apply.
+- __Install the OS__: Click on Begin Installation and follow the wizard. 
 
 ## TODO
 * None
