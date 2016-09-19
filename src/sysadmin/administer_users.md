@@ -2,7 +2,8 @@
 
 ### Add a User
 ```
-sudo adduser username # Enter other details when prompted.
+sudo adduser username
+# Fill other details when prompted.
 ```
 
 ### Delete a User and its Primary Group
