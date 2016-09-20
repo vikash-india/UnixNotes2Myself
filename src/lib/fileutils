@@ -25,3 +25,34 @@ function check_if_directory_exists () {
         exit 1
     fi
 }
+
+function check_for_invalid_ntfs_characters () {
+
+    if [ $# -ne 1 ]
+    then
+        log $LOG_FILE $LOG_LEVEL_ERROR $LOG_TAG 'Invalid number of arguments.'
+        log $LOG_FILE $LOG_LEVEL_INFO $LOG_TAG "Usage: check_for_invalid_ntfs_characters 'path/to/directory/or/file'"
+        exit 1
+    fi
+
+    filepath="$1"
+
+    log_message="Checking for 8 invalid NTFS characters ie < or > or : or \" or \ or | or * or ?  in filepath [path=$filepath]."
+    log $LOG_FILE $LOG_LEVEL_INFO $LOG_TAG "$log_message"
+    echo "$log_message"
+
+    found_count=$(find "$filepath" -type f -regex '.*\(<\|>\|:\|"\|\\\||\|*\|?\).*' | wc -l)
+    if (( $found_count > 0 ))
+    then
+        log_message="Invalid NTFS characters found in $found_count files. Please fix them before proceeding."
+        log $LOG_FILE $LOG_LEVEL_ERROR $LOG_TAG "$log_message"
+        echo "$log_message"
+
+        find "$filepath" -type f -regex '.*\(<\|>\|:\|"\|\\\||\|*\|?\).*'
+        exit 1
+    else
+        log_message="No invalid NTFS characters found."
+        log $LOG_FILE $LOG_LEVEL_INFO $LOG_TAG "$log_message"
+        echo "$log_message"
+    fi
+}

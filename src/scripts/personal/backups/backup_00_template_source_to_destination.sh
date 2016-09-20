@@ -13,22 +13,24 @@ log $LOG_FILE $LOG_LEVEL_INFO $LOG_TAG 'Started syncing "<Everything>" on <sourc
 
 # Destination Directory
 # TODO: Modify
-DESTINATION_DIR='/tmp/backups/'
+DESTINATION_DIR='/tmp/backup_destination/'
 check_if_directory_exists "$DESTINATION_DIR"
 
 ################################################################################ SYNC Source to Destination
 # TODO: Modify
 # Important: The trailing slash
 SOURCE_PATHS=(
-    '/tmp/test_backup/Directory1/'
-    '/tmp/test_backup/Directory2/'
-    '/tmp/test_backup/Dir With Special Characters/'
+    '/tmp/backup_source/Directory1/'
+    '/tmp/backup_source/Directory2/'
+    '/tmp/backup_source/Dir With Special Characters/'
 )
 
 for source_path in "${SOURCE_PATHS[@]}"
 do
     source_basename=`basename "$source_path"`
     destination_path="$DESTINATION_DIR$source_basename"
+
+    check_for_invalid_ntfs_characters "$source_path"
 
     log_message="Syncing '$source_path' to '$destination_path'"
     log $LOG_FILE $LOG_LEVEL_INFO $LOG_TAG "$log_message"
@@ -42,15 +44,15 @@ do
     if [[ $REPLY =~ ^[Yy]$ ]]
     then
         echo "TODO: Uncomment the below line after testing!"
-        # rsync -avs --delete -i "$source_path" "$destination_path"
+        #rsync -avs --delete -i "$source_path" "$destination_path"
     fi
 done
 
 ################################################################################ MOVE Source to Destination
 # Important: The trailing slash
 SOURCE_PATHS=(
-    '/tmp/test_backup/Move Directory 1/'
-    '/tmp/test_backup/Move Directory 2/'
+    '/tmp/backup_source/Move Directory 1/'
+    '/tmp/backup_source/Move Directory 2/'
 )
 
 for source_path in "${SOURCE_PATHS[@]}"
@@ -58,7 +60,9 @@ do
     source_basename=`basename "$source_path"`
     destination_path="$DESTINATION_DIR$source_basename"
 
-    log_message="Syncing '$source_path' to '$destination_path'"
+    check_for_invalid_ntfs_characters "$source_path"
+
+    log_message="Moving '$source_path' to '$destination_path'"
     log $LOG_FILE $LOG_LEVEL_INFO $LOG_TAG "$log_message"
 
     check_if_directory_exists "$source_path"
