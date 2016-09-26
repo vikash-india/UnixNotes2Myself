@@ -13,7 +13,7 @@ to a guest.
   auto-mount the disk on host/hypervisor.
 * Add the disk to the domain’s xml config file by hand.
 
-```
+```shell
 # Go to path containing all the domain definition.
 cd /etc/libvirt/qemu/
 
