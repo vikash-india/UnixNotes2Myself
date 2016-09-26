@@ -9,6 +9,7 @@
 
 # Common Examples
 rename -vn 's/(DSC_....)(.*)(\.jpg)$/$1$3/' *.jpg
+rename -vn 's/(<|>|:|"|\\|\||\*|\?)/ /g' *
 
 # Examples with details
 rename 's/\.bak$//' *.bak       # Rename all files matching "*.bak" to strip the extension.
@@ -20,8 +21,12 @@ rename -f 's/\.bak$//' *.bak    # Use -f or --force flag to force ie overwrite e
 
 # Cool Tricks
 # 1. Rename files like DSC_8790_14609827968_o.jpg to DSC_8790.jpg
-# 2. Remove the -n or --no-act switch to rename instead of just showing the changes.
+#    Note: Remove the -n or --no-act switch to rename instead of just showing the changes.
 rename -vn 's/(DSC_....)(.*)(\.jpg)$/$1$3/' *.jpg
+
+# 2. Remove NTFS Invalid characters ie < or > or : or \" or \ or | or * or ? with SPACE.
+#    Note: Remove the -n or --no-act switch to rename instead of just showing the changes.
+rename -vn 's/(<|>|:|"|\\|\||\*|\?)/ /g' *
 
 # TODO
 # None
