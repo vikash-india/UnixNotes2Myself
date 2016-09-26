@@ -4,7 +4,7 @@
 ## Install a New Hard Drive on Ubuntu
 ### Determine Hard Drive Information
 
-```
+```shell
 sudo lshw -C disk
 
 # Note the "logical name" entry from the output
@@ -24,7 +24,7 @@ sudo lshw -C disk
 - Use GUI tool GParted or Termnal tool fdisk to partition a disk. 
 - Let's use fdisk to partition a disk.
 
-```
+```shell
 # The /dev/sdb is the logical name obtaining the previous step.
 sudo fdisk /dev/sdb
 
@@ -48,17 +48,17 @@ sudo fdisk /dev/sdb
 ```
 
 ### Format the new partition as ext4 file system.
-```
+```shell
 sudo mkfs -t ext4 /dev/sdb1
 ```
 
 ### Create A Mount Point
-```
+```shell
 sudo mkdir /media/harddisk_2
 ```
 
 ### Add Automatic Mount At Boot
-```
+```shell
 sudo vim /etc/fstab
 
 # Add the following entry to the table 
@@ -67,12 +67,12 @@ sudo vim /etc/fstab
 
 ### Mount or Restart the machine
 Either reboot the computer to have the changes take effect or execute the following command.
-```
+```shell
 sudo mount -a
 ```
 
 ### Confirm Hard Disk Setup After Restarting Machine
-```
+```shell
 sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
 ```
 
