@@ -85,7 +85,7 @@ uname -m
 sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
 ```
 
-##### 2. Optionally Install a GUI Tool to Manage Virtual Machines
+##### 2. Optionally Install a GUI Tool to Manage Virtual Machines from Local Desktop
 - This is applicable for an Ubuntu Desktop running a KVM.
 
 ```
@@ -137,7 +137,10 @@ status libvirt-bin
 cd /opt
 sudo mkdir ISOs
 cd ISOs/
+
+# After copying ubuntu-14.04.5-server-amd64.iso file on the server
 mv ~/ubuntu-14.04.5-server-amd64.iso .
+
 sudo chown libvirt-qemu:kvm ubuntu-14.04.5-server-amd64.iso
 ```
 
@@ -157,7 +160,7 @@ sudo vi /etc/network/interaces
 # The bridge network
 auto br0
 iface br0 inet dhcp
-   bridge_ports em1
+   bridge_ports eth0
    bridge_stp on
    bridge_fd 0
 

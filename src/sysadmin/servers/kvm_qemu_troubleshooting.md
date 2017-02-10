@@ -2,15 +2,16 @@
 
 ## Add a Hard Drive (or Any Block Device) to a VM/Guest
 This cannot be done with virt-manager since virt-manager works with storage pools. A storage pool can be created from 
-the second hard disk and attach it the VM using virt-manager but a disk cannot be directly added to a VM. 
+the second hard disk and attach it to the VM using virt-manager but a disk cannot be directly added to a VM. 
 
 Here are the steps to add a hard drive (or any physical block devices like CD-ROM, DVD etc) on the host physical machine 
 to a guest.
 
-* Physically attach the hard disk device to the host physical machine or hypervisor 
-* See [Administer Hard Disk on Ubuntu](administer_ubuntu_harddisk.md) to configure the host physical machine if the 
-  drive is not accessible by default. Create partition table and format the disk but DO NOT create mount point or 
-  auto-mount the disk on host/hypervisor.
+* Physically attach the hard disk device to the host physical machine or hypervisor. 
+* Configure the hard disk on host physical machine by creating partition table and formating the disk but DO NOT create 
+  mount point or auto-mount the disk on host/hypervisor using fstab. Use any of the following methods
+    - [Administer Hard Disk on Ubuntu Using fdisk](../system/P004_administer_ubuntu_harddisk_using_fdisk.md)
+    - [Administer Hard Disk on Ubuntu Using parted](../system/P005_administer_ubuntu_harddisk_using_parted.md)
 * Add the disk to the domain’s xml config file by hand.
 
 ```shell
@@ -25,7 +26,7 @@ sudo vim <hostname>.xml
   <source dev='/dev/sdb1'/>
   <target dev='vdb' bus='virtio'/>
 </disk>
- 
+
 # Redefine the VM
 virsh define /etc/libvirt/qemu/<hostname>.xml
 # It should display the success message as "Domain sarus defined from /etc/libvirt/qemu/<hostname>.xml".
@@ -33,8 +34,7 @@ virsh define /etc/libvirt/qemu/<hostname>.xml
 # Restart the VM/Guest to find the disk as vdb
 sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
 
-# Partition the disk
-sudo fdisk /dev/vdb
+# Once again partition the disk using fdisk (Upto 2TB) or parted.
 
 # Format the disk
 sudo mkfs -t ext4 /dev/vdb
@@ -45,7 +45,7 @@ sudo vim /etc/fstab
 
 # Restart the machine.
 
-# Check the mountpoint
+# Check the mountpoint.
 df
 ```
 

@@ -1,5 +1,4 @@
-# Description: Hard Disk Administration on Ubuntu
-
+# Description: Hard Disk Administration on Ubuntu Using fdisk
 
 ## Install a New Hard Drive on Ubuntu
 ### Determine Hard Drive Information
@@ -19,10 +18,21 @@ sudo lshw -C disk
        serial: CSH405DCLSHK6B
        size: 37GB
        capacity: 37GB
+       
+# Alternate way to find the size of the current disk (If logical name is known)
+sudo fdisk -l /dev/sdb
+
+# Sample output will be as follows
+Disk /dev/sdb: 4000.8 GB, 4000787030016 bytes
+255 heads, 63 sectors/track, 486401 cylinders, total 7814037168 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disk identifier: 0x00000000
 ```
-### Partition The Disk
-- Use GUI tool GParted or Termnal tool fdisk to partition a disk. 
-- Let's use fdisk to partition a disk.
+
+### Partition The Disk using fdisk
+- GUI tool GParted or Termnal tool parted are other aternatives to fdisk. 
 
 ```shell
 # The /dev/sdb is the logical name obtaining the previous step.
@@ -50,6 +60,7 @@ sudo fdisk /dev/sdb
 ### Format the new partition as ext4 file system.
 ```shell
 sudo mkfs -t ext4 /dev/sdb1
+sudo mkfs.ext4 /dev/sdb1   # Alternative
 ```
 
 ### Create A Mount Point
@@ -66,7 +77,7 @@ sudo vim /etc/fstab
 ```
 
 ### Mount or Restart the machine
-Either reboot the computer to have the changes take effect or execute the following command.
+- Either reboot the computer to have the changes take effect or execute the following command.
 ```shell
 sudo mount -a
 ```
