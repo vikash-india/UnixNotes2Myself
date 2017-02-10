@@ -29,8 +29,9 @@ Units = sectors of 1 * 512 = 512 bytes
 Sector size (logical/physical): 512 bytes / 4096 bytes
 I/O size (minimum/optimal): 4096 bytes / 4096 bytes
 Disk identifier: 0x00000000
+```
 
-### Create a partition
+### Partition The Disk using parted
 
 ```shell
 sudo parted /dev/sdb
@@ -66,8 +67,11 @@ quit
 
 # Sample output will be as follows
 Information: You may need to update /etc/fstab.
+```
 
-# Finally format the new partition as ext4 file system.
+### Format the new partition as ext4 file system.
+
+```shell
 sudo mkfs.ext4 /dev/sdb1
 sudo mkfs -t ext4 /dev/sdb1     # Alternative
 ```
