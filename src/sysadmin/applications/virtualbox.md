@@ -31,3 +31,24 @@ broadcast 192.168.56.255
 ```
 
 Now access the VM Guest from the Host by adding entries in /etc/hosts file of the Host. 
+
+### Setup USB Drive for VirtualBox Guests
+#### One Time Setup
+- Install VirtualBox Extension Pack which brings in the support for USB 3.0 interface. Download VirtualBox Extension Pack from the VirtualBox website.
+- From VirtualBox main window, go to File -> Preferences -> Extensions. Click on "Add new package". Navigate to downloaded extension file and install.
+- Add current users to the vboxusers group.
+
+```bash
+# Add the current user to the group vboxusers
+sudo usermod -a -G vboxusers $USER
+
+# Logout and login to check if the user is added to the group
+groups $USER
+```
+- Reboot host machine and USB is setup.
+
+#### Inserting and Ejecting a USB Disk
+- Start a VM Guest. 
+- Insert the USB drive.
+- Go to top menu on Guest -> Device -> USB -> USB Disk 3.0 [0100]. Now the USB disk will be available on the Guest and removed from the host.
+- Eject the USB disk after use.
