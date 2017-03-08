@@ -12,7 +12,7 @@ sudo apt-get dist-upgrade
 sudo apt-get install vim-gtk
 ```
 
-### Initial Setup Using raspi-config CLI Tool or GUI Tool
+### Initial Rasbian Configuration Using raspi-config CLI Tool or GUI Tool
 
 ```bash
 # Use the CLI tool
@@ -22,7 +22,7 @@ sudo raspi-config
 Open the Raspberry Pi Configuration Settings by navigating to Menu => Preferences => Raspberry Pi Configuration.
 ```
 
-Use the GUI to make following changes
+Use the tool to make following changes
 1. Change Password
 2. Change Hostname
 3. Expand Storage
@@ -45,8 +45,16 @@ sudo wicd-curses
 ```
 
 ### Setup Static IP
-1. Login to Router
+1. Login to Router.
 2. Assign static IP to raspberry pi machine.
+
+### Accessing Without Monitor
+1. Use SSH for commandline access. 
+2. Download and use VNC Viewer from Real VNC for desktop/GUI access.
+
+### Customise Raspbian
+1. Add .bashrc aliases.
+
 
 ### TODO
 - Setup FSTAB for External Harddisk
