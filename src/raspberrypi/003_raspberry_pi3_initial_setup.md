@@ -48,14 +48,14 @@ sudo wicd-curses
 1. Login to Router.
 2. Assign static IP to raspberry pi machine.
 
-### Accessing Without Monitor
+### Accessing Remotely Without Monitor
 1. Use SSH for commandline access. 
 2. Download and use VNC Viewer from Real VNC for desktop/GUI access.
+3. Use Nautilus → Connect to Server → Enter ssh://pi@[hostname] to access SCP/SFTP GUI.
 
 ### Customise Raspbian
 1. Add .bashrc aliases.
 
-
 ### TODO
-- Setup FSTAB for External Harddisk
 - Setup Temperature Control
+- Add Fan
