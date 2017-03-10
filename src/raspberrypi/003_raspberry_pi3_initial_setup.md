@@ -58,4 +58,7 @@ sudo wicd-curses
 
 ### TODO
 - Setup Temperature Control
-- Add Fan
+    - Add a cron tab expression for the temperature script.
+    - Make /etc/wpa_supplicant/wpa_supplicant.conf work.
+    - Add Heatsink
+    - Add fan with python script as a temperature trigger to control fan.
