@@ -17,8 +17,8 @@ scp 005_c_temperature_monitor.py [hostname]:scripts/temperature_moniter/monitor.
 4. Add a crontab expression to call this script just after bootup.
 ```bash
 crontab -e
-@reboot python /home/pi/scripts/monitor_temperature/monitor.py
+@reboot python /home/pi/scripts/temperature_monitor/monitor.py
 ```
 
 ### TODO
-# None
+* None
