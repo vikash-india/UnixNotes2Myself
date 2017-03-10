@@ -3,7 +3,7 @@ from subprocess import check_output
 from time import sleep, strftime
 
 # Full path is important so that it can work as crontab
-TEMPERATURE_LOG_FILE = "/home/pi/scripts/temperature_moniter/temperature.log"
+TEMPERATURE_LOG_FILE = "/home/pi/scripts/temperature_monitor/temperature.log"
 
 
 def get_temperature():

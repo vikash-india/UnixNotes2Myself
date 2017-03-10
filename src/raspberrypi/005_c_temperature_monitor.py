@@ -2,7 +2,7 @@ from re import findall
 from subprocess import check_output
 from time import sleep, strftime
 
-TEMPERATURE_LOG_FILE = "/home/pi/scripts/temperature_moniter/temperature.log"
+TEMPERATURE_LOG_FILE = "/home/pi/scripts/temperature_monitor/temperature.log"
 
 
 def get_temperature():

@@ -11,7 +11,7 @@
 
 3. Copy the files to raspberry pi
 ```bash
-scp 005_c_temperature_monitor.py [hostname]:scripts/temperature_moniter/monitor.py
+scp 005_c_temperature_monitor.py [hostname]:scripts/temperature_monitor/monitor.py
 ```
 
 4. Add a crontab expression to call this script just after bootup.
