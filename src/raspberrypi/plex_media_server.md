@@ -1,7 +1,7 @@
-# Description: lex Media Server Administration on Raspbian
+# Description: Plex Media Server Administration on Raspbian
 
 ### Install Plex Media Server
-```
+```bash
 # Enable the Plex Media Server repository on Rasbian
 sudo vim /etc/apt/sources.list
 deb https://dev2day.de/pms/ jessie main
@@ -32,5 +32,5 @@ sudo service plexmediaserver restart
 1. Visit [http://localhost:32400/web](http://localhost:32400/web) from a browser.
 2. Follow on-screen wizard to set up.
 
-# TODO
-# None
+### TODO
+- None

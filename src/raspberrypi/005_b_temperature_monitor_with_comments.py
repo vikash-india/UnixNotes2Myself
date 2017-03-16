@@ -3,7 +3,7 @@ from subprocess import check_output
 from time import sleep, strftime
 
 # Full path is important so that it can work as crontab
-TEMPERATURE_LOG_FILE = "/home/pi/scripts/temperature_monitor/temperature.log"
+TEMPERATURE_LOG_FILE = "/home/pi/bin/temperature_monitor/temperature.log"
 
 
 def get_temperature():
@@ -63,16 +63,11 @@ def main():
         None
     """
 
-    # Start an infinite loop that will run until you kill the program with Ctrl+C
-    while True:
-        # Get the temperature
-        temperature = get_temperature()
+    # Get the temperature
+    temperature = get_temperature()
 
-        # Sleep for 1 minute
-        write_temperature(temperature)
-
-        # Sleep for 1 minute
-        sleep(60)
+    # Sleep for 1 minute
+    write_temperature(temperature)
 
 
 # Call Main
