@@ -61,6 +61,9 @@ smbclient //<hostname>/<sharename> -U <username>
 ### Access Share from Windows
 ```bash
 # TODO
+# Domain: WORKGROUP
+# User: pi
+# Password: 
 ```
 
 ### Mount the Share on Ubuntu
