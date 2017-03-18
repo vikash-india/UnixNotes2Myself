@@ -2,7 +2,7 @@
 
 ### Install Plex Media Server
 ```bash
-# Enable the Plex Media Server repository on Rasbian
+# Enable the Plex Media Server repository on Raspbian
 sudo vim /etc/apt/sources.list
 deb https://dev2day.de/pms/ jessie main
 

@@ -1,7 +1,7 @@
-# Description: Auto Mount External Hard Disk
+# Description: Auto Mount NTFS Disk
 
-### Mount an NTFS External Harddisk Automatically
-1. Boot Raspberry Pi3 and plug in the external harddisk.
+### Mount an NTFS Disk Automatically
+1. Boot Raspberry Pi3 and plug in the disk.
 ```bash
 # Install a better NTFS driver
 sudo apt-get install ntfs-3g
@@ -29,5 +29,5 @@ ls -l /dev/disk/by-uuid/
 UUID=346244099865F63A /media/saturn ntfs-3g nofail,auto,uid=1000,gid=1000,umask=007 0 0
 ```
 
-# TODO
-# None
+### TODO
+- None

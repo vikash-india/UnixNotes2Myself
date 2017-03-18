@@ -1,4 +1,4 @@
-# Description: Initial Setup For Raspberry Pi
+# Description: Initial Setup of Raspbian on Raspberry Pi
 
 ### Update Raspbian to the Latest Version
 ```bash
@@ -53,12 +53,12 @@ sudo wicd-curses
 2. Download and use VNC Viewer from Real VNC for desktop/GUI access.
 3. Use Nautilus → Connect to Server → Enter ssh://pi@[hostname] to access SCP/SFTP GUI.
 
-### Customise Raspbian
+### Raspbian Customisation
 1. Add .bashrc aliases.
+2. Setup Python Virtual Environments
 
 ### TODO
-- Setup Temperature Control
-    - Add a cron tab expression for the temperature script.
-    - Make /etc/wpa_supplicant/wpa_supplicant.conf work.
-    - Add Heatsink
-    - Add fan with python script as a temperature trigger to control fan.
+- Visualisation for temperature.
+- Add Heatsink after a couple of days of temperature.
+- Backup of SD Card.
+- Deploy network manager script if required.
