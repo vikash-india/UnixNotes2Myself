@@ -2,6 +2,7 @@ from re import findall
 from subprocess import check_output
 from time import sleep, strftime
 
+# Modify the following path based on your usecase
 TEMPERATURE_LOG_FILE = "/home/pi/bin/temperature_monitor/temperature.log"
 
 
