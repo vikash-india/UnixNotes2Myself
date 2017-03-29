@@ -1,6 +1,6 @@
 # Description: R Administration on Ubuntu
 
-### Install Ubuntu Version of R (This might NOT be LATEST)
+### Install Ubuntu Version of R (Probably Older Version)
 ```
 sudo apt-get install r-base
 ```
@@ -20,16 +20,16 @@ sudo apt-get update
 sudo apt-get install r-base
 ```
 
-### Install RStudio
+### Install RStudio: Using Software Center
 1. Download installer from [www.rsudio.com](https://www.rstudio.com/products/rstudio/download/)
 2. Open with Software Install and install RStudio.
 
-### Install R Packages
+### Install RStudio: Using Commandline
+```bash
+sudo  dpkg -i '/path/to/rstudio-0.99.902-amd64.deb'
 ```
-# Install igraph for graph visualisations.
-R Studio - Tools - Install Packages - igraph
-# Note: The igraph installation might fail. Install the following dependency.
-sudo apt-get install r-cran-plyr
-sudo apt-get install r-cran-reshape2
-sudo apt-get install r-cran-ggplot2
+
+### Uninstall RStudio
+```
+sudo apt-get remove rstudio
 ```
