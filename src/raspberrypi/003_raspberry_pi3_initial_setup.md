@@ -1,5 +1,26 @@
 # Description: Initial Setup of Raspbian on Raspberry Pi
 
+### Install Raspbian
+```bash
+# Insert the SD card.
+
+# Find mount point and device name
+df
+
+# Unmount the SD card
+umount /media/sdcardlabel
+
+# Format SD card to FAT 32 filesystem
+sudo mkdosfs -F 32 -v /dev/mmcblk0
+
+# Create Startup Disk
+# 1. Unzip 2017-04-10-raspbian-jessie.zip to 2017-04-10-raspbian-jessie.img 
+# 2. Open Startup Disk Creator from Dash.
+# 3. Use 2017-04-10-raspbian-jessie.img to create the startup disk.
+
+# Insert the SD Card into Raspberry Pi and boot.
+```
+
 ### Update Raspbian to the Latest Version
 ```bash
 sudo apt-get update
