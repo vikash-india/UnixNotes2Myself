@@ -3,6 +3,9 @@
 ### Install Octave Using Commandline
 ```bash
 sudo apt-get install octave
+
+# Install Octave documentation (If it does not come by default)
+sudo apt-get install octave-info
 ```
 
 ### Install Octave Using Ubuntu Software Center
