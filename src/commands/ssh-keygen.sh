@@ -17,6 +17,7 @@
 # Common Examples
 ssh-keygen -t rsa -b 4096 -f my-ssh-key
 ssh-keygen -t rsa -b 4096 -f my-ssh-key -N "A Long Pass Phrase"
+ssh-keygen -lf my-ssh-key.pub
 
 # Examples with details
 ssh-keygen                  # 1. Without any arguments, it will generate an RSA key pair for SSH protocol version 2.
@@ -31,8 +32,8 @@ ssh-keygen -N "I like 999"  # The -N option provides the new passphrase.
 ssh-keygen -p               # The passphrase can be changed later by using the -p option. This will prompt for the
                             # private key filename for which passphrase should be changed.
 ssh-keygen -pf my-ssh-key   # Use the -f option along with -p to specify the private key file name directly.
-ssh-keygen -l               # The -l option is used to check the fingerprint & protocol of a private key file. This
-                            # will prompt for the the private key filename.
+ssh-keygen -l               # The -l option is used to check the bit length, fingerprint & protocol of a private key
+                            # file. This will prompt for the the private key filename.
 ssh-keygen -lf my-ssh-key   # Use the -f option along with -l to specify the private key file name directly.
 ssh-keygen -lfv my-ssh-key  # If combined with -v, an ASCII art representation of the key is is also displayed.
 ssh-keygen -qf my-ssh-key   # Use the -q option to silence ssh-keygen.
