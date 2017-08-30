@@ -28,6 +28,8 @@ sudo service plexmediaserver restart
 
 ### Common Troubleshooting
 1. Make sure that the directory has proper permissions for plex media server to read and write.
+2. The logs are available at /var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Logs
+3. The plexmediaserver should have write permission on the directories containing the movies.
 
 ### TODO
 * None
