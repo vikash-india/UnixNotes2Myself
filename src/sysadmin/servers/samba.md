@@ -1,6 +1,6 @@
 # Description: Samba Administration on Ubuntu
 
-### Install WriteHere
+### Install Samba
 ```
 sudo apt-get update
 sudo apt-get install samba
@@ -25,6 +25,25 @@ smbclient //mars/dilbert -U=dilbert
 # Finally access the share from a remote Windows machine
 \\mars\share
 # Enter username and password
+```
+
+### Give Write Permission on a Share to a Team/Group
+```bash
+# Create a user and then add an existing user to a secondary group (-G)
+usermod -G hr catbert
+
+# Add the following entry to smb.conf
+[sharename]
+path = /path/to/share
+writeable = yes
+browseable = yes
+public = yes
+create mask = 0644
+directory mask = 0755
+# force user = shareuser
+valid users = catbert
+
+# Restart samba server
 ```
 
 ### TODO
