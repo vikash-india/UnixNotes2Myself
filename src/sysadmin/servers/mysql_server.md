@@ -79,3 +79,15 @@ sudo deluser mysql
 sudo rm -rf /var/lib/mysql
 sudo rm -rf /etc/mysql
 ```
+
+### Create a Read Only User
+```bash
+CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
+GRANT SELECT ON * . * TO 'username'@'localhost';
+FLUSH PRIVILEGES;
+```
+
+### Change password for root user
+```bash
+mysqladmin -u root password NEWPASSWORD -p
+```

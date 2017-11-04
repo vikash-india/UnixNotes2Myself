@@ -24,6 +24,8 @@ logout                              # Same as above.
 (RETURN)(RETURN)~.                  # Terminate SSH connection from the client end instead of the server end. This is
                                     # useful if connectivity is lost with the machine and there is no way of ending the
                                     # shell session.
+ssh -F /path/to/config jupiter      # Specify SSH config file.
+ssh -i /path/to/ssh-key jupiter     # Specify SSH private key file.
 
 # Cool Tricks
 # None
