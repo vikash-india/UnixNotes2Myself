@@ -8,7 +8,7 @@
 # 1. Make SOURCE_DIRECTORY as a command line arguments.
 
 # NO TRAILING PATH
-SOURCE_DIRECTORY="/home/vikash/Downloads/temp/test"
+SOURCE_DIRECTORY="/home/vikash/Downloads/Archive/Photos-HEIC"
 
 FILES="${SOURCE_DIRECTORY}/*.heic"
 for heic_file_path in $FILES

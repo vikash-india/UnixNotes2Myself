@@ -155,7 +155,7 @@ sudo chown libvirt-qemu:kvm ubuntu-14.04.5-server-amd64.iso
 ##### 6. Create a Bridged Network
 ```
 # Open interfaces file and add the following content
-sudo vi /etc/network/interaces
+sudo vi /etc/network/interfaces
 
 # The bridge network
 auto br0
