@@ -31,7 +31,7 @@ sudo apt-get install r-base
 - Install RStudio using the below command
 
 ```bash
-sudo  dpkg -i '/path/to/rstudio-0.99.902-amd64.deb'
+sudo  dpkg -i '/path/to/rstudio-x.xx.xxx-amd64.deb'
 ```
 
 ### Update RStudio to the Latest Version on Ubuntu
