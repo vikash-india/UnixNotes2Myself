@@ -38,6 +38,9 @@ date --date='-1 day ago' +%d-%m-%Y  # Tomorrow's date
 date --date='next day' +%d-%m-%Y    # Tomorrow's date
 date --date='tomorrow' +%d-%m-%Y    # Tomorrow's date
 
+date -date "+10 days"               # Date arithmetic. Add 10 days
+date -d "+10 days"                  # Alternative to above command
+
 # Cool Tricks
 # None
 
