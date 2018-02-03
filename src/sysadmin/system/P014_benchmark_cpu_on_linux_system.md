@@ -40,4 +40,5 @@ time stress --cpu 4 --timeout 300s
 ```
 
 ### TODO
-* None
+* Read about `photonix-test-suite` which benchmarks several real world CPU-heavy use cases like compression, encryption 
+  and databases.
