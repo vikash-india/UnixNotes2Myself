@@ -31,5 +31,13 @@ sudo apt-get install ntp
 NOTE: As soon as NTP is intalled, time synchronization is enabled.
 ```
 
+### Query NTP Servers
+```bash
+sudo apt-get install ntpq
+
+# Query NTP Servers
+ntpq -p
+```
+
 ### TODO
 * None

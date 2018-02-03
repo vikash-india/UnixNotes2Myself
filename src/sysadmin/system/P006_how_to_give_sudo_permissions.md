@@ -1,13 +1,17 @@
 # Description: Give SUDO permission to an Existing User
 
-### 1. Open the sudo file using the command.
+### Give sudo Permission Using Group sudo
+- Add the user to the secondary group sudo
+
+### (Alternate Method) Give sudo Permission Using visudo
 ```
+# Open the sudoers file
 sudo /usr/sbin/visudo
-```
 
-### 2. Enter user privilege specification.
-```
-newuser    ALL=(ALL:ALL) ALL    # Duplicate the line for root and modify. Same as root  ALL=(ALL:ALL) ALL
-```
+# Enter user privilege specification.
+# Duplicate the line for root and modify the permissions. 
+# root  ALL=(ALL:ALL) ALL
+newuser    ALL=(ALL:ALL) ALL    
 
-### 3. Save and exit the file.
+# Save and exit the file.
+```

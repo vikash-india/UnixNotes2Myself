@@ -1,4 +1,4 @@
-# Description: Execute Scripts on OS Statup
+# Description: Execute Scripts on OS Startup
 
 ### 1. Edit the FILE /etc/rc.local and add the commands
 ```
