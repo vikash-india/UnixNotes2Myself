@@ -1,9 +1,9 @@
 # Description: Write Here
 
 # Notes
-# 1. Execute the script `awk -f writeHere.awk writeHere.txt`.
+# 1. Execute the script `awk -f scriptName.awk inputfile1.txt [inputfile2.txt ...]`.
 
-# Main Code
+# AWK Code
 BEGIN { print "THE BEGINNING" }
       { print }
 END   { print "THE END" }

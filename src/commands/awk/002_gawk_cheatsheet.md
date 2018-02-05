@@ -17,17 +17,17 @@ length(field)               Counts the number of characters in a word or field. 
 {printf(...)}               Prints using a user-supplied format.
 BEGIN{...}                  Executes whatever is inside the braces before reading the first input line.
 END{...}                    Executes whatever is inside the braces after awk is finished reading the input file.
-array[countr]               An array with the counting variable countr. Note this didn’t have to be predefined!
-/string/                    Matches the current input line for string.
-~/string/                   Matches current input line for string by itself or as a substring.
-!~ /string/                 Matches current input line for anything not containing string
+array[counter]              An array with the counting variable counter. Note this didn’t have to be predefined!
+/string/                    Matches the current input line for pattern 'string'.
+~/string/                   Matches current input line for pattern 'string' by itself or as a substring.
+!~ /string/                 Matches current input line for anything not containing the pattern 'string'.
 ```
 
 ### Control Flow Statements
 ```
 Command                     Description
 ------------------------------------------------------------------------------------------------------------------------
-{statements}                                            Execute all the statements grouped in the brackets.
+{statements}                                            Execute all the statements grouped in the braces.
 if (expression) statement                               If expression is true, execute statement.
 if (expression) statement1 else statement2              If expression is true, execute statement1; otherwise, execute 
                                                         statement2.
@@ -201,10 +201,4 @@ getline var         Read next line from the input-file and store it in variable 
 getline < file      Read next line from another input-file. Sets $0, NF.
 getline var < file  Read next line from another input-file and store it in variable (var).
 cmd | getline       Execute Unix OS command (cmd) and store output in $0.
-```
-
-### WriteHere
-```
-Commands    Description
-------------------------------------------------------------------------------------------------------------------------
 ```
