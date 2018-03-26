@@ -1,7 +1,10 @@
 # Description: Unbound Administration on Ubuntu
 
 ### Note
+* Simple Unbound [Tutorial](https://calomel.org/unbound_dns.html).
 * Check /usr/share/doc/unbound/examples/unbound.conf for a commented reference config file after installation.
+
+### Setup Root Hints
 * Root key location: /var/lib/unbound/root.key
 * Get root hints and place it on path /var/lib/unbound/root.hints.
 
@@ -27,29 +30,29 @@ apt-get install unbound
 /etc/init.d/unbound restart
 ```
 
-### Allow People to use hostnames without the .local part
-- [Source](https://www.unbound.net/pipermail/unbound-users/2011-March/001733.html)
+### Configure to Resolve Hostnames Without .local
+- [Reference](https://www.unbound.net/pipermail/unbound-users/2011-March/001733.html)
 
 ```
-[TODO: THIS HAS TO BE DONE IN HEAD on HAWK]
-Simply edit your /etc/resolv.conf, and add a domain or search directive, on each of your servers
+# Simply edit /etc/resolv.conf, and add a domain or search directive, on each of the servers
 # cat /etc/resolv.conf
 search local 
 nameserver 127.0.0.1
 
-# cat /etc/unbound.conf | grep "\.local"
-    local-data: "testing.local IN A 127.0.0.5"
+cat /etc/unbound.conf | grep "\.local"
+# Output
+# local-data: "testing.local IN A 127.0.0.5"
 
-# ping testing
-PING testing.local (127.0.0.5) 56(84) bytes of data.
-64 bytes from 127.0.0.5: icmp_seq=1 ttl=64 time=0.055 ms
+ping testing
+# Output
+# PING testing.local (127.0.0.5) 56(84) bytes of data.
+# 64 bytes from 127.0.0.5: icmp_seq=1 ttl=64 time=0.055 ms
 ```
-include: "/etc/unbound/localnetwork.conf"
 
-
-## Change your local DNS server to point to this new machine
-- If you are using ubuntu 14.04, you may find you can not setting dns on your /etc/resolv.conf.
-- This is because ubuntu using resolvconf to manage the dns setting, every times system boot, resolvconf will regenerate resolv.conf file.
+### Test Locally By Pointing Local DNS server to point to the New DNS Server Machine
+- If you are using ubuntu 14.04, you may find you can not set DNS on your /etc/resolv.conf.
+- This is because Ubuntu which uses resolvconf to manage the DNS settings, will regenerate resolv.conf file on every 
+  system boot.
 
 ```bash
 sudo vim /etc/resolvconf/resolv.conf.d/head  
@@ -60,7 +63,7 @@ nameserver 8.8.4.4
 
 nameserver 192.168.0.21
 
-Then run to regenerate the file 
+# Regenerate the resolve.conf file 
 sudo resolvconf -u
 
 # Check /etc/resolv.conf 
@@ -72,9 +75,9 @@ cat /etc/resolv.conf
 nmcli dev show enp0s25 | grep -i dns
 ```
 
-### Other Addresses
+### Miscellaneous
 ```bash
-# Run the following on Vikash 
+# Command to check the DNS server being used locally. 
 nmcli dev show enp0s25 | grep -i dns
 
 # Add the output IP of the above to DNS server cat /etc/resolv.conf on hawk
@@ -86,7 +89,4 @@ nameserver 202.83.20.100
 ```
 
 ### TODO
-* This needs to be updated.
 * Add the log file details.
-* Understand the other file locations.
-* Understand all the terms.
