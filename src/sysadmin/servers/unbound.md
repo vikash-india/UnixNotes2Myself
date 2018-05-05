@@ -1,14 +1,14 @@
-# Description: Unbound Administration on Ubuntu
+# Description: Unbound DNS Server Administration on Ubuntu
 
 ### Note
-* Simple Unbound [Tutorial](https://calomel.org/unbound_dns.html).
-* Check /usr/share/doc/unbound/examples/unbound.conf for a commented reference config file after installation.
+* Unbound [Tutorial](https://calomel.org/unbound_dns.html).
+* Ubnound Hosts Without Domain Name [Troubleshooting](https://www.unbound.net/pipermail/unbound-users/2011-March/001733.html)
 
 ### Setup Root Hints
 * Root key location: /var/lib/unbound/root.key
 * Get root hints and place it on path /var/lib/unbound/root.hints.
 
-```bash
+```
 # Place the downloaded file on the path /var/lib/unbound/root.hints
 wget ftp://FTP.INTERNIC.NET/domain/named.cache -O /var/lib/unbound/root.hints
 
@@ -16,23 +16,36 @@ wget ftp://FTP.INTERNIC.NET/domain/named.cache -O /var/lib/unbound/root.hints
 sudo chown root:root /var/lib/unbound/root.hints
 ```
 
-### Install Unbound
-```bash
-# Install Unbound
-apt-get install unbound
+### Install Unbound DNS Server
+```
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo apt-get install unbound
 ```
 
-### Configure Unbound
-```bash
-# Configure the files
+### Check Unbound Reference Conf File
+* Check /usr/share/doc/unbound/examples/unbound.conf for a commented reference config file after installation.
+* Alternativley, check unbound.conf.original in this directory.
+
+### Configure Unbound DNS Server
+```
+### Take Backup of Original Conf file
+ssh <machine-name>
+cd /etc/unbound
+sudo cp unbound.conf unbound.conf.YYYY-MM-DD
+
+# Edit the configuration file unbound.conf
+sudo vim /etc/unbound/unbound.conf
+
+# Check unbound.conf in this directory and add entries
+
+# Save the file 
 
 # Restart the file
 /etc/init.d/unbound restart
 ```
 
 ### Configure to Resolve Hostnames Without .local
-- [Reference](https://www.unbound.net/pipermail/unbound-users/2011-March/001733.html)
-
 ```
 # Simply edit /etc/resolv.conf, and add a domain or search directive, on each of the servers
 # cat /etc/resolv.conf
@@ -88,5 +101,17 @@ nameserver 202.83.21.12
 nameserver 202.83.20.100
 ```
 
+### Common Unbound Server Commands
+```
+# Start Unbound Server
+sudo service unbound start
+
+# Stop Unbound Server 
+sudo service unbound stop
+
+# Restart Unbound Server 
+sudo service unbound restart
+```
+
 ### TODO
-* Add the log file details.
+* Add the log file details.jai
