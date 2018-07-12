@@ -57,6 +57,9 @@ rsync -avz --include-from 'rsync_include_list.txt'  dir1/ backup/   # Similarly,
                                                                     # at the same time using a list mentioned in a file.
                                                                     # IMPORTANT: All files and directories mentioned in
                                                                     # include or exclude file is relative to dir1/.
+rsync -avs --copy-links links/ destination/                         # Use --copy-links to copy content instead of
+                                                                    # symbolic links
+rsync -avs -L /links/ destination/                                  # Short form of --copy-links
 
 # Examples of LOCAL rsync
 rsync -vh  file1  backup/                                           # Copy/Sync one file locally.
@@ -93,3 +96,5 @@ rsync -avzhe ssh --progress mars:/home/dilbert/backup/ backup/dir2/ # Use --prog
 
 # TODO
 # None
+
+-
