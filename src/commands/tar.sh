@@ -10,6 +10,7 @@
 tar -cvf dir.tar dir1 dir2
 tar -xavf archive.tar.bz2
 tar -xf archive.tar.gz -C /target/directory
+tar -czvhf archive.tar.gz links/
 
 # Examples with details
 # Archive commands
@@ -33,6 +34,8 @@ tar -cvf archive.tar --remove-files file2 file3 # By default, tar creates an arc
                                                 # be removed when using tar by adding the --remove-files option.
 tar -cvjf archive.tar.bz2 file1 file2 file3     # The flags -j (for bzip2), -z (for gzip) and -Z (for compress) can be
                                                 # used to compress along with archiving.
+tar -czvhf archive.tar.gz links/                # Use -h or --dereference to for NOT archiving symlinks. Instead archive
+                                                # the files they point to. Use -z to zip the files to .gz.
 
 # Extract Commands
 # 1. Confirm that sufficient space is available on the hard disk drive (HDD).
