@@ -1,0 +1,32 @@
+% Description: Packages in LaTeX
+
+% Note
+% 1. Packages add new functions to LaTeX.
+% 2. All packages must be included in the preamble.
+% 3. Packages add features such as support for pictures, links and bibliography etc.
+% 4. To import a package in LaTeX, add the \usepackage{PACKAGENAME} directive to the preamble of a document.
+% 5. When using Linux or Mac, most packages will already be installed by default. In case of Ubuntu installing
+%    texlive-full from the package manager would provide all packages available.
+% 6. Example: An example of package to typeset math is an environment called equation. Everything inside this
+%    environment will be printed in math mode, a special typesetting environment for math.
+
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{equation}
+    f(x) = x^2
+\end{equation}
+
+% Note
+% 1. The equation environment does not need amsmath package but it numbers each of the equations. The automatic
+%    numbering is a useful feature, but sometimes it's necessary to remove them for auxiliary calculations.
+% 2. LaTeX doesn't allow this by default but through a package amsmath included above.
+% 3. Use equation* environment instead of equation environment to disable auto-numbering.
+\begin{equation*}
+  f(x) = x^2
+\end{equation*}
+
+\end{document}

@@ -1,0 +1,30 @@
+% Description: Hello World Detailed
+
+% Note
+% 1. All commands share the structure: \commandname{option}.
+% 2. An environment is simply an area of the document where certain typesetting rules apply. It is possible (and
+%    usually necessary) to have multiple environments in a document, but it is imperative the document environment is
+%    the topmost environment. Eg. \begin{document} and \end{document}
+
+\documentclass{article} % Loads settings for the document layout.
+
+% Preamble
+
+% The following settings are used for title generation and will show up in the main document where the \maketitle 
+% command is set.
+\title{Title of my document}
+\date{2018-07-12}
+\author{Dilbert}
+
+% Main document
+
+\begin{document} % The document starts here.
+
+\maketitle % Creates the titlepage.
+\pagenumbering{gobble} % Turns off page numbering.
+\newpage % Starts a new page.
+\pagenumbering{arabic} % Turns on page numbering. Possible values are gobble, arabic and roman.
+
+Hello World!
+
+\end{document} % The document ends here.
