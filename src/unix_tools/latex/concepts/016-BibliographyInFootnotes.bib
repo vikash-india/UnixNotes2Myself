@@ -1,0 +1,65 @@
+%  Description: A Sample .bib File
+
+% Note
+% 1. A .bib file will contain the bibliographic information of our document.
+% 2. There are many tools to generate a BibTeX entries automatically. Use any bibtex generator available online.
+% 3. Generally the name of the .bib file should be same as .tex file.
+% 4. A simple .bib file will look like this.
+
+% BibTex Format for Books
+@BOOK{BOOK_REF:1,
+AUTHOR="AuthorFirstName AuthorLastName",
+TITLE="Book One Without Title",
+PUBLISHER="Dummy Publisher",
+YEAR="2020",
+},
+
+@BOOK{BOOK_REF:2,
+AUTHOR="AuthorFirstName AuthorLastName",
+TITLE="Book Two Without Title",
+PUBLISHER="Dummy Publisher",
+YEAR="2020",
+},
+
+% BibTex Format for specific pages in a book
+@INBOOK{BOOK_REF:3,
+    AUTHOR="AuthorFirstName AuthorLastName",
+    TITLE="Book Three Without Title",
+    PUBLISHER="Dummy Publisher",
+    YEAR="2020",
+    PAGES="100-101",
+},
+
+% BibTex Format for Articles
+@ARTICLE{ARTICLE_REF:1,
+    AUTHOR="AuthorFirstName AuthorLastName",
+    TITLE="Title One",
+    JOURNAL="Journal One",
+    YEAR="2020",
+},
+
+@ARTICLE{ARTICLE_REF:2,
+    AUTHOR="AuthorFirstName AuthorLastName",
+    TITLE="Title Two",
+    JOURNAL="Journal Two",
+    YEAR="2017",
+},
+
+% BibTex Format for websites
+@MISC{WEBSITE_REF:1,
+	HOWPUBLISHED = "\url{http://example.com}",
+	AUTHOR = "CompanyName",
+	TITLE = "Example Website One",
+	MONTH = "Dec",
+	YEAR = "2020",
+	NOTE = "Accessed on 2021-11-11"
+},
+
+@MISC{WEBSITE_REF:2,
+	HOWPUBLISHED = "\url{http://example.com}",
+	AUTHOR = "AuthorName",
+	TITLE = "Example Website Two",
+	MONTH = "Dec",
+	YEAR = "2020",
+	NOTE = "Accessed on 2021-11-11"
+}
