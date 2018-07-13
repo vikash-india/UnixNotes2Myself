@@ -40,6 +40,5 @@ aws ec2 describe-regions --output table
 
 ```
 
-
 ### Notes
 - None
