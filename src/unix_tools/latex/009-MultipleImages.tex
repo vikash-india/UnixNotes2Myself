@@ -1,0 +1,65 @@
+% Description: Multiple Images in LaTeX
+
+% Note
+% 1. None
+
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{subcaption} % Use the subcaption package to preamble for subfigure environment.
+
+\begin{document}
+
+    % First Figure with 2 figures of same size.
+	\begin{figure}[h!]
+  	\centering
+   	\begin{subfigure}[b]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{009-TexLogo-1.jpg}
+     	\caption{Blue Tex.}
+   	\end{subfigure}
+  	\begin{subfigure}[b]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{009-TexLogo-2.jpg}
+    	\caption{Brown Tex.}
+  	\end{subfigure}
+  	\caption{First Figure with 2 figures of same size.}
+  	\label{fig:tex1}
+	\end{figure}
+
+    % Second Figure with 2 figures of different size.
+	\begin{figure}[h!]
+  	\centering
+  	\begin{subfigure}[b]{0.2\linewidth}
+    	\includegraphics[width=\linewidth]{009-TexLogo-1.jpg}
+    	\caption{Blue Tex.}
+  	\end{subfigure}
+    \begin{subfigure}[b]{0.6\linewidth}
+    	\includegraphics[width=\linewidth]{009-TexLogo-2.jpg}
+    	\caption{Brown Tex.}
+  	\end{subfigure}
+  	\caption{Second Figure with 2 figures of different size.}
+  	\label{fig:tex2}
+	\end{figure}
+
+    % Third Figure with 4 figures in different size and multiple rows.
+	\begin{figure}[h!]
+  	\centering
+   	\begin{subfigure}[b]{0.2\linewidth}
+    	\includegraphics[width=\linewidth]{009-TexLogo-1.jpg}
+     	\caption{Blue Tex.}
+   	\end{subfigure}
+  	\begin{subfigure}[b]{0.2\linewidth}
+    	\includegraphics[width=\linewidth]{009-TexLogo-2.jpg}
+    	\caption{Brown Tex.}
+  	\end{subfigure}
+  	\begin{subfigure}[b]{0.2\linewidth}
+    	\includegraphics[width=\linewidth]{009-TexLogo-1.jpg}
+    	\caption{Blue Tex.}
+  	\end{subfigure}
+    \begin{subfigure}[b]{0.5\linewidth}
+    	\includegraphics[width=\linewidth]{009-TexLogo-2.jpg}
+    	\caption{Brown Tex.}
+  	\end{subfigure}
+  	\caption{Third Figure with 4 figures in different size and multiple rows.}
+  	\label{fig:tex3}
+	\end{figure}
+\end{document}
