@@ -1,0 +1,31 @@
+% Description: Set Custom Depth in Table of Content.
+
+% Note
+% 1. The easiest way of changing the spacing of your table of contents (and document in general) is by using the
+%    setspace package.
+% 2. Use \usepackage{setspace} in preamble.
+% 3. Use \doublespacing or \singlespacing in the document.
+
+\documentclass{article}
+
+\usepackage{setspace}
+
+\begin{document}
+
+\doublespacing
+\tableofcontents
+\singlespacing
+
+\newpage
+
+% Section 1
+\section{Section}
+\subsection{Subsection}
+\subsubsection{Subsubsection}
+
+% Section 2
+\section{Section}
+\subsection{Subsection}
+\subsubsection{Subsubsection}
+
+\end{document}

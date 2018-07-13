@@ -1,0 +1,39 @@
+% Description: Set Specific Depth in Table of Content.
+
+% Note
+% 1. Set a tocdepth by using the command \setcounter{tocdepth}{X}, where X is the desired depth.
+% 2. A value of 0 means that your table of contents will show nothing at all and 5 means, that even subparagraphs will
+%    be shown.
+% 3. The value has to be set in the preamble of your document and automatically applies to the whole document.
+
+\documentclass{article}
+
+% Set default table of content depth
+\setcounter{tocdepth}{3} % Show sections
+
+\begin{document}
+
+\tableofcontents
+\newpage
+
+% Section 1 with default depth
+\section{Section}
+\subsection{Subsection}
+\subsubsection{Subsubsection}
+
+% Section 2 with CUSTOM depth
+% Override default depth for this section
+\addtocontents{toc}{\setcounter{tocdepth}{1}} % Set depth to 1
+\section{Another section}
+\subsection{Subsection}
+\subsubsection{Subsubsection}
+
+% Set depth back to the default value
+\addtocontents{toc}{\setcounter{tocdepth}{3}} % Reset to default (3)
+
+% Section 3 with default depth
+\section{Section}
+\subsection{Subsection}
+\subsubsection{Subsubsection}
+
+\end{document}
