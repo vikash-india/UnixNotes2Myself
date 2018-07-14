@@ -1,0 +1,41 @@
+% Description: Simple Table in Latex
+
+% Note
+% 1. Tables in LaTeX can be created using a combination of the table environment and the tabular environment.
+% 2. The table environment contains caption and defines the float for a table, ie. where in the document the table
+%    should be positioned and whether it should be displayed centered.
+% 3. The \caption and \label commands can be used in the same way as for images.
+% 4. The actual content of the table is contained within the tabular environment.
+
+\documentclass{article}
+
+\begin{document}
+
+\section{Tables in \LaTeX}
+
+\subsection{A Simple table}
+
+A simple table looks like this.
+
+\begin{table}[h!]
+    \begin{center}
+        \caption{A Simple table.}
+        \label{tab:table1}
+        \begin{tabular}{l|c|r}                                          % - Align columns to left, center and right.
+                                                                        % - There should be one letter for every column.
+                                                                        % - Use a vertical line in between lettrs or in
+                                                                        %   front of them, to show a vertical line in
+                                                                        %   the table.
+            \textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\    % - Column Names 1.
+                                                                        % - Use ampersands & as column seperators.
+                                                                        % - Use newline symbols \\ as row seperators.
+            $\alpha$ & $\beta$ & $\gamma$ \\                            % Column Names 2
+            \hline                                                      % Row seperator
+            1 & 1110.1 & a\\                                            % Row 1 data
+            2 & 10.1 & b\\                                              % Row 2 data
+            3 & 23.113231 & c\\                                         % Row 3 data
+        \end{tabular}                                                   % End table data
+    \end{center}
+\end{table}                                                             % End table
+
+\end{document}

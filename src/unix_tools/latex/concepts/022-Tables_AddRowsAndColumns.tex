@@ -1,0 +1,56 @@
+% Description: Add Rows and Columns in a Table
+
+% Note
+% 1. None
+
+\documentclass{article}
+
+\usepackage{siunitx} % Required for alignment
+
+\sisetup{
+  round-mode          = places,     % Rounds numbers
+  round-precision     = 2,          % to 2 places
+}
+
+\begin{document}
+
+\section{Tables in \LaTeX}
+
+\subsection{Adding rows}
+Add more rows to a table.
+
+\begin{table}[h!]
+    \begin{center}
+        \caption{More rows.}
+        \label{tab:table1}
+        \begin{tabular}{l|S|r}
+            \textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
+            $\alpha$ & $\beta$ & $\gamma$ \\
+            \hline
+            1 & 1110.1 & a\\
+            2 & 10.1 & b\\
+            3 & 23.113231 & c\\
+            4 & 25.113231 & d\\                                         % Add more rows like this.
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\subsection{Adding columns}
+Add more columns to a table.
+
+\begin{table}[h!]
+    \begin{center}
+        \caption{More columns.}
+        \label{tab:table1}
+        \begin{tabular}{l|S|r|l}                                                            % Add more columns metadata.
+            \textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3} & \textbf{Value 4} \\    % Add more columns metadata.
+            $\alpha$ & $\beta$ & $\gamma$ & $\delta$ \\                                     % Add more columns metadata.
+            \hline
+            1 & 1110.1 & a & e \\                                                           % Add more columns data.
+            2 & 10.1 & b & f \\                                                             % Add more columns data.
+            3 & 23.113231 & c & g \\                                                        % Add more columns data.
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\end{document}

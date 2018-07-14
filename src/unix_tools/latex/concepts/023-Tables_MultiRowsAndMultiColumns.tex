@@ -1,0 +1,91 @@
+% Description: Multi-Rows and Multi-Columns Table
+
+% Note
+% 1. None
+
+\documentclass{article}
+
+\usepackage{siunitx}                % Required for alignment
+\usepackage{multirow}               % Required for multi-rows and multi-columns.
+
+\sisetup{
+  round-mode          = places,     % Rounds numbers
+  round-precision     = 2,          % to 2 places
+}
+
+\begin{document}
+
+\section{Tables in \LaTeX}
+
+\subsection{Multi-rows Table}
+
+You can also create cells, that span multiple rows or columns (or both).
+
+\begin{table}[h!]
+    \begin{center}
+        \caption{Multi-rows Table}
+        \label{tab:table1}
+        \begin{tabular}{l|S|r}
+            \textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
+            $\alpha$ & $\beta$ & $\gamma$ \\
+            \hline
+            \multirow{2}{*}{12} & 1110.1 & a\\          % Syntax is \multirow{NUMBER_OF_COLUMNS}{WIDTH}{CONTENT}
+                                                        % Use an asterisk (*) as a parameter for the width so
+                                                        % that the width is determined automatically.
+            & 10.1 & b\\                                % Content of first column omitted.
+            \hline
+            3 & 23.113231 & c\\
+            4 & 25.113231 & d\\
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\subsection{Multi-columns table}
+
+\begin{table}[h!]
+    \begin{center}
+        \caption{Multi-column Table}
+        \label{tab:table1}
+        \begin{tabular}{l|S|r}
+            \textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
+            $\alpha$ & $\beta$ & $\gamma$ \\
+            \hline
+            \multicolumn{2}{c|}{12} & a\\               % Syntax is \multicolumn{NUMBER_OF_COLUMNS}{ALIGNMENT}{CONTENT}
+                                                        % There's only one column separator (&) instead of two for all
+                                                        % other rows)
+            \hline
+            2 & 10.1 & b\\
+            3 & 23.113231 & c\\
+            4 & 25.113231 & d\\
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\subsection{Combining multi-rows and multi-columns, specifically combining two columns and two rows}
+
+\begin{table}[h!]
+    \begin{center}
+        \caption{Multirow and multi-column table}
+        \label{tab:table1}
+        \begin{tabular}{l|S|r}
+            \textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
+            $\alpha$ & $\beta$ & $\gamma$ \\
+            \hline
+            \multicolumn{2}{c|}{\multirow{2}{*}{1234}} & a\\    % - Multi-column spanning 2 columns, content multirow
+                                                                %   spanning two rows.
+                                                                % - Use the multicolumn command and instead of
+                                                                %   specifying content, add a multirow command as the
+                                                                %   content.
+
+            \multicolumn{2}{c|}{} & b\\                         % - Multicolumn spanning 2 columns with empty content as
+                                                                %   placeholder
+                                                                % - Add another multicolumn statement for as many rows
+                                                                %   as that are to be combined.
+            \hline
+            3 & 23.113231 & c\\
+            4 & 25.113231 & d\\
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\end{document}

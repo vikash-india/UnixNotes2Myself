@@ -1,0 +1,41 @@
+% Description: Align Decimal Points in a Table
+
+% Note
+% 1. The numbers in the center column are not aligned at the decimal point in previous example.
+
+\documentclass{article}
+
+% Include the siunitx package required for alignment in the preamble.
+\usepackage{siunitx}
+
+% Use the command \sisetup to tell the package how many digital places it should display.
+\sisetup{
+  round-mode          = places,         % Rounds numbers
+  round-precision     = 2,              % to 2 places
+}
+
+\begin{document}
+
+\section{Tables in \LaTeX}
+
+\subsection{Align numbers at decimal point}
+
+Align numbers in tables at the decimal point with \emph{siunitx}.
+
+\begin{table}[h!]
+    \begin{center}
+        \caption{Table with aligned units.}
+        \label{tab:table1}
+        \begin{tabular}{l|S|r}                                          % There's now an additional setting S, which
+                                                                        % will align the numbers automagically.
+            \textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
+            $\alpha$ & $\beta$ & $\gamma$ \\
+            \hline
+            1 & 1110.1 & a\\
+            2 & 10.1 & b\\
+            3 & 23.113231 & c\\
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\end{document}
