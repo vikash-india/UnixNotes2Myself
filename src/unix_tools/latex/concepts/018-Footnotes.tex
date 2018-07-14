@@ -1,0 +1,22 @@
+% Description: Footnotes in Latex
+
+% Note
+% 1. Create footnotes with the \footnote command and label them with \label.
+% 2. The label should be contained within the braces of the footnote command.
+% 3. Use the \ref command to refer to footnotes.
+
+\documentclass{article}
+
+\begin{document}
+
+% Create footnote and assign a label 'footnote1' to it.
+This is some example text\footnote{\label{footnote1}Footnote 1 text goes here!}.
+
+% Create footnote and assign a label 'footnote1' to it.
+Some other example text\footnote{\label{footnote2}Footnote 2 text goes here!}.
+
+% Refer the footnote using its label.
+In some other section, refer to the to footnote \ref{footnote1} and footnote \ref{footnote2}.
+
+\end{document}
+
