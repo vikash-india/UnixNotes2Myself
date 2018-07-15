@@ -1,0 +1,42 @@
+% Description: Table with Landscape Orientation
+
+% Note
+% 1. None
+
+\documentclass{article}
+
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{rotating}                                   % To display tables in landscape
+
+\sisetup{
+  round-mode          = places, % Rounds numbers
+  round-precision     = 2, % to 2 places
+}
+
+\begin{document}
+
+\section{Tables in \LaTeX}
+
+\subsection{Landscape tables}
+
+Sometimes when displaying huge tables with many columns, it's better to display them in landscape mode.
+
+\begin{sidewaystable}[h!]
+    \begin{center}
+    \caption{Landscape table.}
+    \label{tab:table1}
+    \begin{tabular}{l|S|r}
+        \toprule
+        \textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
+        $\alpha$ & $\beta$ & $\gamma$ \\
+        \midrule
+        1 & 1110.1 & a\\
+        2 & 10.1 & b\\
+        3 & 23.113231 & c\\
+        \bottomrule
+  \end{tabular}
+  \end{center}
+\end{sidewaystable}
+
+\end{document}
