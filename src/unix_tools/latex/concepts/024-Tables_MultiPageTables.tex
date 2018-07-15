@@ -1,0 +1,98 @@
+% Description: Multi-page Table
+
+% Note
+% 1. By default, the table will be cropped at the bottom of the page.
+% 2. The package longtable provides a convenient way to make tables span multiple pages.
+% 3. The longtable environment replaces both table and tabular environments or rather combines both of them into a
+%    single environment.
+% 4. Use \begin{longtable}[POSITION_ON_PAGE]{ALIGNMENT} which will automatically split between pages, if it has too many
+%    rows.
+% 5. The header will be repeated on every page, but without the caption. This is because the commands \endfirsthead and
+%    \endhead to my table, where everything written before \endfirsthead declares the header for the first page the
+%    table occurs on and everything between \endfirsthead and \endhead denotes the header, which should be repeated on
+%    every following page. If the header is not required on the following pages, one can simply remove everything in
+%    between \endfirsthead and \endhead including the \endhead command.
+
+\documentclass{article}
+
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{longtable}                                          % To display tables on several pages.
+
+\sisetup{
+  round-mode          = places,     % Rounds numbers
+  round-precision     = 2,          % to 2 places
+}
+
+\begin{document}
+
+\section{Tables in \LaTeX}
+
+\subsection{Multipage tables}
+
+A tables spanning multiple pages
+
+\begin{longtable}[c]{l|S|r}                                  % Replaces \begin{table}, alignment must be specified
+                                                                % here (no more tabular)
+    \caption{Multipage table.}
+    \label{tab:table1}\\                                        % Add a row separator here \\
+    \toprule
+    \textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
+    $\alpha$ & $\beta$ & $\gamma$ \\
+    \midrule
+    \endfirsthead                                               % This denotes the end of the header, which will be
+                                                                % shown on the first page only.
+    \toprule
+    \textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
+    $\alpha$ & $\beta$ & $\gamma$ \\
+    \midrule
+    \endhead                                                    % Everything between \endfirsthead and \endhead will be
+                                                                % shown as a header on every page.
+    1 & 1110.1 & a\\
+    2 & 10.1 & b\\
+    \ldots & \ldots & \ldots \\                                 % Many rows in between.
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    \ldots & \ldots & \ldots \\
+    3 & 23.113231 & c\\
+    \bottomrule
+\end{longtable}                                                 % End of longtable.
+
+\end{document}
