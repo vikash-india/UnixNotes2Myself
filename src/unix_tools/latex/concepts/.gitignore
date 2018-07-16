@@ -1,0 +1,8 @@
+# Ignore list
+
+# Latex intermediary files
+*.pdf
+*.aux
+*.log
+*.synctex.gz
+

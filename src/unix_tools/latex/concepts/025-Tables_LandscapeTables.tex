@@ -1,13 +1,14 @@
 % Description: Table with Landscape Orientation
 
 % Note
-% 1. None
+% 1. If there are too many columns in a table, it might be too wide for the page.
+% 2. Display a table in landscape mode in such situations using rotating package.
 
 \documentclass{article}
 
 \usepackage{siunitx}
 \usepackage{booktabs}
-\usepackage{rotating}                                   % To display tables in landscape
+\usepackage{rotating}                                   % To display tables in landscape.
 
 \sisetup{
   round-mode          = places, % Rounds numbers
@@ -22,7 +23,7 @@
 
 Sometimes when displaying huge tables with many columns, it's better to display them in landscape mode.
 
-\begin{sidewaystable}[h!]
+\begin{sidewaystable}[h!]                                 % Just replace the table with the sidewaystable environment.
     \begin{center}
     \caption{Landscape table.}
     \label{tab:table1}
