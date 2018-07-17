@@ -1,0 +1,39 @@
+% Description: Hyperlinks in Latex
+
+% Note
+% 1. Create hyperlinks using hyperref package.
+% 2. Links will show up in a colored box which will be invisible when printed.
+% 3. Use \href{URL}{DESCRIPTION} to add a link with description.
+% 4. Use \url{URL} to add a link without a description.
+% 5. Prepend your email address with mailto: to make it clickable and open a mail program.
+% 6. Read ctan documentation to customise the appearance of hyperlinks.
+
+\documentclass{article}
+
+\usepackage{hyperref}   % For hyperlinks.
+
+% Package settings
+\hypersetup{
+  colorlinks = true,    % Colour links instead of ugly boxes.
+  urlcolor = blue,      % Colour for external hyperlinks.
+  linkcolor = blue,     % Colour of internal links.
+  citecolor = red       % Colour of citations.
+}
+
+\begin{document}
+
+\section{Hyperlinks}
+
+\subsection{Hyperlinks}
+
+Please find a good latex editor using \href{http://www.google.com}{Google}.
+
+\subsection{Bare URLs}
+
+Use url instead of href for bare URLs \url{http://www.google.com}.
+
+\subsection{Email Addresses}
+
+My email address is: \href{mailto:dilbert@example.com}{dilbert@example.com}
+
+\end{document}
