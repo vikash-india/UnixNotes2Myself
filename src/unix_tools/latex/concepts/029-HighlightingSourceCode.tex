@@ -1,0 +1,56 @@
+% Description: Source Code Highlighting
+
+% Note
+% 1. After some initial setup, all source code can be embedded in a lstlistings environment.
+% 2. A list of all languages and more documentation is available in the manual of the listings package.
+% 3. Use the \lstlinputlisting{FILENAME} command to read the content of source files directly into a lstlistings
+%    environment.
+
+\documentclass{article}
+
+% Include the color and listings package
+\usepackage{listings}
+\usepackage{color}
+
+
+% Set up the language of the package headings to german using \renewcommand\lstlistingname{Quelltext}.
+% This is not necessary if one has to use English.
+\renewcommand\lstlistingname{Quelltext}
+
+% Set up the general layout for the package
+\lstset{
+	language=Perl,
+	basicstyle=\small\sffamily,
+	numbers=left,
+ 	numberstyle=\tiny,
+	frame=tb,
+	tabsize=4,
+	columns=fixed,
+	showstringspaces=false,
+	showtabs=false,
+	keepspaces,
+	commentstyle=\color{red},   % It's required to manually set the colors for keywords and comments, otherwise the
+	                            % output would be only black on white.
+	keywordstyle=\color{blue}   % Set the keyword color.
+}
+
+\begin{document}
+
+\section{Source Code Highlighting}
+
+\subsection{Inline Source Code}
+
+% If the code is part of Latex script
+\begin{lstlisting}
+#!/usr/bin/perl
+
+print S(@ARGV);sub S{$r=(@_[0]%4==0&&@_[0]%100!=0)||@_[0]%400=0;}
+\end{lstlisting}
+
+
+\subsection{Source Code From a File}
+
+% If the code is part of Latex script
+\lstinputlisting{029-SourceCode.pl}
+
+\end{document}
