@@ -4,7 +4,7 @@
 % 1. Use pgfplots package for plotting data directly from .csv files.
 % 2. Select a column by the actual name from the .csv file using table[x=column 1,y=column 2...]
 
-% Note on file '026-Tables_Data.csv'
+% Note on the CSV file
 % 1. The CSV file must have comma as the column seperator.
 % 2. The CSV file must have newline as the row seperator.
 % 3. The column seperator and row seperator can be modified in the CSV files as well as in the code.
@@ -44,7 +44,7 @@
                 \addplot
                 % Add a plot from table.
                 % Select the columns by using the actual name in the .csv file (on top)
-                table[x=Column 1,y=Column 2,col sep=comma] {027-Plots_Data.csv};
+                table[x=Column 1,y=Column 2,col sep=comma] {030-Plots_Data.csv};
                 \legend{Plot}
             \end{axis}
         \end{tikzpicture}
