@@ -1,18 +1,26 @@
 # Description: Latex Commands Reference
 
-### Compile Latex Source File
-```bash
-# Compile LaTeX to DVI (Device Independent) file
-latex path/to/file.tex
-
-# View DVI file
-xdvi path/to/file.dvi
+### Common Latex Commands
 ```
+# Versions Info
+tex -v                  # 3.14159265. Get the version of Tex
+latex -v                # 3.14159265-2.6-1.40.16. Get the version of Latex
+pdftex -v               # 3.14159265-2.6-1.40.16. Get the version of pdftex
 
-### Convert LaTeX to PDF
-```bash
-# Convert file.tex to file.pdf 
-pdflatex path/to/file.tex
+# Compilation Commands
+tex &latex src          # Outputs .dvi file. Run tex with format latex for the source file src.tex WITHOUT EXTENSION. 
+latex src               # Outputs .dvi file. Shortcut to tex &latex command above.
+xdvi src                # Preview src.dvi before sending it to a printer.
+dvips src               # Outputs postscript file src.ps from src.dvi.
+pdftex &latex src       # Outputs .pdf directly from .tex without the intermediate file .dvi. Alternative to Tex.
+pdflatex src            # Same as above. Shortcut for pdftex &latex src
+
+# The Logo Commands
+{\LaTeX}                # Outputs the LaTeX logo.
+{\LaTeX{}}              # Outputs the LaTeX logo followed by space. Insert a space after a command that consists only of 
+                        # a name, either add an empty structure {} or a space command (\ and blank) after the command.
+{\TeX}                  # Outputs the TeX logo.
+{\LaTeXe}               # Outputs the LATEX 2ε logo.
 ```
 
 ### TODO
