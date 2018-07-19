@@ -1,0 +1,39 @@
+% Description: Using Colors in Latex
+
+% Note
+% 1. The colors in Latex are supported through color and xcolor packages.
+% 2. The colour system provided by the packages color and xcolor is built around the idea of colour models, the colour
+%    mode and the colour names.
+% 3. The colors supported by a driver may vary.
+% 4. The model based on colour names is very intuitive, even though the list of available names is limited.
+
+\documentclass{article}
+
+% Added for colors
+% 1. The usenames makes the names in the corresponding driver name model available.
+% 2. This option can be omitted in xcolor.
+\usepackage[usenames, dvipsnames]{color}
+
+\begin{document}
+
+\section{Colors}
+Use \texttt{ccolor} package to change the colour of elements in \LaTeX.
+
+\subsection{All Text in Color}
+{\color{ForestGreen}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed eros at leo congue consequat quis quis erat. Mauris
+sit amet urna ac nulla maximus sodales.}
+
+\subsection{Selected Text in Color}
+% The syntax is \textcolor{colorname}{text}.
+The selected \textcolor{red}{text} can also be displayed in color.
+
+\subsection{Selected Text in Background Color}
+% The syntax is \colorbox{BurntOrange}{this text}.
+The background colour of some text can also be easily set. For instance, change to orange the background of
+\colorbox{BurntOrange}{this text} and then continue typing.
+
+\subsection{Line in Color}
+{\color{RubineRed} \rule{\linewidth}{0.5mm} }
+
+\end{document}

@@ -1,0 +1,42 @@
+% Description: Colors Using Xcolors in Latex
+
+% Note
+% 1. The xcolor package only supports the following models
+%   - cmy   : cyan, magenta, yellow
+%   - hsb   : hue, saturation, brightness
+%   - HTML  : RRGGBB
+%   - Gray  : Grey scale, a number between 1 and 15.
+%   - wave  : Wave length. Between 363 and 814.
+
+\documentclass{article}
+
+\usepackage[dvipsnames]{xcolor}
+
+% A new colour named LightRubineRed is created which is has 70% the intensity of the original RubineRed colour. It can
+% be thought of as a mixture of 70% RubineRed and 30% white. Defining colours in this way is great to obtain different
+% tones of a main colour.
+\colorlet{LightRubineRed}{RubineRed!70!}
+
+% A colour named myColor1 is created with 10% green and 90%orange. One can use any number of colours to create new ones
+% with this syntax.
+\colorlet{myColor1}{green!10!orange!90!}
+
+% The colour myColor2 is created using the HTML model. Colours in this model must be created with 6 hexadecimal digits,
+% the characters A,B,C,D,E and F must be upper-case.
+\definecolor{myColor2}{HTML}{00F9DE}
+
+\begin{document}
+Use \texttt{xcolor} package to change the colour of elements in \LaTeX.
+
+\begin{itemize}
+\item \textcolor{myColor1}{First item}
+\item \textcolor{myColor2}{Second item}
+\end{itemize}
+
+\noindent
+{\color{LightRubineRed} \rule{\linewidth}{1mm} }
+
+\noindent
+{\color{RubineRed} \rule{\linewidth}{1mm} }
+
+\end{document}

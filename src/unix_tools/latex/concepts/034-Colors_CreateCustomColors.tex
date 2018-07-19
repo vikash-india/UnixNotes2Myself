@@ -1,0 +1,34 @@
+% Description: Creating Custom Colors in Latex
+
+% Note
+% 1. Different color models are
+%   - rgb   : Red, Green, Blue. Three comma-separated values between 0 and 1 define the components of the colour.
+%   - RGB   : The same as rgb, but the numbers are integers between 0 and 255.
+%   - cmyk  : Cyan, Magenta, Yellow and blacK. Comma-separated list of four numbers between 0 and 1 that determine the
+%            colour according to the additive model used in most printers.
+%   - gray  : Grey scale. A single number between 0 and 1.
+% 2. The colours defined by any of the model can later be used within a document not only to set the colour of the text,
+%    but for any other element that takes a colour as parameter. Example, tables (Must add the parameter table to the
+%    preamble), graphic elements created with TikZ, plots, vertical rulers in multicolumn documents and code listings.
+
+\documentclass{article}
+
+\usepackage[usenames, dvipsnames]{color}
+
+% The syntax is \definecolor{ColorName}{ColorModel}{ColourDefinition}.
+\definecolor{myColor1}{rgb}{0.858, 0.188, 0.478}
+\definecolor{myColor2}{RGB}{219, 48, 122}
+\definecolor{myColor3}{cmyk}{0, 0.7808, 0.4429, 0.1412}
+\definecolor{mygray}{gray}{0.6}
+
+\begin{document}
+User-defined colours using different colour models
+
+\begin{enumerate}
+\item \textcolor{myColor1}{Pink with rgb}
+\item \textcolor{myColor2}{Pink with RGB}
+\item \textcolor{myColor3}{Pink with cmyk}
+\item \textcolor{mygray}{Gray with gray}
+\end{enumerate}
+
+\end{document}

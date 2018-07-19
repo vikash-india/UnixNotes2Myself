@@ -13,7 +13,7 @@
       to a larger typeface.
 * Command names are case sensitive, so \large, \Large and \LARGE are distinct commands.
 * The general syntax of commands is `\name[optional]{mandatory}` where 
-    - The optional arguments are put into square brackets [ ] 
+    - The optional arguments are put into square brackets [ ].
     - The mandatory arguments are put into curly braces { }. 
     - A command may have several optional arguments, each one in its set of brackets in the specified sequence. 
     - If none of the optional arguments is used, the square brackets may be omitted. 
@@ -25,7 +25,7 @@
   their functionality somehow. Example, the `\section` command has a *-form `\section*` which, unlike the regular form, 
   does not print an automatic section number.
 
-### Environment
+### Latex Environment
 * An environment is initiated with the command \begin{name} and is terminated by \end{name}.
 * An environment has the effect that the text within it is treated differently according to the environment parameters
 * Example
@@ -36,7 +36,7 @@
     ```
 * If the names of the environment in the \begin{..} \end{..} pair do not match, an error message will be generated.
 
-### Declarations
+### Latex Declarations
 * A declaration is a command that changes the values or meanings of certain parameters or commands without printing any 
   text. 
 * The effect of the declaration begins immediately and ends when another declaration of the same type is encountered.
