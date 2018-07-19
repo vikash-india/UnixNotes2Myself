@@ -21,9 +21,10 @@ cd /etc/libvirt/qemu/
 sudo vim <hostname>.xml
 
 # Add the following <disk> section to the <devices> section of the file.
+# Note: Even a sdc on hypervisor will show up as vdb in VM based on the last disk letter used.
 <disk type='block' device='disk'>
   <driver name='qemu' type='raw'/>
-  <source dev='/dev/sdb1'/>
+  <source dev='/dev/sdc1'/>
   <target dev='vdb' bus='virtio'/>
 </disk>
 
