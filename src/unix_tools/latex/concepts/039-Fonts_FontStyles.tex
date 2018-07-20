@@ -1,0 +1,35 @@
+% Description: Font Styles
+
+% Note
+% 1. None
+
+\documentclass{article}
+
+\begin{document}
+
+% Different Font Styles Using Commands
+Different Font Styles Using Commands
+\newline \textmd{Medium}
+\newline \textbf{Bold}       
+\newline \textup{Upright}    
+\newline \textit{Italic}     
+\newline \textsl{Slanted}    
+\newline \textsc{Small Caps}
+\newline \emph{Emphasized}
+\newline \textnormal{Normal Document Text}
+\newline \underline{Underline}
+
+% Different Font Styles Using Switch Commands
+% Note: Use \mdseries Medium instead of {\mdseries Medium} to apply changes to subsequent part of the document.
+Different Font Styles Using Switch Commands
+\newline {\mdseries Medium}
+\newline {\bfseries Bold}
+\newline {\upshape Upright}
+\newline {\itshape Italic}
+\newline {\slshape Slanted}
+\newline {\scshape Small Caps}
+\newline {\em Emphasized}
+\newline {\normalfont Normal Document Text}
+% Note: \underline{Underline} does not have switch command equivalent
+
+\end{document}
