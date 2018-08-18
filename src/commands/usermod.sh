@@ -1,7 +1,8 @@
 # Description: usermod - Modify a user account
 
 # Notes
-# None
+# - The -G flag will add the user to all the Secondary groups listed after -G. This in effect can remove the user from
+#   all those existing secondary groups of which the user is a part of but not listed after -G flag.
 
 # Common Examples
 usermod -G dev calvin
