@@ -22,6 +22,12 @@ openssl s_client -connect google.com:443 < /dev/null | openssl x509 -in /dev/std
                                                                 # - Use -text option to to display readable text content
                                                                 # - Use -noout so that PEM certificate is not spitout
 
+# Convert PEM encoded certificate to DER encoded certificate
+openssl x509 -in ServerCertificate.cer -outform der -out ServerCertificate.der
+
+# Convert DER encoded certificate to PEM encoded certificate
+openssl x509 -in ServerCertificate.der -inform der -outform pem -out ServerCertificate.pem
+
 # Cool Tricks
 # None
 

@@ -39,9 +39,7 @@ openssl s_client -connect google.com:443 < /dev/null
 openssl s_client -connect google.com:443 < /dev/null | openssl x509 -in /dev/stdin -text -noout
 ```
 
-### Certificate Architecture
-
-#### Structure of SSL Certificate
+### Architecture/Structure of SSL Certificate
 ![](images/structure-of-ssl-certificate.png)
 * Data Section
     - Data section shows the content of the actual certificate.
@@ -67,7 +65,7 @@ openssl s_client -connect google.com:443 < /dev/null | openssl x509 -in /dev/std
     - sha256withRSAEncryption specifies the SHA256 algorithm used to compute the checksum and RSA Private key encryption 
       used to sign the request.
 
-#### Digital Signature
+### Digital Signature
 ![](images/digital-signature.png)
 
 * Digital signature is hash of something signed by private keys.
@@ -81,5 +79,63 @@ openssl s_client -connect google.com:443 < /dev/null | openssl x509 -in /dev/std
     - eDocuments or online orders
     - Watermarking
 
+### Certificate Standards & Encoding Methods
+* Standard 
+    - X.509 (one of the ITU X.500 Directory standards) was chosen to be the certificate standard for SSL by NetScape.
+    - SSL certificates are actually X.509 certificates.
+    - In fact, x509 is the certificate standard for all PKIX as covered in RFC 6818.
+* Encoding
+    - Encoding standards of X.509 certificates or SSL certificates are DER and PEM.  
+    - Distinguised Encoding Rules (DER) is a binary encoding standards generally stored in .cer or .crt files.
+    - Privacy Enhanced Mail (PEM) is an ASCII (Base 64) encoding standard generally stored in .cer or .crt or .pem file.
+* File Extensions    
+    - The .crt file: Unix convention for binary encoded DER file or ASCII Base64 encoded PEM files.
+    - The .cer file: Microsoft convention for binary encoded DER file or ASCII Base64 encoded PEM files.
+    - The .key file: Public/Private PKCS#8 keys. DER or PEM.
+* Encoding Conversion
+    - Converting the certificate from DER to PEM does not change the content or the signature of the certificate.
+    ```
+    # Convert PEM encoded certificate to DER encoded certificate
+    openssl x509 -in ServerCertificate.cer -outform der -out ServerCertificate.der
+    
+    # Convert DER encoded certificate to PEM encoded certificate
+    openssl x509 -in ServerCertificate.der -inform der -outform pem -out ServerCertificate.pem
+    ```
+    
+### Types of Certificates
+* DV or Domain Validated Certificates
+    - This type of certificate has the most basic trust level.
+    - This type of certificate requires least amount of validation.
+    - Validation is only against the domain. 
+    - There is no paperwork involved to get this type of certificate.
+    - It does not guarantee the identity of the website's owner or the actual existence of the organisation.
+    - Validation process is through email, files and registrar.
+    - Features
+        * Shows only a green padlock
+        * Cheapest of the 3 certificates.
+        * Quick issuance within minutes.
+        * 99.9% Mobile and Web Browser Validity.
+        * Has wildcard and multi-domain features.
+        * Can be re-issued as many times as needed during the validity period.
+* OV or Organisation Validated Certificates
+    - This type of certificate has business identity level trust.
+    - Organisation name is printed on the certificate.
+    - Features
+        * Shows a green padlock
+        * Takes 1-3 days for validation.
+        * More trusted then DV
+        * Organisation name is validated and part of certificate.
+        * High 256-Bit encryption with 2048-bit key Length.
+* EV or Extended Validated Certificates
+    - This is the most trust level with maximum validation required.
+    - This is used by trusted and high security sites like bank.
+    - This is the most detailed certificate.
+    - Features
+        * Shows Green Padlock + Organisation Name + Green Address Bar
+        * Takes upto 10 days for validation.
+        * Strict validation process.
+        * High 256-Bit encryption with 2048-bit key Length.
+        * Multi-domain with SAN only
+    
 ### TODO
 * None

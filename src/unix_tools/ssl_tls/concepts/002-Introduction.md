@@ -35,5 +35,8 @@
 
 **Even though SSL is replaced by TLS, word SSL is used to represent both SSL and TLS protocols in general.**
 
+### References
+* [https://aboutssl.org](https://aboutssl.org)
+
 ### TODO
 * None
