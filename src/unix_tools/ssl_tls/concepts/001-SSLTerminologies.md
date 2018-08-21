@@ -4,7 +4,7 @@
 * AES   : Advance Encryption Standards
 * CA    : Certificate Authority
 * CLI   : Command Line Interface
-* CRL   : Certificate Revoke List
+* CRL   : Certificate Revocation List
 * CSR   : Certificate Signing Request
 * DER   : Distinguished Encoding Rules
 * DN    : Distinguished Name 
