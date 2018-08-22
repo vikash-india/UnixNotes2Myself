@@ -37,10 +37,10 @@ openssl s_client -connect -tls1_2 qualys.com:443 < /dev/null
 # - Use -in /dev/stdin option to read the content from standard input
 # - Use -text option to to display readable text content
 # - Use -noout to avoid spitting out PEM formatted certificate details
-openssl x509 -in www.google.com.crt -noout –text  
+openssl x509 -in www.google.com.crt -noout text  
 
 # Get the certificate and pipe it to decode the certificate
-openssl s_client -connect google.com:443 < /dev/null 2>/dev/null | openssl x509  -in /dev/stdin -noout –text
+openssl s_client -connect google.com:443 < /dev/null 2>/dev/null | openssl x509  -in /dev/stdin -noout -text
 
 # Check start date and end date of a certificate
 openssl s_client -connect google.com:443 < /dev/null 2>/dev/null | openssl x509  -in /dev/stdin -noout -dates
@@ -68,7 +68,7 @@ openssl rsa -noout -text -check -in mysite.key
 openssl rsa -in mysite.key -pubout > mysite.key.pub
   
 # Display the public key components
-openssl rsa -in mysite.key.pub -pubin -text –noout   
+openssl rsa -in mysite.key.pub -pubin -text -noout   
 ```
 
 * Generate CSR or Self-signed Certificates Using req
