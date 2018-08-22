@@ -32,6 +32,9 @@
 # T - Go backward in 10 minute intervals.
 # b - Go to a snapshop at a particular time. Enter the time in format hh:mm after pressing b.
 
+# Setup custom Interval for atop
+# Edit the file /etc/default/atop and update the default value for INTERVAL=60 to INTERVAL=30 and restart service.
+
 # Common Examples
 sudo atop
 sudo atop -r /var/log/atop/atop_20170829
