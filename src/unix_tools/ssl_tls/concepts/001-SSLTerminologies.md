@@ -15,6 +15,7 @@
 * PKI   : Public Key Infrastructure
 * MITM  : Man in the Middle
 * SAN   : Subject Alternative Name
+* SNI   : Server Name Indication
 * SSL   : Secure Socket Layer
 * TLS   : Transport Layer Security
 
