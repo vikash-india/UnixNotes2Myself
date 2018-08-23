@@ -270,7 +270,7 @@ openssl ciphers -v 'DHE-RSA-AES256-SHA'
 openssl ciphers -v 'EECDH+ECDSA+AESGCM:EECDH+aRSA+SHA256:EECDH:DHE+AESGCM:DHE:!RSA!aNULL:!eNULL:!LOW:!RC4'
 ```
 
-* View CRL Information Using crl
+* Get Certification Revocation Status
 
 ```
 # Check Certification Revocation List Using CRL
