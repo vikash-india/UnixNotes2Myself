@@ -4,13 +4,13 @@
 * None
 
 ### Common Examples
-```
+```shell
 openssl -h
 openssl version -a
 ```
 
 ### Examples with Details
-```
+```shell
 # OpenSSL Help
 openssl -h
 man openssl
@@ -23,7 +23,7 @@ openssl version -a
 
 * Working with RSA Keys Using genrsa/rsa
 
-```
+```shell
 # General Syntax where bits can be 2048, 4096, 8192 etc.
 # openssl genrsa -out example.key [bits]
 
@@ -62,7 +62,7 @@ openssl rsa -des3 -in example.key -out example_with_pass.key
 
 * Working with ECDSA Keys Using ecparam/ec/dhparam
 
-```
+```shell
 # General syntax to generate ECDSA key. 
 # Replace curve with prime256v1, secp384r1, secp521r1, or any other supported elliptic curve.
 openssl ecparam -genkey -name [curve] | openssl ec -out example.ec.key
@@ -79,7 +79,7 @@ openssl dhparam -out dhparams.pem [bits]
 
 * Generate CSR or Self-signed Certificates Using req
 
-```
+```shell
 # General syntax to create a CSR from an existing private key.
 # The [digest] can be any supported hash function: md5, sha1, sha224, sha256, sha384 or sha512, etc. 
 # Use sha256 and above for [digest]
@@ -121,7 +121,7 @@ DNS.3=ftp.example.com
 
 * Certificate Operations Using x509
 
-```
+```shell
 # Create self-signed certificates and a new private key with 1 Year Validity
 openssl req -x509 -newkey rsa:4096 -keyout example.key -out example.crt -days 365 
 
@@ -154,7 +154,7 @@ openssl s_client -connect google.com:443 < /dev/null 2>/dev/null | openssl x509 
 
 * Convert Between Encoding and Container Formats
 
-```
+```shell
 # Convert PEM encoded certificate to DER encoded certificate
 openssl x509 -in example.pem -outform der -out example.der
 
@@ -178,7 +178,7 @@ openssl pkcs12 -in keystore.pfx -out keystore.pem -nodes
 
 * Verify CSRs or Certificates
 
-```
+```shell
 # Verify a CSR signature
 openssl req -in example.csr -verify
 
@@ -203,7 +203,7 @@ openssl s_client -verify_hostname www.example.com -connect example.com:443
 
 * TLS Secure Client to Connect to a Remote Server Using s_client
 
-```
+```shell
 # Connect to a server supporting TLS and print SSL Certificate Details
 # - Use s_client to run in client mode
 # - Use -connect to connect to a server
@@ -233,7 +233,7 @@ openssl s_client -host example.com -port 443 -cipher ECDHE-RSA-AES128-GCM-SHA256
 
 * Measure TLS Connection and Handshake Time Using s_time
 
-```
+```shell
 # Measure SSL connection time without/with session reuse
 openssl s_time -connect example.com:443 -new
 openssl s_time -connect example.com:443 -reuse
@@ -248,7 +248,7 @@ openssl speed ecdsap256
 
 * Secure Server Using s_server
 
-```
+```shell
 # Start an SSL server on port 4443
 # - Private key and a certificate is required to run an SSL server
 # - Terminal will keep showing you how to connect to the server
@@ -258,7 +258,7 @@ openssl s_server -cert example.crt -key example.key -www -accept 4443
 
 * List SSL Ciphers Using ciphers
 
-```
+```shell
 # Display all ciphers information
 openssl ciphers -v
 
@@ -272,7 +272,7 @@ openssl ciphers -v 'EECDH+ECDSA+AESGCM:EECDH+aRSA+SHA256:EECDH:DHE+AESGCM:DHE:!R
 
 * Get Certification Revocation Status
 
-```
+```shell
 # Check Certification Revocation List Using CRL
 # Get the CRL URL from any SSL certificate and get its Certificate Revocation List
 curl -s http://pki.google.com/GIAG2.crl  | openssl crl -inform DER -text -noout -in /dev/stdin
@@ -297,7 +297,7 @@ openssl ocsp -header "Host" "ocsp.stg-int-x1.letsencrypt.org" -issuer chain.pem 
 #### Generic Encryption Decryption Functions
 * Working with Message Digests 
 
-```
+```shell
 # Calculate md5, sha1, sha256, sha384, sha512 digests
 # General syntax 
 # openssl dgst -[hash_function] < input.file
@@ -318,7 +318,7 @@ openssl dgst -sha256 -verify pubkey.pem -signature input_message.tar.gz.sig inpu
 
 * Encoding and Decoding Using base64
 
-```
+```shell
 # Base64 Encoding
 openssl base64 -in file.txt -out file.txt.base64
 
@@ -328,7 +328,7 @@ openssl base64 -d -in file.txt.base64 -out file.txt
 
 * Encryption and Decryption Using enc
 
-```
+```shell
 # Encrypt a plain text file
 openssl enc -aes-256-cbc -salt -in file.txt -out file.txt.enc [-k PASS]   
 
@@ -338,7 +338,7 @@ openssl enc -aes-256-cbc -d -in file.txt.enc -out file.txt [-k PASS]
 
 * Elliptical Curve Cryptography Using ecparam
 
-```
+```shell
 # List all ECC curves
 openssl ecparam -list_curves                                           
 
@@ -348,7 +348,7 @@ openssl ecparam -name secp256k1 -genkey -noout -out secp256k1-key.pem
 
 * Generate Shadow Style Passwords Using passwd
 
-```
+```shell
 # Create Shadow-style Password
 # - The output of the below command can be pasted in system files
 openssl passwd -1 -salt alphanumeric MyPassword   
@@ -356,7 +356,7 @@ openssl passwd -1 -salt alphanumeric MyPassword
 
 * Generate Random Data Using rand
 
-```
+```shell
 # Create 64 bytes random data
 openssl rand -out random-data.bin 64              
 
