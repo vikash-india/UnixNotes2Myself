@@ -72,4 +72,4 @@ host -v -t a example.com
 * None
 
 ### TODO
-* None
+* Understand other types of records that can be entered in DNS Zone File.
