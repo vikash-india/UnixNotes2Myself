@@ -9,7 +9,7 @@
 ### Common Examples
 ```
 git tag -a Version_1.0.1 -m 'Version 1.0.1'
-git tag -a volume-1-issue-1 -m 'Inauguration edition of Perfios Pulse.'
+git tag -a volume-1-issue-2 -m 'Pulse - September 2018.'
 
 # Push the tags to the server
 git push origin --tags
