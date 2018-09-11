@@ -1,0 +1,14 @@
+# Description: Sample .mailrc for Gmail
+
+# Note
+# Rename this file to `.mailrc` and copy to path `~/.mailrc`.
+# Set the mode of `~/.mailrc` to 600 by `chmod 600 `~/.mailrc`.
+# Either fill all the values in this file or use variables.
+
+set smtp-use-starttls
+set ssl-verify=ignore
+set smtp=smtp://smtp.gmail.com:587
+set smtp-auth=login
+set smtp-auth-user=''
+set smtp-auth-password=''
+set from="email@gmail.com(<Name>)"
