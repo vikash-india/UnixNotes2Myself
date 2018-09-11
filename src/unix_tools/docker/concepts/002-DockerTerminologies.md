@@ -1,7 +1,8 @@
 # Description: Docker Terminologies
 
 ### Acronyms
-* TODO  : Write Here
+* Docker CE     : Docker Community Editions
+* Docker EE     : Docker Enterprise Editions
 
 ### TODO
 * None
