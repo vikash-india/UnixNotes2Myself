@@ -16,7 +16,21 @@ sudo gvim /etc/redis/redis.conf
 
 ### Start a Redis Client
 ```shell
+# Start Redis client locally
 redis-cli
+```
+
+### Redis Server and Client Version
+```shell
+# Get the version of the server
+redis-server -v
+
+# Get the version of the client
+redis-cli -v
+
+# Get the version of the server from the client
+redis-cli
+INFO
 ```
 
 ### TODO
