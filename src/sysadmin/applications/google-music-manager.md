@@ -1,6 +1,6 @@
 # Description: Google Music Manager Administration on Ubuntu
 
-### Install Google Music Manager
+### Install Google Music Manager on Ubuntu 16.04
 - Add the Google Music repository for Ubuntu
 ```
 sudo sh -c 'echo ""deb http://dl.google.com/linux/musicmanager/deb/ stable main"" >> /etc/apt/sources.list.d/google-musicmanager.list'
@@ -17,3 +17,9 @@ sudo apt-get update
 ```
 sudo apt-get install google-musicmanager-beta"
 ```
+
+### Install Google Music Manager on Ubuntu 18.04
+- Login to Google Play Music in Chrome
+- Download .deb Google Music Manager file.
+- Install .deb file.
+- Open Google Music Manager and Configure.

@@ -50,5 +50,14 @@ find . -name core -exec /bin/rm -f '{}' \;
 # 3. This one is safer if file names contain spaces or newlines.
 find . -name core -delete
 
+# Find files newer than 2018-08-01 using option -newermt
+find ./ -newermt "2018-08-01"
+
+# Find files older than 2018-08-01 using the switch ! with the option -newermt
+find ./ ! -newermt "2018-08-01"
+
+# Find files between dates 2018-08-01 and 2018-09-01
+find ./ -newermt "2018-08-01" ! -newermt '2018-09-01'
+
 # TODO
 # 1. Explore man pages.
