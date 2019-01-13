@@ -1,4 +1,7 @@
-# Description: Arithmetic Operators in Unix Shell Script
+# Description: Arithmetic Operators in Bash Script
+
+# Note
+# 1. Use the bc command to math with floating point numbers or anything fairly complicated.
 
 # Arithmetic Operators
 expr 1 + 3			# Addition
@@ -7,7 +10,5 @@ expr 10 \* 3        # Multiplication. Use \* instead of * since asterisk is inte
 expr 10 / 2			# Division
 expr 20 % 3			# Modular Division
 
-# The bc command
-# 1. Use the bc command to math with floating point numbers or anything fairly complicate.
-
-exit 0
+# TODO
+# * None

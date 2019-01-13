@@ -1,11 +1,9 @@
-# Description: WriteHere in Unix Shell Script
+# Description: Write Here in Bash Script
 
 # Note
 # 1. None
 
 # Write Code Here
-
-exit 0
 
 # TODO
 # * None

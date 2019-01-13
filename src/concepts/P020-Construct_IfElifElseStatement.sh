@@ -1,25 +1,33 @@
-# Description: If-Else Statement in Unix Shell Script
+# Description: If-Elif-Else Construct in Bash Script
 
 # Note
-# 1. None
+# 1. The general syntax is
+# if [ condition-is-true ]
+# then
+#       # Code goes here.
+# elif [ condition-is-true ]
+# then
+#       # Code goes here.
+# else
+#       # Code goes here.
+# fi
 
 # Sample variables
 x=111
 y=222
 
-# Form 1: With only an if condition
+# Form 1: Only an if condition
 if [ $x == $y ]
 then
     echo "The variable x (ie $x) is equal the variable to y (ie $y)"
 fi
-
 
 if [ $x != $y ]
 then
     echo "The variable x (ie $x) is not equal to the variable y (ie $y)"
 fi
 
-# Form 2: With an if-else condition
+# Form 2: An if-else condition
 if [ $x == $x ]
 then
     echo "The variable x (ie $x) is equal the variable to y (ie $y)"
@@ -27,7 +35,7 @@ else
     echo "The variable x (ie $x) is not equal to the variable y (ie $y)"
 fi
 
-# Form 3: With an if-elif-else condition
+# Form 3: An if-elif-else condition
 if [ $x == $y ]
 then
     echo "The variable x (ie $x) is equal the variable to y (ie $y)"
@@ -40,8 +48,6 @@ then
 else
     echo "Else condition executed."
 fi
-
-exit 0
 
 # TODO
 # * None
