@@ -2,8 +2,12 @@
 
 ### Logging
 * Log the 5Ws: Log about Who, What, When, Where and Why.
+* Different ways to log
+    - Log to Syslog
+    - Log to File
+    - Log using log4bash
 
-### Linux Syslog
+### Log to Syslog
 * The syslog standard uses facilities and severities to categorize messages.
 * Facilities: kern, user, mail, daemon, auth, local0, local7.
 * Severities: emerg, alert, crit, err, warning, notice, info, debug.
@@ -12,10 +16,9 @@
 /var/log/messages
 /var/log/syslog
 ```
-
-### Logging to Syslog
 * The logger utility is available on path `/usr/bin/logger`.
 * By default logger creates user.notice messages.
+* Examples
 ``` 
 logger "Message"
 Aug 23 01:22:34 linuxserver dilbert: Message
@@ -33,7 +36,7 @@ logger -i -t myscript "Message"
 Aug 23 01:22:34 linuxserver myscript[123943]: Message
 ```
 
-### Logging to File
+### Log to File
 ``` 
 # Log Function
 log() {
@@ -52,6 +55,9 @@ log() {
 log "INFO" "Reading configuration file."
 log "ERROR" "Error reading file."
 ```
+
+### Log using log4bash
+* TODO
 
 ### TODO
 * None
