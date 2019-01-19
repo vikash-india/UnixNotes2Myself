@@ -3,7 +3,7 @@
 # Note
 # 1. None
 
-function hello() {
+function hello {
     arguments="$@"
     for argument in ${arguments}
     do

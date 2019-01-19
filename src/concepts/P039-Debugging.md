@@ -27,7 +27,7 @@ Testing Debug
 ```
 * Selective Debugging: Switch on debug using `set -x` or switch off debugging using `set +x` for on selective code.
 ``` 
-#!/bin/bash -x
+#!/bin/bash
 VAR="Testing debug"
 set -x
 echo "$VAR"

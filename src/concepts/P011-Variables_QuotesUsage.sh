@@ -5,9 +5,11 @@
 # 2. Double Quotes ("): Anything enclosed in double quotes removes meaning of those characters (except \ and $).
 # 3. Back Quote (`): Used to execute commands.
 
-echo 'Hi $USER, Today is date'
-echo "Hi $USER, Today is date"
-echo "Hi $USER, Today is `date`".
+USER="Dilbert"
+echo 'Hi $USER, Today is date.'
+echo 'Hi $USER, Today is `date`.'
+echo "Hi $USER, Today is date."
+echo "Hi $USER, Today is `date`"
 
 # Cool Tricks
 # 1. Effect of single quotes, double quotes and concatenation on a bash prompt.

@@ -18,8 +18,8 @@ echo $?
 [ 10 -le 15 ]       # -le checks for less than or equal to.
 
 # Another Use Case
-a=10
-b=20
+a=010
+b=10
 if [ "$a" -eq "$b" ]
 then
    echo "$a -eq $b: a is equal to b"

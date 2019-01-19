@@ -1,5 +1,8 @@
 # Description: String Test Operators in Bash Script
 
+# Note
+1. Single equal sign inside the square bracket is for checking string instead of assignment.
+
 # String Test Operators
 x="dilbert"
 y="catbert"
