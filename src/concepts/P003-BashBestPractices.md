@@ -1,5 +1,8 @@
 # Description: Bash Scripting Best Practices
 
+### Shell Script Code Style Guide
+
+
 ### Standard Structure of a Shell Script 
 * Shebang
 * Comment and File Header
@@ -19,7 +22,8 @@
 * Keep the variables inside a function as local.
 * Use $() format over backtick (`) format to asisgn command output into a variable.
 
-### Avoid Common Pitfalls
+
+### Watch Out For Common Pitfalls
 
 #### Quoting
 
@@ -178,4 +182,3 @@ while getopts "a" f; do case $f in "b") # Unhandled getopts flags
 
 ### TODO
 * None
-
