@@ -1,0 +1,4 @@
+# System Specific Macros
+CC = gcc
+CFLAGS = -E -g -Wall -I$(INCLUDE_PATH)
+

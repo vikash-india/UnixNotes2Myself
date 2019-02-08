@@ -1,0 +1,4 @@
+# User Specific Macros
+INCLUDE_PATH = /cygdrive/c/cygwin/usr/include
+INSTALL_PATH = .
+
