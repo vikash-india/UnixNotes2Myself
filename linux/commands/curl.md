@@ -101,4 +101,4 @@ curl -u username:password URL
 * Find the public IP of a machine using `curl http://icanhazip.com`.
 
 ### TODO
-* None
+* https://www.thegeekstuff.com/2012/04/curl-examples/

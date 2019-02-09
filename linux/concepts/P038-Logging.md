@@ -57,7 +57,7 @@ log "ERROR" "Error reading file."
 ```
 
 ### Log using log4bash
-* TODO
+* TODO - https://unix.stackexchange.com/questions/155551/how-to-debug-a-bash-script
 
 ### TODO
 * None
