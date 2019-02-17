@@ -2,6 +2,7 @@
 
 ### Note
 * This command displays system-wide information.
+* Equivalent to ``.
 
 ### Commands
 ```

@@ -2,6 +2,7 @@
 
 ### Note
 * This command list images.
+* Equivalent to ``.
 
 ### Commands
 ```

@@ -2,6 +2,7 @@
 
 ### Note
 * This command loads an image from a tar archive or STDIN.
+* Equivalent to ``.
 
 ### Commands
 ```

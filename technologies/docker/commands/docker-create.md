@@ -2,6 +2,7 @@
 
 ### Note
 * This command creates a new container.
+* Equivalent to ``.
 
 ### Commands
 ```

@@ -2,6 +2,7 @@
 
 ### Note
 * This command fetches the logs of a container.
+* Equivalent to ``.
 
 ### Commands
 ```

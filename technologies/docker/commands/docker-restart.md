@@ -2,6 +2,7 @@
 
 ### Note
 * This command restarts one or more containers.
+* Equivalent to ``.
 
 ### Commands
 ```

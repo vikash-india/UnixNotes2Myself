@@ -2,6 +2,7 @@
 
 ### Note
 * This command updates configuration of one or more containers.
+* Equivalent to ``.
 
 ### Commands
 ```

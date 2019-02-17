@@ -2,6 +2,7 @@
 
 ### Note
 * This command renames a container.
+* Equivalent to ``.
 
 ### Commands
 ```

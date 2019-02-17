@@ -12,6 +12,9 @@
 * Images are often created by combining and modifying standard images downloaded from public repositories.
 
 ### Docker Vs Virtual Machine
+* Container are just processes.
+* Containers are limited to what resources they can access.
+* Container exit when the process stops.
 ![](images/docker-vs-virtual-machine.png)
 
 ### Docker on Linux Vs Docker on Windows
@@ -19,6 +22,9 @@
 
 ### Docker Architecture
 ![](images/docker-architechture.png)
+
+### Docker Client Server Architecture
+![](images/docker-client-server.png)
 
 ### Docker Components
 ![](images/docker-engine-components-flow.png)

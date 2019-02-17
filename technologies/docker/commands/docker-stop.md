@@ -2,10 +2,12 @@
 
 ### Note
 * This command stops one or more running containers.
+* Equivalent to ``.
 
 ### Commands
 ```
-Write Here
+# Stop a Docker Container
+docker container stop [container-name-or-id]
 ```
 
 ### TODO

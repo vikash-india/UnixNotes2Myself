@@ -3,21 +3,17 @@
 ### Note
 * This command displays docker help.
 
-### List All Available Docker Commands
+### Commands
 ```
+# List all available docker commands
 docker
-```
 
-### List all Options for a Particular Docker Command
-* Syntax: `docker <command>`
-```
-# Get options for image command
+# List all options for a particular docker command
+# General Syntax: docker <command>
 docker image
-```
-### Get Help for a Particular Command 
-* Syntax: `docker <command> --help`
-```
-# Get help for image command
+
+# Get help for a particular command 
+# General Syntax: docker <command> --help
 docker image --help
 
 # Get help for build command

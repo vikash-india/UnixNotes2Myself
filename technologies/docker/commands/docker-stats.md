@@ -2,10 +2,12 @@
 
 ### Note
 * This command displays a live stream of container(s) resource usage statistics.
+* Equivalent to `docker container stats`.
 
 ### Commands
 ```
-Write Here
+# List Performance Stats of All Containers
+docker container stats
 ```
 
 ### TODO

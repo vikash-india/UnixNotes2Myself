@@ -2,6 +2,7 @@
 
 ### Note
 * This command blocks until one or more containers stop, then print their exit codes.
+* Equivalent to ``.
 
 ### Commands
 ```

@@ -2,6 +2,7 @@
 
 ### Note
 * This command kills one or more running containers.
+* Equivalent to ``.
 
 ### Commands
 ```

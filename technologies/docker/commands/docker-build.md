@@ -2,6 +2,7 @@
 
 ### Note
 * This command builds an image from a Dockerfile.
+* Equivalent to ``.
 
 ### Commands
 ```

@@ -2,6 +2,7 @@
 
 ### Note
 * This command unpauses all processes within one or more containers.
+* Equivalent to ``.
 
 ### Commands
 ```

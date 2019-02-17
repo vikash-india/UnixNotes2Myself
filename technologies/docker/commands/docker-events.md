@@ -2,6 +2,7 @@
 
 ### Note
 * This command gets real time events from the server.
+* Equivalent to ``.
 
 ### Commands
 ```

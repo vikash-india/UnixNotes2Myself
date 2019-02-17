@@ -2,6 +2,7 @@
 
 ### Note
 * This command removes one or more images.
+* Equivalent to ``.
 
 ### Commands
 ```

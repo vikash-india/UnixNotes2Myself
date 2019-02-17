@@ -2,6 +2,7 @@
 
 ### Note
 * This command log in to a Docker registry.
+* Equivalent to ``.
 
 ### Commands
 ```
