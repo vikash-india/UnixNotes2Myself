@@ -5,10 +5,10 @@
 
 ### Common Examples
 ```shell
-Write here
+# Check below
 ```
 
-### Examples with details
+### Examples With Details
 #### Write Here
 ```shell
 Write here
