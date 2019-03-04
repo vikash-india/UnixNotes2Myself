@@ -1,14 +1,20 @@
 # Description: Abash Library
 
 ### About
-* The abash library is a bash library containing bash utlility functions.
+* The abash library is a bash library containing bash utility functions.
 
-### Execution Notes
-* Run scripts developed using this library as `script_name [arguments...] 2>&1 | tee /path/to/output.log`.
-    - 2>&1 redirects channel 2 (stderr/standard error) into channel 1 (stdout/standard output). 
-    - Append to the log file, use tee -a as in `script_name [arguments...] 2>&1 | tee -a /path/to/output.log`
+### Setup Abash Library
+* Copy the directory `UnixNotes2Myself/linux/abash` to any location on your PC.
+* Set the ABASH_DIR variable in `.bashrc`
+```
+export ABASH_DIR=/absolute/path/to/UnixNotes2Myself/linux/abash
+```
+* Include the library in any bash script and call the functions.
+```
+source ${ABASH_DIR}/main.sh
+```
 
 ### Development Notes
 * The files under `src` should be independent functions which can be included in any source file.
-* Avoid using echo statement inside library functions so that it does not get printed without timestamp in scripts.
-
+* Avoid using echo statement inside library functions so that the library functions does not print anything that is not 
+  required by the scripts.
