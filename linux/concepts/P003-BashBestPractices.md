@@ -1,11 +1,39 @@
 # Description: Bash Scripting Best Practices
 
+### Bash Scripting Process
+* Task before writing a bash script
+    - Read THIS Best Practices document.
+    - Read Bash Code Style Guide
+* Write the bash script with the following standard structure
+```
+#!/bin/bash                                         # Shebang
+# Description: Shell Script                         # Comment and File Header
 
-### Watch Out For Common Pitfalls
+DATA_FILE_PATH=/home/dilbert/data/                  # All Global Variables
 
-#### Quoting
+# Function level comment                            # Function Level Comment
+function get_data() {                               # All Functions
+    local count=0                                   # Local function variables
 
-ShellCheck can recognize several types of incorrect quoting:
+    # Code 
+    # ...
+}
+
+# Main                                              # Script Main Content
+get_data
+
+# Code
+# ...
+
+exit 0                                              # Exit with an exit status
+```
+* Tasks after writing a bash script
+    - Do a code review.
+    - Run `shellcheck` on the script.
+    - Write tests for the scripts.
+
+###  Best Practices - Quoting
+ShellCheck can recognize several types of incorrect quoting.
 
 ```sh
 echo $1                           # Unquoted variables
@@ -20,8 +48,7 @@ echo 'Path is $PATH'              # Variables in single quotes
 trap "echo Took ${SECONDS}s" 0    # Prematurely expanded trap
 ```
 
-#### Conditionals
-
+### Best Practices - Conditionals
 ShellCheck can recognize many types of incorrect test statements.
 
 ```sh
@@ -38,9 +65,8 @@ ShellCheck can recognize many types of incorrect test statements.
 (( 1 -lt 2 ))                     # Using test operators in ((..))
 ```
 
-#### Frequently Misused Commands
-
-ShellCheck can recognize instances where commands are used incorrectly:
+### Best Practices - Frequently Misused Commands
+ShellCheck can recognize instances where commands are used incorrectly.
 
 ```sh
 grep '*foo*' file                 # Globs in regex contexts
@@ -56,9 +82,8 @@ find -name \*.bak -o -name \*~ -delete  # Implicit precedence in find
 f() { whoami; }; sudo f           # External use of internal functions
 ```
 
-#### Common Beginner's Mistakes
-
-ShellCheck recognizes many common beginner's syntax errors:
+### Best Practices - Common Beginner's Mistakes
+ShellCheck recognizes many common beginner's syntax errors
 
 ```sh
 var = 42                          # Spaces around = in assignments
@@ -77,9 +102,8 @@ f; f() { echo "hello world; }     # Using function before definition
 if ( -f file )                    # Using (..) instead of test
 ```
 
-#### Style
-
-ShellCheck can make suggestions to improve style:
+### Best Practices - Style
+ShellCheck can make suggestions to improve style.
 
 ```sh
 [[ -z $(find /tmp | grep mpg) ]]  # Use grep -q instead
@@ -92,9 +116,8 @@ echo "$(date)"                    # Useless use of echo
 cat file | grep foo               # Useless use of cat
 ```
 
-#### Data and Typing Errors
-
-ShellCheck can recognize issues related to data and typing:
+### Best Practices - Data and Typing Errors
+ShellCheck can recognize issues related to data and typing.
 
 ```sh
 args="$@"                         # Assigning arrays to strings
@@ -109,9 +132,8 @@ cat foo | cp bar                  # Piping to commands that don't read
 printf '%s: %s\n' foo             # Mismatches in printf argument count
 ```
 
-#### Robustness
-
-ShellCheck can make suggestions for improving the robustness of a script:
+### Best Practices - Robustness
+ShellCheck can make suggestions for improving the robustness of a script.
 
 ```sh
 rm -rf "$STEAMROOT/"*            # Catastrophic rm
@@ -123,9 +145,8 @@ export MYVAR=$(cmd)              # Masked exit codes
 case $version in 2.*) :;; 2.6.*) # Shadowed case branches
 ```
 
-#### Portability
-
-ShellCheck will warn when using features not supported by the shebang. For example, if you set the shebang to `#!/bin/sh`, ShellCheck will warn about portability issues similar to `checkbashisms`:
+### Best Practices - Portability
+ShellCheck will warn when using features not supported by the shebang. For example, if you set the shebang to `#!/bin/sh`, ShellCheck will warn about portability issues similar to `checkbashisms`.
 
 ```sh
 echo {1..$n}                     # Works in ksh, but not bash/dash/sh
@@ -140,9 +161,8 @@ local var=value                  # local is undefined in sh
 time sleep 1 | sleep 5           # Undefined uses of 'time'
 ```
 
-#### Miscellaneous
-
-ShellCheck recognizes a menagerie of other issues:
+### Best Practices - Miscellaneous
+ShellCheck recognizes a menagerie of other issues.
 
 ```sh
 PS1='\e[0;32m\$\e[0m '            # PS1 colors not in \[..\]
