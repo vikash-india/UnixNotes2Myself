@@ -74,7 +74,7 @@ sudo docker run hello-world
 * Download the debian package and install it manually.
 
 ### Docker Installation on Linux Using docker-machine
-* TODO
+* None
 
 ### TODO
 * None

@@ -2,11 +2,11 @@
 
 ### References
 * Docker Website: [Official Website](https://www.docker.com/)
-* Docker Editions: [Docker Editions](https://store.docker.com/)
+* Docker Documentation: [Offical Documentation](https://docs.docker.com/)
+* Docker Editions: [Community Editions on Docker Hub](https://hub.docker.com/search?q=&type=edition&offering=community)
+* Docker Containers: [Offical Containers on Docker Hub](https://hub.docker.com/search?image_filter=official&type=image)
 * Docker Tools: [Docker Landscape](https://landscape.cncf.io/)
-* Docker Editions: [Docker Hub](https://hub.docker.com/search?q=&type=edition&offering=community)
-* Docker Installation on Ubuntu: [Docker Hub](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-* Docker Documentation: [Website](https://docs.docker.com/)
+* Docker Installation on Ubuntu: [How to Install](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
 ### TODO
 * None
