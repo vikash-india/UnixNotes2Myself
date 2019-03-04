@@ -1,0 +1,27 @@
+# Description: Common Library
+
+# Abash Library Version
+ABASH_VERSION='0.1'
+
+# Log Levels
+LOG_LEVEL_INFO="INFO"
+LOG_LEVEL_WARNING="WARNING"
+LOG_LEVEL_ERROR="ERROR"
+
+# Boolean Values
+TRUE=0
+FALSE=1
+
+# Success and Failure
+SUCCESS=0
+FAILURE=1
+
+# Error Codes
+ERROR_WRONG_NUMBER_OF_ARGUMENTS=1
+ERROR_NOT_IMPLEMENTED=2
+ERROR_UNKNOWN=127
+
+# Error Messages
+MESSAGE_ERROR_WRONG_NUMBER_OF_ARGUMENTS='Wrong number of arguments.'
+MESSAGE_ERROR_NOT_IMPLEMENTED='Not implemented.'
+MESSAGE_ERROR_UNKNOWN='Unknown Error.'
