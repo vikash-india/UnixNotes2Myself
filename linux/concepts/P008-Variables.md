@@ -14,5 +14,13 @@
 * By default, variables are global.
 * Variables have to be defined before used.
 
+### Variables Best Practices
+* Use UPPERCASE for variable names.
+* Do not use space on either side of equal to while assigning variables.
+* Use curly braces to print variables. Eg ${HELLO}World
+* Use quotes to define variables.
+* Keep the variables inside a function as local.
+* Use $() format over backtick (`) format to asisgn command output into a variable.
+
 ### TODO
 * None
