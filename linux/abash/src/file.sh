@@ -57,22 +57,17 @@ function contains_invalid_ntfs_characters () {
     # *
     # ?
 
-    message="Checking for 8 invalid NTFS characters: < or > or : or \" or \ or | or * or ?  in file path [path=$file_path]."
-    echo "$message"
-
     found_count=$(find "$file_path" -type f -regex '.*\(<\|>\|:\|"\|\\\||\|*\|?\).*' | wc -l)
     if (( $found_count > 0 ))
     then
-        message="Invalid NTFS characters found in $found_count files. Please fix them before proceeding."
-        echo "$message"
-
         find "$file_path" -type f -regex '.*\(<\|>\|:\|"\|\\\||\|*\|?\).*'
 
+        message=$( printf "Invalid NTFS characters ie  < or > or : or \" or \ or | or * or ? found. Please fix them before proceeding. [count=%s, path=%s]" "${found_count}" "${file_path}" )
+        echo "$message"
         return "${FALSE}"
     else
-        message="No invalid NTFS characters found."
+        message=$( printf "No invalid NTFS characters found. [path=%s]" "${file_path}" )
         echo "$message"
-
         return "${TRUE}"
     fi
 }

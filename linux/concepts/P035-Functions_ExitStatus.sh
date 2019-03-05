@@ -26,5 +26,12 @@ function hello2() {
 hello2
 echo "Implicit Return: $?"
 
+# Typical Usage
+message=$( hello1 )     # Hello. Capture the last echo message from the function.
+return_value=$?         # 0. Capture the return value of the function.
+
+echo $message
+echo $return_value
+
 # TODO
 # * None
