@@ -1,14 +1,17 @@
-# Description: basename - strip directory and suffix from filenames
+# Description: The basename Command
 
-# Notes
-# None
+### Notes
+* The basename commands strip directory and suffix from filenames.
 
-# Common Examples
+### Common Examples
+```shell
 basename /path/to/filename.ext
 basename /path/to/filename.ext .ext
 basename -a -s .ext filename1.ext filename2.ext
+```
 
-# Examples with details
+### Examples with details
+```shell
 basename /path/to/filename.ext                              # Outputs filename.txt.
 basename /path/to/directory/                                # Outputs directory
 basename /path/to/filename.ext .ext                         # Outputs filename. The second argument .ext removes the
@@ -20,9 +23,10 @@ basename -a -s .ext filename1.ext filename2.ext             # Use -s switch to r
                                                             # multiple arguments are passed to this command.
 basename -a /path/to/filename1.ext /path/to/filename2.ext   # Use -z switch separate output with NUL rather than a
                                                             # newline.
+```
 
-# Cool Tricks
-# None
+### Cool Tricks
+* None
 
-# TODO
-# None
+### TODO
+* None
