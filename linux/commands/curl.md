@@ -1,10 +1,10 @@
-# Description: curl - transfer a URL
+# Description: The curl Command 
 
 ### Notes
-* None
+* The curl command is used to transfer a URL.
 
 ### Common Examples
-``` 
+```shell
 curl --verbose \
 --http1.1 \
 --header "Host: ptsv2.com" \

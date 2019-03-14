@@ -1,4 +1,4 @@
-# Description: WriteHere
+# Description: The WriteHere Command
 
 ### Notes
 * None

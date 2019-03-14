@@ -1,7 +1,9 @@
-# Description: cron - daemon to execute scheduled commands (Vixie Cron)
+# Description: The cron Command
 
-# Notes
-#  1. Structure of cron expressions: m h dom mon dow command
+### Notes
+* The cron command is the daemon to execute scheduled commands (Vixie Cron).
+* Structure of cron expressions: m h dom mon dow command
+```
       ╔═════════╦════════════════════════════════════════════════════════════════════════╗
       ║ Option  ║                              Description                               ║
       ╠═════════╬════════════════════════════════════════════════════════════════════════╣
@@ -13,8 +15,9 @@
       ║         ║ Under dow, both 0 and 7 are considered Sunday.                         ║
       ║ command ║ The command to run. This can contain spaces or point to a bash script. ║
       ╚═════════╩════════════════════════════════════════════════════════════════════════╝
-
-#  2. Special characters
+```
+* Special characters
+```
       ╔════════════╦════════════════════════════════════════════════════════════════════════════╗
       ║ Character  ║                                Description                                 ║
       ╠════════════╬════════════════════════════════════════════════════════════════════════════╣
@@ -27,8 +30,9 @@
       ║            ║ Examples: 0-23/2 is same as */2 is same as 0,2,4,6,8,10,12,14,16,18,20,22. ║
       ║ Names      ║ First 3 letters of Months or Days of Week can be used.                     ║
       ╚════════════╩════════════════════════════════════════════════════════════════════════════╝
-
-#  3. Special String
+```
+* Special String
+```
       ╔═══════════╦════════════════════════════════╗
       ║  String   ║            Meaning             ║
       ╠═══════════╬════════════════════════════════╣
@@ -41,32 +45,35 @@
       ║ @midnight ║ (same as @daily)               ║
       ║ @hourly   ║ Run once an hour, "0 * * * *". ║
       ╚═══════════╩════════════════════════════════╝
+```
+* The command (the rest of the line upto a newline or % character) specifies the command to be run.
+* Command will be executed by /bin/sh or by the shell specified in the SHELL variable of the crontab file.
+* Percent-signs (%) in the command, unless escaped with backslash (\), will be changed into newline characters,
+  and all data after the first % will be sent to the command as standard input.
+* When cron job is run from the users crontab it is executed as that user. It does not however source any files in
+  the users home directory like their .cshrc or .bashrc or any other file. If you need cron to source (read) any
+  file that your script will need you should do it from the script cron is calling. Setting paths, sourcing files,
+  setting environment variables, etc.
+* If the users account has a crontab but no useable shell in /etc/passwd then the cronjob will not run. You will
+  have to give the account a shell for the crontab to run.
+* If your cronjobs are not running check if the cron deamon is running. Then remember to check /etc/cron.allow and
+  /etc/cron.deny files. If they exist then the user you want to be able to run jobs must be in /etc/cron.allow. You
+  also might want to check if the /etc/security/access.conf file exists. You might need to add your user in there.
+* Crontab is not parsed for environmental substitutions. You can not use things like $PATH, $HOME, or ~/sbin. You
+  can set things like MAILTO= or PATH= and other environment variables the /bin/sh shell uses.
+* Cron does not deal with seconds so you can't have cronjob's going off in any time period dealing with seconds.
+  Like a cronjob going off every 30 seconds.
+* You can not use % in the command area. They will need to be escaped and if used with a command like the date
+  command you can put it in backticks. Ex. `date +\%Y-\%m-\%d`.
 
-#  4. The command (the rest of the line upto a newline or % character) specifies the command to be run.
-#  5. Command will be executed by /bin/sh or by the shell specified in the SHELL variable of the crontab file.
-#  6. Percent-signs (%) in the command, unless escaped with backslash (\), will be changed into newline characters,
-#     and all data after the first % will be sent to the command as standard input.
-#  7. When cron job is run from the users crontab it is executed as that user. It does not however source any files in
-#     the users home directory like their .cshrc or .bashrc or any other file. If you need cron to source (read) any
-#     file that your script will need you should do it from the script cron is calling. Setting paths, sourcing files,
-#     setting environment variables, etc.
-#  8. If the users account has a crontab but no useable shell in /etc/passwd then the cronjob will not run. You will
-#     have to give the account a shell for the crontab to run.
-#  9. If your cronjobs are not running check if the cron deamon is running. Then remember to check /etc/cron.allow and
-#     /etc/cron.deny files. If they exist then the user you want to be able to run jobs must be in /etc/cron.allow. You
-#     also might want to check if the /etc/security/access.conf file exists. You might need to add your user in there.
-# 10. Crontab is not parsed for environmental substitutions. You can not use things like $PATH, $HOME, or ~/sbin. You
-#     can set things like MAILTO= or PATH= and other environment variables the /bin/sh shell uses.
-# 11. Cron does not deal with seconds so you can't have cronjob's going off in any time period dealing with seconds.
-#     Like a cronjob going off every 30 seconds.
-# 12. You can not use % in the command area. They will need to be escaped and if used with a command like the date
-#     command you can put it in backticks. Ex. `date +\%Y-\%m-\%d`.
+### Common Examples
+```shell
+00 08 * * *              /absolute/path/to/the/script/file/cron_script.sh
+```
 
-# Common Examples
-00 08 * * *              /home/dilbert/Personal/Workspace/ShellScriptProject/src/commands/cron_sample.sh
-
-# Examples with details
-# Note: Type crontab -e and enter these details
+### Examples with details
+* Note: Type `crontab -e` and enter these details
+```shell
 * * * * *                echo “Runs after EVERY MINUTES”
 10 * * * *               echo “Runs at 10 min past every hour, every day”
 22 7 * * *               echo “Runs daily at 7:22 am”
@@ -81,27 +88,33 @@
 */20 9-17 * * *          echo "Use chunks of time and a range together. Runs every 20 mins between the hours or 9 AM and 5 PM"
 
 # 11:30 pm on Mon-Fri
-30 11 * * Mon-Fri /home/dilbert/Personal/Workspace/ShellScriptProject/src/commands/cron_sample.sh
+30 11 * * Mon-Fri /absolute/path/to/the/script/file/cron_script.sh
+```
 
-# Cool Tricks
-# 1. Set up a cron script
-#    Step 1: crontab -e
-#    Step 2: Add the following entry to the file, save and quit to run a script every 1 minute
-* * * * * /home/dilbert/cron_sample.sh
-#    Step 3: Watch the output of the cron_sample.sh
-
-# 2. Sync System Time: The cron command is dependent on time. For accurate results, setup the system to sync its clock
-#    via NTP. If NTP sync is not configured, get up to date temporarily using the following command (As ROOT),
+### Cool Tricks
+* Set up a cron script
+    - Step 1: crontab -e
+    - Step 2: Add the following entry to the file, save and quit to run a script every 1 minute
+    ```shell
+    * * * * * /absolute/path/to/the/script/file/cron_script.sh
+    ```
+    - Step 3: Watch the output of the cron_sample.sh
+* Sync System Time: The cron command is dependent on time. For accurate results, setup the system to sync its clock
+  via NTP. If NTP sync is not configured, get up to date temporarily using the following command (As ROOT),
+```shell
 sudo ntpdate pool.ntp.org
-
-# 3. Selecting Default Editor: First time when crontab -e is run, it will show an option to choose an editor. Editor
-#    can be changed later on using the following commmand,
+```
+* Selecting Default Editor: First time when crontab -e is run, it will show an option to choose an editor. Editor
+  can be changed later on using the following commmand,
+```shell
 select-editor
-
-# 4. Editing Cron: There are more than one way to edit the cron config files; however many of them require a service
-#    restart. Here is a method to add a task to cron without having to restart the deamon. IMPORTANT: You will need to
-#    login to the user you wish to execute the command and type.
+```
+* Editing Cron: There are more than one way to edit the cron config files; however many of them require a service
+  restart. Here is a method to add a task to cron without having to restart the deamon. IMPORTANT: You will need to
+  login to the user you wish to execute the command and type.
+```
 crontab -e
+```
 
-# TODO
-# None
+### TODO
+* None

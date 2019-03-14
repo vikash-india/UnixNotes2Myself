@@ -1,12 +1,15 @@
-# Description: bc - An arbitrary precision calculator language
+# Description: The bc Command
 
-# Notes
-# None
+### Notes
+* An arbitrary precision calculator language.
 
-# Common Examples
+### Common Examples
+```shell
 echo '5 + 5' | bc -l
+```
 
-# Examples with details
+### Examples with details
+```shell
 bc                                  # Invoke command line calculators bc. Use quit to come out of bc mode.
 bc -q                               # Runs bc in quiet mode and prevents the normal GNU bc welcome from being printed.
 echo '5 + 5' | bc                   # Use calculator without invoking calculator prompt.
@@ -20,14 +23,19 @@ echo 'sqrt(2)' | bc -l              # Square root. The -l starts bc with a math 
 echo 'obase=16; 255' | bc           # Decimal to Hexadecimal. obase variables defines output base (Valid values: 2-999).
 echo 'obase=2; 12' | bc             # Decimal to Binary.
 echo 'ibase=2; obase=A; 10' | bc    # Binary to Decimal. ibase variables defines input base (Valid values: 2-16).
-bc -q bc_input_file                 # Giving a file input to bc.
+bc -q bc.in                         # Giving a file input to bc.
+```
 
-# Cool Tricks
-# 1. There are only 10 types of people in the world - those who understand binary, and those who don't.
+### Cool Tricks
+* There are only 10 types of people in the world - those who understand binary, and those who don't.
+```shell
 echo 'ibase=2; obase=A; 10' | bc
+```
 
-# 2. Check the time to compute the value of PI to 5000 decimal places. Tan PI / 4 = 1 => PI = 4 * Arctangent(1)
+* Check the time to compute the value of PI to 5000 decimal places. Tan PI / 4 = 1 => PI = 4 * Arctangent(1)
+```shell
 time echo "scale=5000; 4*a(1)" | bc -l -q
+```
 
-# TODO
-# 1. Explore 'man bc' to learn about built-in functions math library, relational operators, bc langauge.
+### TODO
+* Explore 'man bc' to learn about built-in functions math library, relational operators, bc langauge.

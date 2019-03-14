@@ -1,8 +1,10 @@
-# Description: chattr - Change file attributes on a Linux file system
+# Description: The chattr command
 
-# Notes
-# 1. Most of the attributes require sudo permission to be modified.
-# 2. Read-Write Attributes: Various attributes in the file attribute string 'acdeijstuACDST' are as follows
+### Notes
+* The chattr command is used to change file attributes on a Linux file system.
+* Most of the attributes require sudo permission to be modified.
+* Read-Write Attributes: Various attributes in the file attribute string 'acdeijstuACDST' are as follows
+```
               ╔═══════════╦════════════════════════════════╗
               ║ Attribute ║          Description           ║
               ╠═══════════╬════════════════════════════════╣
@@ -21,8 +23,9 @@
               ║ S         ║ synchronous updates            ║
               ║ T         ║ top of directory hierarchy     ║
               ╚═══════════╩════════════════════════════════╝
-
-# 3. Readonly Attributes:
+```
+* Readonly Attributes
+```
               ╔═══════════╦════════════════════════════════╗
               ║ Attribute ║          Description           ║
               ╠═══════════╬════════════════════════════════╣
@@ -32,13 +35,17 @@
               ║ X         ║ compression raw access AAAAAA  ║
               ║ Z         ║ compressed dirty file          ║
               ╚═══════════╩════════════════════════════════╝
-# 4. Use lsattr to check the attributes set on a file.
+```
+* Use lsattr to check the attributes set on a file.
 
-# Common Examples
+### Common Examples
+```shell
 sudo chattr +i filename
 sudo chattr +i -R directory
+```
 
-# Examples with details
+### Examples with details
+```shell
 chattr +i  file_or_dir_name         # The + operator adds the selected attribute(s) to the existing ones.
                                     # The file or directory with the +i attribute set, CANNOT be modified, deleted,
                                     # renamed, changed or moved. Even root user cannot modify that directory.
@@ -50,9 +57,10 @@ chattr +i -R path/to/dir            # Use -R switch to make the changes recursiv
 chattr -i -f a.txt                  # The -f switch suppress most of the error messages.
 chattr +i -V file_or_dir_name       # Use -V switch to give verbose output. This shows version number as well.
 chattr -v 22                        # Set the file's version/generation number.
+```
 
-# Cool Tricks
-# None
+### Cool Tricks
+* None
 
-# TODO
-# 1. Explore the common usages of each file attribute.
+### TODO
+* Explore the common usages of each file attribute.

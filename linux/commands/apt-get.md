@@ -4,7 +4,9 @@
 * Check `apt` for a comparison.
 
 ### Common Examples
+```shell
 sudo apt-get --only-upgrade install openssl
+```
 
 ### Examples with details
 ```shell

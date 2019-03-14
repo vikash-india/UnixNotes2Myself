@@ -1,16 +1,20 @@
-# Description: crontab - maintain crontab files for individual users (Vixie Cron)
+# Description: The crontab Command
 
-# Notes
-# 1. The crontab is the program used to install, deinstall or list the tables used to drive the cron(8) daemon in Vixie
-#    Cron.
-# 2. There is one file for each user's crontab under the directory /var/spool/cron/crontabs. Users are not allowed to
-#    edit the files under this directory directly so that only syntactically correct crontabs will be written there.
+### Notes
+* The crontab command maintains crontab files for individual users (Vixie Cron)
+* The crontab is the program used to install, deinstall or list the tables used to drive the cron(8) daemon in Vixie
+  Cron.
+* There is one file for each user's crontab under the directory /var/spool/cron/crontabs. Users are not allowed to
+  edit the files under this directory directly so that only syntactically correct crontabs will be written there.
 
-# Common Examples
+### Common Examples
+```shell
 crontab -l
 crontab -e
+```
 
-# Examples with details
+### Examples with details
+```shell
 crontab -l              # Use -l switch to display the crontab list for the logged in user.
 sudo crontab -u mars -l # Use -u switch to display the crontab list for the user 'mars'.
 crontab -e              # Use -e switch to edit the current crontab using the editor specified by the VISUAL or EDITOR
@@ -31,8 +35,10 @@ cat /etc/cron.deny      # 1. If the /etc/cron.allow file does not exist but the 
                         #    able to use this command.
                         # 4. Regardless  of  the existance of any of these files, the root administrative user is always
                         #    allowed to setup a crontab.  For standard Debian systems, all users may use this command.
-# Cool Tricks
-# None
+```
 
-# TODO
-# None
+### Cool Tricks
+* None
+
+### TODO
+* None

@@ -1,13 +1,16 @@
-# Description: cp - Copy files and directories
+# Description: The cp Command
 
-# Notes
-# None
+### Notes
+* The cp command copy files and directories.
 
-# Common Examples
+### Common Examples
+```shell
 cp path/to/source path/to/destination
 cp -r dir_1 dir_e
+```
 
-# Examples with details
+### Examples with details
+```shell
 cp path/to/source path/to/destination   # Copy source file or directory to destination.
 cp -i source destination                # Warn before overwriting.
 cp -v file_1 file_2 file_3 dir_1        # Verbose Output while copying file_1, file_2 and file_3 to directory dir_1.
@@ -17,9 +20,10 @@ cp -r dir_1 dir_e                       # Copy directories recursively. Equivale
 cp -u file_1 file_5                     # Copy only when the SOURCE ie file_1 is newer than the destination file_5
                                         # or when the destination file is missing.
 cp --parents foo/foo/foo.txt bar        # Creates the path foo/foo under bar and then copies foo.txt.
+```
 
-# Cool Tricks
-# None
+### Cool Tricks
+* None
 
-# TODO
-# None
+### TODO
+* None
