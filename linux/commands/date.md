@@ -1,12 +1,15 @@
-# Description: date - Print or set the system date and time
+# Description: The date Command
 
-# Notes:
-# 1. None
+### Notes
+* The date command prints or set the system date and time.
 
-# Common Examples
+### Common Examples
+```shell
 date
+```
 
-# Examples with details
+### Examples with details
+```shell
 date                                # Print or set the system date and time. Displays current day, date and time.
 date -r test.txt                    # Display the last modification time of the file.
 date -R                             # Displays date in RFC 2822 format. Example Fri, 24 Sep 2010 00:19:04 +0530.
@@ -40,9 +43,10 @@ date --date='tomorrow' +%d-%m-%Y    # Tomorrow's date
 
 date -date "+10 days"               # Date arithmetic. Add 10 days
 date -d "+10 days"                  # Alternative to above command
+```
 
-# Cool Tricks
-# None
+### Cool Tricks
+* None
 
-# TODO
-# None
+### TODO
+* None

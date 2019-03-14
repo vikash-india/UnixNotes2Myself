@@ -1,24 +1,28 @@
-# Description: fdisk - manipulate disk partition table
+# Description: The fdisk Command
 
-# Notes
-# 1. Hard disks can be divided into one or more logical disks called partitions. This division is described in the
-#    partition table found in sector 0 of the disk.
-# 2. The fdisk is a text based utility program to accomplish the following
-#       - View existing partitions.
-#       - Create a new partition.
-#       - Delete an existing partition
-#       - Change an existing partition.
-# 3. The fdisk tool understands DOS type partition tables and BSD or SUN type disklabels.
-# 4. The fdisk command is root user command and hence always switch to "root" or "superuser" user using 'sudo su -'.
-# 5. The fdisk command does not create GPT partition tables. The GPT fdisk (gdisk, cgdisk, sgdisk, and fixparts
-#    programs) is a set of text-mode partitioning tools for Linux, FreeBSD, Mac OS X, and Windows.
-# 6. IMPORTANT: The fdisk command cannot create partitions larger than 2 TB. Use GNU parted command for such cases.
+### Notes
+* The fdisk command is used to manipulate disk partition table.
+* Hard disks can be divided into one or more logical disks called partitions. This division is described in the
+  partition table found in sector 0 of the disk.
+* The fdisk is a text based utility program to accomplish the following
+       - View existing partitions.
+       - Create a new partition.
+       - Delete an existing partition
+       - Change an existing partition.
+* The fdisk tool understands DOS type partition tables and BSD or SUN type disklabels.
+* The fdisk command is root user command and hence always switch to "root" or "superuser" user using 'sudo su -'.
+* The fdisk command does not create GPT partition tables. The GPT fdisk (gdisk, cgdisk, sgdisk, and fixparts
+    programs) is a set of text-mode partitioning tools for Linux, FreeBSD, Mac OS X, and Windows.
+* IMPORTANT: The fdisk command cannot create partitions larger than 2 TB. Use GNU parted command for such cases.
 
-# Common Examples
+### Common Examples
+```shell
 sudo fdisk -l
 sudo fdisk /dev/sda
+```
 
-# Examples with details
+### Examples with details
+```shell
 fdisk -l            # Use -l option to list or view all existing disk partitions. The partitions shown are ordered by
                     # device label as /dev/sda, /dev/sdb or /dev/sdc etc.
 fdisk -l /dev/sda   # View partitions of specific a hard disk.
@@ -40,9 +44,10 @@ fdisk /dev/sda      # Initiate the interactive command line menu to perform vari
                     #   command can be used to fix the order of partition table.
                     # After quitting, format the filesystem using mkfs and mount it manually using mount command or
                     # automatically using fstab.
+```
 
-# Cool Tricks
-# None
+### Cool Tricks
+* None
 
-# TODO
-# 1. None
+### TODO
+* None

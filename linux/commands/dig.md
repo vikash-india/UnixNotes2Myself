@@ -1,6 +1,7 @@
-# Description: dig - DNS Lookup Utility
+# Description: The dig Command
 
 ### Notes
+* The dig command is a DNS lookup utility.
 * The dig (domain information groper) is a flexible tool for interrogating DNS name servers.
 * Most DNS administrators use dig to troubleshoot DNS problems because of its flexibility, ease of use and clarity of 
   output. 
@@ -41,7 +42,6 @@ dig @b.iana-servers.net example.com a   # Query a particular name server returne
   servers for the name being looked up. 
 * When tracing is enabled, dig makes iterative queries to resolve the name being looked up. It will follow referrals 
   from the root servers, showing the answer from each server that was used to resolve the lookup.
-
 ```shell
 dig +trace example.com
 ```

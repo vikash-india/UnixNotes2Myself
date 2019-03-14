@@ -1,18 +1,22 @@
-# Description: find - Search for files in a directory hierarchy
+# Description: The find Command
 
-# Notes
-# 1. This command can be used to search for files by name, owner, group, type, permissions, date, and other criteria.
-# 2. The general syntax is: find [Where to look] [Criteria] [What to do]
-#   - Where to look: This defaults to . ie the current working directory.
-#   - Criteria: This defaults to none ie select all files.
-#   - What to do: This is also known as the find action. This defaults to ‑print ie display the names of found files to
-#     standard output.
-# 3. The search is recursive and it will search all subdirectories.
+### Notes
+* The find command searches for files in a directory hierarchy.
+* This command can be used to search for files by name, owner, group, type, permissions, date, and other criteria.
+* The general syntax is: find [Where to look] [Criteria] [What to do]
+    - Where to look: This defaults to . ie the current working directory.
+    - Criteria: This defaults to none ie select all files.
+    - What to do: This is also known as the find action. This defaults to ‑print ie display the names of found files to
+      standard output.
+* The search is recursive and it will search all subdirectories.
 
-# Common Examples
+### Common Examples
+```shell
 find . -name foo* 2>/dev/null
+```
 
-# Examples with details
+### Examples with details
+```shell
 find                                    # Display the pathnames of all files in the current directory recursively.
 find .                                  # Same as above. Where to look defaults to the current directory.
 find -print                             # Same as above. What to do defaults to -print.
@@ -28,36 +32,45 @@ find . -perm -o=w                       # Find files that are writable by “oth
                                         #  should be writable by all.
 find . -name Hello.java                 # Finds Hello.java in the current directory resursively. Use the switch -name
                                         # is to perform a name search for the filename Hello.java.
+```
 
-# Cool Tricks
-# Find the files whose name contains reserved characters in Windows
-# Source: https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247(v=vs.85).aspx
-# Look for < or > or : or " or | or \ or * or ? in the filenames.
+### Cool Tricks
+* Find the files whose name contains reserved characters in Windows
+    - Source: [Microsoft Website](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247(v=vs.85).aspx)
+    - Look for < or > or : or " or | or \ or * or ? in the filenames.
+```shell
 find . -type f -regex '.*\(<\|>\|:\|"\|\\\||\|*\|?\).*'
-
-# Find all files with name 'CVS' and delete it recursively using xargs.
+```
+* Find all files with name 'CVS' and delete it recursively using xargs.
+```shell
 find . -name 'CVS' | xargs rm -rf
-
-# Same as above.
-# 1. Run the rm command once per file.
-# 2. Not as efficient as the above command
-# 3. This one is safer if file names contain spaces or newlines.
+```
+* Same as above.
+    - Run the rm command once per file.
+    - Not as efficient as the above command
+    - This one is safer if file names contain spaces or newlines.
+```shell
 find . -name core -exec /bin/rm -f '{}' \;
-
-# Same as above.
-# 1. Run the rm command once per file.
-# 2. Not as efficient as the above command
-# 3. This one is safer if file names contain spaces or newlines.
+```
+* Same as above.
+    - Run the rm command once per file.
+    - Not as efficient as the above command
+    - This one is safer if file names contain spaces or newlines.
+```shell
 find . -name core -delete
-
-# Find files newer than 2018-08-01 using option -newermt
+```
+* Find files newer than 2018-08-01 using option -newermt
+```shell
 find ./ -newermt "2018-08-01"
-
-# Find files older than 2018-08-01 using the switch ! with the option -newermt
+```
+* Find files older than 2018-08-01 using the switch ! with the option -newermt
+```shell
 find ./ ! -newermt "2018-08-01"
-
-# Find files between dates 2018-08-01 and 2018-09-01
+```
+* Find files between dates 2018-08-01 and 2018-09-01
+```shell
 find ./ -newermt "2018-08-01" ! -newermt '2018-09-01'
+```
 
-# TODO
-# 1. Explore man pages.
+### TODO
+* Explore man pages.

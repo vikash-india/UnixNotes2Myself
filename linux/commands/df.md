@@ -1,12 +1,16 @@
-# Description: df - Check file system disk space usage
+# Description: The df Command
 
-# Notes
-# 1. df cannot show the space available on unmounted file systems.
+### Notes
+* The df command check file system disk space usage.
+* df cannot show the space available on unmounted file systems.
 
-# Common Examples
+### Common Examples
+```shell
 df -hT --total
+```
 
-# Examples with details
+### Examples with details
+```shell
 df                          # Shows disk usage.
 df -h                       # Use -h switch to print sizes in human readable format. Eg. 1K, 234M, 2G etc.
 df --human-readable         # Same as above.
@@ -16,9 +20,10 @@ df -h --total               # Use --total switch to produce a grand total at the
 df -a                       # Include dummy file systems. Same as df --all.
 df --version                # Show version information.
 df -hT                      # Use -T switch to print file system type.
+```
 
-# Cool Tricks
-# None
+### Cool Tricks
+* None
 
-# TODO
-# 1. Explore man pages to include/exclude file system type, check block size, inodes etc.
+### TODO
+* 1. Explore man pages to include/exclude file system type, check block size, inodes etc.
