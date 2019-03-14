@@ -11,6 +11,7 @@ export ABASH_DIR=/absolute/path/to/UnixNotes2Myself/linux/abash
 ```
 * Include the library in any bash script and call the functions.
 ```
+# Include abash library
 source ${ABASH_DIR}/main.sh
 ```
 
