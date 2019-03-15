@@ -23,7 +23,7 @@ ERROR_DIRECTORY_DOES_NOT_EXIST=3
 ERROR=255
 
 # Error Messages
-MESSAGE_ERROR_WRONG_NUMBER_OF_ARGUMENTS='Wrong number of arguments.'
+MESSAGE_ERROR_WRONG_NUMBER_OF_ARGUMENTS='Wrong number of arguments to this function.'
 MESSAGE_ERROR_NOT_IMPLEMENTED='Not implemented.'
 MESSAGE_ERROR_DIRECTORY_DOES_NOT_EXIST='Directory does not exist.'
 MESSAGE_ERROR='Unknown Error.'
