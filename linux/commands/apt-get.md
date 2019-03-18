@@ -35,6 +35,9 @@ sudo apt-get autoclean              # Autoclean only removes those retrieved pac
                                     # and they won’t be used anymore
 sudo apt-get autoremove             # Removes libs and packages that were installed automatically to satisfy the 
                                     # dependencies of an installed package.
+                                    
+sudo apt-get check                  # Check apt-get dependency list to make sure that it is not broken. If broken, fix 
+                                    # this.
 ```
 
 ### Cool Tricks

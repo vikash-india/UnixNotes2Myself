@@ -34,7 +34,7 @@ dig +noall +answer example.com any      # Display all DNS records but just the a
 
 dig +short example.com                  # Get only short answer
 
-dig @b.iana-servers.net example.com a   # Query a particular name server returned by NS records. 
+dig @b.iana-servers.net example.com a   # Query a particular name server returned by NS records.
 ```
 
 #### Trace Domain Delegation Path
@@ -54,6 +54,11 @@ dig -x +short 93.184.216.34
 #### Find Out TTL Value
 ```shell
 dig +nocmd +noall +answer a cyberciti.biz
+```
+
+#### Find My IP
+```shell
+dig +short myip.opendns.com @resolver1.opendns.com
 ```
 
 ### Cool Tricks
