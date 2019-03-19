@@ -1,16 +1,20 @@
-# Description: whoami - Print effective userid
+# Description: The whoami Command
 
-# Notes:
-# None
+### Notes
+* The whoami command prints effective userid.
 
-# Common Examples
+### Common Examples
+```shell
+```
 
-# Examples with details
+### Examples with details
+```shell
 whoami              # Print effective userid. Equivalent to id -un
 whoami --version    # Output version information.
+```
 
-# Cool Tricks
-# None
+### Cool Tricks
+* None
 
-# TODO
-# None
+### TODO
+* None

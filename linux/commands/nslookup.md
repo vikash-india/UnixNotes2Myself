@@ -1,6 +1,7 @@
-# Description: nslookup - Query Internet Name Servers Interactively
+# Description: The nslookup Command
 
 ### Notes
+* The nslookup command queries Internet Name Servers Interactively.
 * The `nslookup` stands for "name server lookup".
 * It is a useful tool for finding out information about a named domain.
 * The nslookup tool has two modes

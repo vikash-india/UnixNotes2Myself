@@ -1,7 +1,7 @@
-# Description: openssl - OpenSSL Command Line Tool
+# Description: The openssl Command
 
 ### Notes
-* None
+* The openssl command is the OpenSSL command line tool.
 
 ### Common Examples
 ```shell
