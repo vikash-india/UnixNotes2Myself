@@ -1,12 +1,15 @@
-# Description: gpg - OpenPGP encryption and signing tool
+# Description: The gpg Command
 
-# Notes
-# 1. None
+### Notes
+* The gpg Command is an OpenPGP encryption and signing tool.
 
-# Common Examples
+### Common Examples
+```shell
 gpg --decrypt <filename.gpg>
+```
 
-# Examples with details
+### Examples with details
+```shell
 gpg --gen-key                                           # Create a key (It will ask a bunch of questions)
 gpg --list-keys                                         # List the keys in the key database (or keyring).
 gpg -e -r <UID> <filename>                              # Encrypt a file <filename> using the key with <UID>.
@@ -32,9 +35,10 @@ gpg --delete-secret-key <UID>                           # This deletes the secre
 gpg --list-secret-keys                                  # To list the keys in your secret key ring.
 gpg --fingerprint > <filename>                          # To generate a short list of numbers that you can use via an
                                                         # alternative method to verify a public key.
+```
 
-# Cool Tricks
-# None
+### Cool Tricks
+* None
 
-# TODO
-# None
+### TODO
+* None

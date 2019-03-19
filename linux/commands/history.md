@@ -1,20 +1,24 @@
-# Description: history - GNU History Library
+# Description: The history Command
 
-# Notes
-# None
+### Notes
+* The history command is a GNU history library.
 
-# Common Examples
+### Common Examples
+```shell
 !git
+```
 
-# Examples with details
+### Examples with details
+```shell
 history | grep git      # Show history related to git.
 history                 # Show all history.
 !4603                   # Execute event number 4603 from history.
 !-1                     # Execute previous event number.
 !git                    # Execute the last command with !git.
+```
 
-# Cool Tricks
-# None
+### Cool Tricks
+* None
 
-# TODO
-# None
+### TODO
+* None

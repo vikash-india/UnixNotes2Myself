@@ -1,4 +1,4 @@
-# Description: host - DNS Lookup Utility
+# Description: The host Command
 
 ### Notes
 * The host tool is a simple utility for performing DNS lookups.

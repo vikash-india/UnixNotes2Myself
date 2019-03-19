@@ -1,16 +1,20 @@
-# Description: grep - print line matching a pattern
+# Description: The grep Command
 
-# Notes
-# 1. egrep, fgrep, and rgrep are different variants of grep.
-# 2. egrep is the same as grep -E. This is deprecated.
-# 3. fgrep is the same as grep -F. This is deprecated.
-# 4. rgrep is the same  as grep -r.
+### Notes
+* The grep Command prints line matching a pattern.
+* egrep, fgrep, and rgrep are different variants of grep.
+* egrep is the same as grep -E. This is deprecated.
+* fgrep is the same as grep -F. This is deprecated.
+* rgrep is the same  as grep -r.
 
-# Common Examples
+### Common Examples
+```shell
 grep -iE "regex" FILEPATTERN
 grep -PR --include="*.java" --include="*.sql" "find_this_pattern" *
+```
 
-# Examples with details
+### Examples with details
+```shell
 grep "string" FILENAME                      # File Pattern can be given instead of FILE
 grep "regex" FILEPATTERN                    # String can be any regex pattern and FILE can be any filepath pattern.
 grep -i "regex" FILEPATTERN                 # Search ignoring case using the switch -i
@@ -32,9 +36,10 @@ grep -PR --include="*.java" --include="*.sql" "find_this_pattern" *
 
 # Highlighting the search using GREP_OPTIONS environment variable.
 export GREP_OPTIONS='--color=auto' GREP_COLOR='100;8'
+```
 
-# Cool Tricks
-# None
+### Cool Tricks
+* None
 
-# TODO
-# None
+### TODO
+* None
