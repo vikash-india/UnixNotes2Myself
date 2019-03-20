@@ -10,7 +10,7 @@ wc - w /path/to/filename
 wc - c /path/to/filename
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 wc -c /path/to/filename            # Print the byte count.
 wc -m /path/to/filename            # Print the character count.

@@ -8,7 +8,7 @@
 date
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 date                                # Print or set the system date and time. Displays current day, date and time.
 date -r test.txt                    # Display the last modification time of the file.

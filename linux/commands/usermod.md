@@ -10,7 +10,7 @@
 usermod -G dev calvin
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 usermod -G dev calvin           # Add the user calvin to SECONDARY group dev
 usermod -g dev calvin           # Add the user calvin to PRIMARY group dev

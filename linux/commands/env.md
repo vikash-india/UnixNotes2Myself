@@ -8,7 +8,7 @@
 ```shell
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 env         # Print a list of all the current environment variables.
 env -0      # Use -0 or -null switch to output line with a 0 (null) byte rather than a newline.

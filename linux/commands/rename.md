@@ -14,7 +14,7 @@ rename -vn 's/(DSC_....)(.*)(\.jpg)$/$1$3/' *.jpg
 rename -vn 's/(<|>|:|"|\\|\||\*|\?)/ /g' *
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 rename 's/\.bak$//' *.bak       # Rename all files matching "*.bak" to strip the extension.
 rename 'y/A-Z/a-z/' *           # Translate uppercase names to lower.

@@ -10,7 +10,7 @@
 unalias x
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 unalias x       # Remove the alias x if the user had any alias named x.
 unalias x y z   # Remove aliases x, y and z. Any number of alias names can be given on a single line.

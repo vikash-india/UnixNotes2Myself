@@ -8,7 +8,7 @@
 cmp path/to/file_1 path/to/file_2
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 cmp path/to/file_1 path/to/file_2       # Compares file_1 with file_2. Returns nothing if they are same. The byte and
                                         # line number at which the first difference occurred is reported.

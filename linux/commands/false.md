@@ -9,7 +9,7 @@
 false
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 false                   # Exit with a status code indicating failure. echo $? after this command will return 1.
 /bin/false --version    # Display version information and exit.

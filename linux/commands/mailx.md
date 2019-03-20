@@ -47,7 +47,7 @@ mailx -v -s "$EMAIL_SUBJECT" \
 $EMAIL_TO_ADDRESS
 ```
 
-### Examples with details
+### Examples With Details
 #### Setup Mailx Command
 ```shell
 # Install mail command from heirloom-mailx package

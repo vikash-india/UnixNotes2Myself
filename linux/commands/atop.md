@@ -42,7 +42,7 @@ sudo atop -r /var/log/atop/atop_20170829
 sudo systemctl restart atop.service
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 systemctl restart atop.service      # Restart atop service after editing the config file /etc/default/atop.
 atop -r /var/log/atop/atop_20170829 # Read atop compressed and binary log files.

@@ -9,7 +9,7 @@ journalctl
 journalctl -u nginx
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 # Querying System States and Logs
 journalctl                      # View all log entries, starting at the oldest entry. By default, this will show entries

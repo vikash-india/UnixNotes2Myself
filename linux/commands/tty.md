@@ -9,7 +9,7 @@ tty
 echo "System is going down for reboot!" > /dev/pts/7
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 tty                         # Print the file name of the terminal connected to standard input. Eg /dev/pts/3.
 echo "Hello" > /dev/pts/7   # Writing to this file ends up writing to the monitor. A superuser can write to any users

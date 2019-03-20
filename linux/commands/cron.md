@@ -71,7 +71,7 @@
 00 08 * * *              /absolute/path/to/the/script/file/cron_script.sh
 ```
 
-### Examples with details
+### Examples With Details
 * Note: Type `crontab -e` and enter these details
 ```shell
 * * * * *                echo “Runs after EVERY MINUTES”

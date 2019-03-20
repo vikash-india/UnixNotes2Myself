@@ -8,7 +8,7 @@
 man ls
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 man man                         # Displays Manual about "man" command. Other example can be man ls, man mv etc.
 man -a ls                       # Display all the manual pages that match name, not just the first.

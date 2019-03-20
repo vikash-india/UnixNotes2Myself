@@ -9,7 +9,7 @@ ps -ef | grep apache2
 ps -f -u tomcat
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 ps -ef                              # Use -e to display all the processes and -f to display full format listing.
 ps -ef -u dilbert                   # Use -u option to displays the process that belongs to a specific username.

@@ -1,13 +1,13 @@
 # Description: The alias Command 
 
 ### Notes
-1. The alias command is used to abbreviate a regularly used command, or add default arguments to an existing system 
-   command.
-2. The alias command is built into most of the shells on Linux systems and is a way of customising a shell.
-3. Aliases are recognised only by the shell in which they are created, and apply only for the user who created it.
-4. The alias name and the replacement text can contain any valid shell input except for the equals sign (=).
-5. Aliases can be added to .bashrc (for bash shell) file to be made permanent.
-6. Remove aliases
+* The alias command is used to abbreviate a regularly used command, or add default arguments to an existing system 
+  command.
+* The alias command is built into most of the shells on Linux systems and is a way of customising a shell.
+* Aliases are recognised only by the shell in which they are created, and apply only for the user who created it.
+* The alias name and the replacement text can contain any valid shell input except for the equals sign (=).
+* Aliases can be added to .bashrc (for bash shell) file to be made permanent.
+* Remove aliases
     - Aliases can be removed using the unalias command: unalias [-a] name(s)
     - Overwrite an existing alias by using the alias command to create a new alias with the same name.
     - A third way is to delete the alias from the appropriate configuration file using a text editor.

@@ -11,7 +11,7 @@
 jhead -ft *.jpg
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 jhead DSC_8772.jpg      # Display exif info of the file DSC_8772.jpg
 jhead DSC_88??.jpg      # Display exif info of all the files with names starting with DSC_88 and having any 2 characters

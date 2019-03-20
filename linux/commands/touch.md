@@ -7,7 +7,7 @@
 ```shell
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 touch path/to/filename                      # Create an empty filename with current timestamp.
 touch file1 file2 file3                     # Create multiple files with current timestamp.

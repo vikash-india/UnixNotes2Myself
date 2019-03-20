@@ -15,7 +15,7 @@
 find . -name foo* 2>/dev/null
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 find                                    # Display the pathnames of all files in the current directory recursively.
 find .                                  # Same as above. Where to look defaults to the current directory.

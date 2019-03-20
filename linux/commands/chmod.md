@@ -73,7 +73,7 @@ chmod --reference=referencefile path/to/filename
 chmod +x path/to/filename
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 chmod o=r filename          # rwxrwxrwx becomes rwxrwxr--. Prevent others from executing or modifying the file.
 chmod g= filename           # rwxrwxrwx becomes rwx---rwx. Remove all permission for the group.

@@ -12,7 +12,7 @@ source /path/to/fileName
 source ~/.bashrc
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 source /path/to/fileName    # Run the commands from the script file /path/to/filename.
 source ~/.bashrc            # Run the .bashrc script file after it has been modified.

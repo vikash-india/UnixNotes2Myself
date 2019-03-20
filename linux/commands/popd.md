@@ -17,7 +17,7 @@ popd +2
 popd -n +2
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 popd        # Without any arguments, popd removes the top directory from the stack, & switches to the new top directory.
 popd +2     # Use the +n switch to remove the nth entry counting from the left of the list shown by dirs, starting with

@@ -8,7 +8,7 @@
 clear
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 clear                       # Clears the screen.
 ```

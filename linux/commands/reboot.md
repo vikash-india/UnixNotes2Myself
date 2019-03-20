@@ -8,7 +8,7 @@
 ```shell
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 reboot -f               # Stop the system. Located in /sbin/reboot. All option for halt can be used.
 ```

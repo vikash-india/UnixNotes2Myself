@@ -10,7 +10,7 @@ dpkg -i google-chrome-stable_current_amd64.deb
 dpkg -r google-chrome-stable_current_amd64.deb
 ```
 
-### Examples with details
+### Examples With Details
 #### Install .deb files from command line.
 Steps are involved in the installation process
 1. Extract the control files of the new package.

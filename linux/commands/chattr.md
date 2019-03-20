@@ -44,7 +44,7 @@ sudo chattr +i filename
 sudo chattr +i -R directory
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 chattr +i  file_or_dir_name         # The + operator adds the selected attribute(s) to the existing ones.
                                     # The file or directory with the +i attribute set, CANNOT be modified, deleted,

@@ -1,10 +1,10 @@
 # Description: The cal and ncal Commands
 
 ### Notes
-1. The cal and ncal displays a calendar and the date of Easter.
-2. The ncal command is similar to cal and offers an alternative layout, more options and the date of Easter.
-   The new format is a little cramped but it makes a year fit on a 25x80 terminal.
-3. Not all options can be used together. For example, the options -y, -3, and -1 are mutually exclusive. If
+* The cal and ncal displays a calendar and the date of Easter.
+* The ncal command is similar to cal and offers an alternative layout, more options and the date of Easter.
+  The new format is a little cramped but it makes a year fit on a 25x80 terminal.
+* Not all options can be used together. For example, the options -y, -3, and -1 are mutually exclusive. If
    inconsistent options are given, the later ones take precedence over the earlier ones.
 
 ### Common Examples
@@ -18,7 +18,7 @@ cal Apr 2014
 cal -A2 -B2
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 cal                     # Displays the current month calendar. Equivalent to cal -1.
 cal -y                  # Display current year calendar.

@@ -14,7 +14,7 @@ md5sum /path/to/filename
 md5sum -c filename                  # Filename contains md5checksum<Space>filename
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 md5sum /path/to/file                # Computes the md5 checksum of /path/to/file.
 md5sum *                            # Computes md5 checksum of all the files in the current directory.

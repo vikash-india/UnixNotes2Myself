@@ -8,7 +8,7 @@
 echo '5 + 5' | bc -l
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 bc                                  # Invoke command line calculators bc. Use quit to come out of bc mode.
 bc -q                               # Runs bc in quiet mode and prevents the normal GNU bc welcome from being printed.

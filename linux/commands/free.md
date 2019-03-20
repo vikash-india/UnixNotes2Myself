@@ -9,7 +9,7 @@ free -g
 free -l
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 free            # Check used and available space of physical memory and swap memory in KB.
 free -b         # Use -b option to display the size of memory in Bytes.

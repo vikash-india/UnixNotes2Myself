@@ -8,7 +8,7 @@
 lsattr -aRV *
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 lsattr -R file_or_dir_name      # Recursively list attributes of directories and their contents.
 lsattr -V file_or_dir_name      # Display the program version.

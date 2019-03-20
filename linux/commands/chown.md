@@ -10,7 +10,7 @@ chown -Rv dilbert:employee dirname
 chown -v dilbert:employee filename
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 chown dilbert filename                      # Change the owner of the file to dilbert.
 chown :employee filename                    # Change the group of the file to employee.

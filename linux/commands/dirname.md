@@ -10,7 +10,7 @@ dirname relative/path/to/filename
 dirname /absolute/path/to/filename
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 dirname filename                    # Outputs . for the current directory if argument does not have any /.
 dirname /home/dilbert/work          # Outputs /home/dilbert.

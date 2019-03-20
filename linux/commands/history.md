@@ -8,7 +8,7 @@
 !git
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 history | grep git      # Show history related to git.
 history                 # Show all history.

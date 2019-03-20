@@ -21,7 +21,7 @@
 head -c 30 /dev/urandom
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 head -c 30 /dev/urandom     # Read 30 bytes from the device /dev/urandom
 ```

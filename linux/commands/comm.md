@@ -12,7 +12,7 @@
 comm path/to/file_1 path/to/file_2
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 comm path/to/file_1 path/to/file_2          # Compare two sorted files line by line.
 comm -1 file_a file_b                       # Suppress lines unique to file_a

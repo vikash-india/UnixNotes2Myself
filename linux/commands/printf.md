@@ -72,7 +72,7 @@
 printf "%s\n" "Hello World"
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 printf Hello World                  # Print Hello and quits after first space.
 printf "Hello World"                # Print the full string Hello World but does not print newline character.

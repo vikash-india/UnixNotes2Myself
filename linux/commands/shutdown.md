@@ -7,7 +7,7 @@
 ```shell
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 sudo shutdown now           # Shutdown immediately. Bring the system down in a secure way. Located in /sbin/shutdown
 sudo shutdown -h now        # Halt now. Do su or sudo

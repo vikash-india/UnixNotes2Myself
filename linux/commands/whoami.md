@@ -7,7 +7,7 @@
 ```shell
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 whoami              # Print effective userid. Equivalent to id -un
 whoami --version    # Output version information.

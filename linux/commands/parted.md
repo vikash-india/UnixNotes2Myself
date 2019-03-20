@@ -23,7 +23,7 @@ sudo parted -l
 sudo fdisk -l /dev/sdb
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 sudo parted /dev/sdb            # Initiate the interactive command line menu to perform various tasks on /dev/sdb.
                                 # Type 'help' to see all the options. Type the following in (parted) commandline.

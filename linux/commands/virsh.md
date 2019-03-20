@@ -18,7 +18,7 @@ edit guests_name                            # Modify a guest’s definition
 undefine guests_name                        # Remove a guest’s definition (it doesn’t remove the image file)
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 virsh                                       # Start virsh command prompt and connects to the localhost hypervisor.
 virsh -c qemu+ssh://dilbert@mars/system     # Connect to the remote machine mars with user as dilbert using qemu+ssh

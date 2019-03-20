@@ -9,7 +9,7 @@ mkdir directory
 mkdir -p a/b/c/d
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 mkdir games                     # Creates a directory "game".
 mkdir games music movies        # Creates 3 directories - games, music & movies.

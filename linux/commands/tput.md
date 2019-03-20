@@ -9,7 +9,7 @@ tput reset
 tput cup 0 0
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 tput clear          # Clears the screen. Same as Ctrl-l.
 tput reset          # Same as clear.

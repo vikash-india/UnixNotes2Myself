@@ -1,8 +1,8 @@
 # Description: The apg Command
 
 ### Notes
-1. The apg utility stands for Advanced Password Generator.
-2. The apg utility needs to be installed using the command `sudo apt-get install apg`.
+* The apg utility stands for Advanced Password Generator.
+* The apg utility needs to be installed using the command `sudo apt-get install apg`.
 
 ### Common Examples
 ```shell

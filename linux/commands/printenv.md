@@ -7,7 +7,7 @@
 ```shell
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 printenv            # Print all environment variables.
 printenv HOME       # Print the value of the environment variable HOME.

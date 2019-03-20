@@ -10,7 +10,7 @@ wget <URL>
 wget --no-clobber --convert-links --random-wait -r -p -E -e robots=off -U mozilla http://site/path/
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 wget <URL>                                          # Gets a file from the <URL> to the present directory.
 wget -c http://www.example.com/linux.iso            # The -c parameter will continue the download after any disruptions.

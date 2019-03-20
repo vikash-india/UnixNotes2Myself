@@ -1,23 +1,23 @@
 # Description: The apropos Command
 
 ### Notes
-1. The apropos command searches the manual page names and descriptions.
-2. The apropos command got its name from the equivalent English word with the same spelling and pronunciation.
-3. Apropos means relevant.
-4. Apropos does not actually search the man pages directly. Instead it searches a database that contains just
+* The apropos command searches the manual page names and descriptions.
+* The apropos command got its name from the equivalent English word with the same spelling and pronunciation.
+* Apropos means relevant.
+* Apropos does not actually search the man pages directly. Instead it searches a database that contains just
    the page's title, section number and description from its NAME section.
-5. Apropos is useful while searching for commands without knowing their exact names.
-6. The lines returned for each keyword are sorted according to the man page titles.
-7. Apropos is case INSENSITIVE during its search.
+* Apropos is useful while searching for commands without knowing their exact names.
+* The lines returned for each keyword are sorted according to the man page titles.
+* Apropos is case INSENSITIVE during its search.
 
 ### Common Examples
-```
+```shell
 apropos uname
 man -k uname
 apropos -e uname
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 apropos whatis          # Search the whatis database for strings.
 man -k uname            # Equivalent to apropos uname.

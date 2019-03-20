@@ -9,7 +9,7 @@ cat file_name
 cat path/to/file1.txt path/to/file2.txt
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 cat file_name                           # Display content of file_name.
 cat -b file_name                        # Number nonempty output lines, overrides -n.

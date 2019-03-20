@@ -9,7 +9,7 @@
 true
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 true                   # Exit with a status code indicating success. echo $? after this command will return 0.
 /bin/true --version    # Display version information and exit.

@@ -15,7 +15,7 @@ sudo lshw -C disk
 sudo lshw -C disk -short
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 sudo lshw                   # Get detailed machine specifications
 sudo lshw -short            # Display the device tree showing hardware paths.

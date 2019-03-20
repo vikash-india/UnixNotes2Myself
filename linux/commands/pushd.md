@@ -18,7 +18,7 @@ pushd -n path/to/directory
 pushd +3
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 pushd                       # Without any arguments, exchanges the top two directories.
                             # Returns 0 on success or returns 1 if directory stack has less than 2 entries.

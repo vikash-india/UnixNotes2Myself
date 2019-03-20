@@ -8,7 +8,7 @@
 pwd
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 pwd                 # Print the current working directory
 /usr/pwd --version  # Display version information

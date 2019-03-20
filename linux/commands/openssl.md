@@ -9,7 +9,7 @@ openssl -h
 openssl version -a
 ```
 
-### Examples with Details
+### Examples With Details
 ```shell
 # OpenSSL Help
 openssl -h

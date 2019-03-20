@@ -8,7 +8,7 @@
 cksum path/to/filename
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 cksum path/to/filename  # Prints CRC checksum and the byte counts of the file filename.
 cksum file1 file2       # Multiple files can be be given as an argument.

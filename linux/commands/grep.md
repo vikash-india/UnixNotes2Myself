@@ -13,7 +13,7 @@ grep -iE "regex" FILEPATTERN
 grep -PR --include="*.java" --include="*.sql" "find_this_pattern" *
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 grep "string" FILENAME                      # File Pattern can be given instead of FILE
 grep "regex" FILEPATTERN                    # String can be any regex pattern and FILE can be any filepath pattern.

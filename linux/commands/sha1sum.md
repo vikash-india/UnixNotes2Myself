@@ -7,7 +7,7 @@
 ```shell
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 sha1sum /path/to/file                   # Computes the sha1 checksum of /path/to/file.
 sha1sum *                               # Computes sha1 checksum of all the files in the current directory.

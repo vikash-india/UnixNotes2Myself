@@ -10,7 +10,7 @@ scp -C sshconfig:/path/to/filename user@host2:filename
 scp -Cr cheetah:dilbert/test .
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 scp user@host1:/path/to/filename user@host2:filename        # Common syntax.
 scp sshconfig:/path/to/filename user@host2:filename         # Another common syntax if ssh is configured.

@@ -21,7 +21,7 @@ rsync -avs --delete --dry-run -i dir1/ backup/
 rsync -avs --delete -i dir1/ backup/
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 rsync -avs dir1/ backup/                                            # General syntax is rsync FLAGS/OPTIONS SRC DEST
                                                                     # Use -a flag for all objects, -v for verbose output

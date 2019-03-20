@@ -8,7 +8,7 @@
 diff path/to/file1 path/to/file2
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 diff a.txt b.txt            # Finds the difference between 2 files a.txt and b.txt
 diff -b a.txt b.txt         # Ignore changes in amount of white space

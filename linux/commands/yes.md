@@ -8,7 +8,7 @@
 yes
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 yes             # Output 'y' repeatedly until killed. Used as input to a script which demands repeated y for proceeding.
 yes 'LINUX'     # Outputs the string 'LINUX' repeatedly until killed.

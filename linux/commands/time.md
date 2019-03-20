@@ -7,7 +7,7 @@
 ```shell
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 time echo "scale=5000; 4*a(1)" | bc -l -q   # Time to compute PI to 5000 places of decimal.
 ```

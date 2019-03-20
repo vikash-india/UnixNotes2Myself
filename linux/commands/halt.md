@@ -7,7 +7,7 @@
 ```shell
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 halt -f             # Force Stop the system. Located in /sbin/halt.
 halt -p             # Do a poweroff while halting. This is the default when poweroff is used.

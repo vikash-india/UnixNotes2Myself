@@ -13,7 +13,7 @@ whatis ls
 whatis -r ls
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 whatis ls       # Search the whatis database for complete words. Equivalent to man -f.
 whatis -r ls    # Use -r option to interpret each word as a regular expression. Same as --regex. Slow command.

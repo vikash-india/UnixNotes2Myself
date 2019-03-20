@@ -9,7 +9,7 @@ uname
 uname - a
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 uname       # Print system information. Equivalent to uname -s.
 uname -s    # Print the kernel name. Eg. Linux.

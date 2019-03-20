@@ -15,7 +15,7 @@ tar -xf archive.tar.gz -C /target/directory
 tar -czvhf archive.tar.gz links/
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 # Archive commands
 # 1. It it not necessary that the new file have the .tar extension; however, the use of this extension can be very

@@ -11,7 +11,7 @@
 atopsar -A
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 atopsar -A                      # Use the flag -A to return all available reports.
 atopsar -A -b 11:00 -e 11:15    # Limit the report to a specific time window using beginning -b and end -e flags reading

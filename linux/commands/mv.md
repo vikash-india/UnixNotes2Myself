@@ -9,7 +9,7 @@ mv source destination
 mv path/to/source path/to/destination
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 mv filename1 filename2      # Renames file filename1 to filename2.
 mv filename1 /path/to/dir1  # Moves file filename1 to /path/to/dir1. Either absolute or relative path can be used.

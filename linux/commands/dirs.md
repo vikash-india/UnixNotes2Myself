@@ -13,7 +13,7 @@ dirs -0
 dirs +2
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 dirs                    # Displays the list of currently remembered directories. Default display is on a single line.
 dirs -p                 # Use -p switch to print the directory stack with one entry per line.

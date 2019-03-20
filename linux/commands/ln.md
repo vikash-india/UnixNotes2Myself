@@ -30,7 +30,7 @@
 ln -s path/to/original/file /path/to/symlink/file
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 ln path/to/file                 # Creates a hardlink to file.txt in the current directory.
 ln -s path/to/file              # The -s switch creates a symbolic link to the file.txt

@@ -16,7 +16,7 @@ ssh dilbert@jupiter
 ssh jupiter
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 ssh dilbert@jupiter                 # ssh to the remote host jupiter using the username dilbert. Username is Optional.
 ssh jupiter                         # ssh to the remote host jupiter using the configuration file ~/.ssh/config.

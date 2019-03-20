@@ -10,7 +10,7 @@ tail path/to/filename
 tail -5 path/to/filename
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 tail                        # With no FILE, or when FILE is -, reads the standard input. Use Ctrl-D to end input.
 tail path/to/filename       # Print the last 10 lines of the file to standard output.

@@ -8,7 +8,7 @@
 cut -c1-10 filename.txt
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 cut -c1-10 filename.txt         # Cuts the first 10 characters of each line of filename.txt.
 ls -l | cut -c1-10              # Cuts the first 10 characters of each line of the output of ls -l.

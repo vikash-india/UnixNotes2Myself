@@ -12,7 +12,7 @@
 which ls
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 which ls        # Outputs /bin/ls. Locate the executable file associated with a given command ls.
 which ls rm     # Multiple arguments can be passed to which command. The exit status will be as follows,

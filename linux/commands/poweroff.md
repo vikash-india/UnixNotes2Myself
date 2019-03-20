@@ -8,7 +8,7 @@
 ```shell
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 poweroff -f     # Stop the system. Located in /sbin/poweroff. All option for halt can be used.
 ```

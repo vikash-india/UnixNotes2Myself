@@ -8,7 +8,7 @@
 lsb_release -a
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 lsb_release -a              # Use -a or --all to display all information
 ```

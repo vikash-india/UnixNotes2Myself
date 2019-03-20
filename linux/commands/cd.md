@@ -9,7 +9,7 @@ cd
 cd ..
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 cd                  # Moves to the home directory.
 cd ~                # Same as above.

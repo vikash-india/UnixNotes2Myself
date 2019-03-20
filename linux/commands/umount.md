@@ -12,7 +12,7 @@ sudo umount /dev/sdb
 sudo umount /data
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 sudo umount /dev/sdb    # Any filesystem can be unmounted by specifying the MOUNTED disk name.
 sudo umount /data       # Alternatively, any filesystem can be unmounted by specifying the MOUNTED directory or the

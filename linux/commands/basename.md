@@ -10,7 +10,7 @@ basename /path/to/filename.ext .ext
 basename -a -s .ext filename1.ext filename2.ext
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 basename /path/to/filename.ext                              # Outputs filename.txt.
 basename /path/to/directory/                                # Outputs directory

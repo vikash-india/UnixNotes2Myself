@@ -9,7 +9,7 @@ who
 who -m
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 who             # Show who is logged on.
 who -q          # Show the number of users who are logged on.

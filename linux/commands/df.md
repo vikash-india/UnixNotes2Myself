@@ -9,7 +9,7 @@
 df -hT --total
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 df                          # Shows disk usage.
 df -h                       # Use -h switch to print sizes in human readable format. Eg. 1K, 234M, 2G etc.

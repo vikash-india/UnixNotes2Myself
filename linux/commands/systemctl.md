@@ -11,7 +11,7 @@ sudo systemctl edit nginx
 sudo systemctl daemon-reload
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 # Service Management Tasks
 systemctl status nginx.service              # Shows the status or current state of a unit. This shows whether the unit

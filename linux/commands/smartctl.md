@@ -17,7 +17,7 @@ sudo smartctl -l selftest /dev/sda
 sudo smartctl -X
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 sudo apt-get install smartmontools          # Install smartctl
 

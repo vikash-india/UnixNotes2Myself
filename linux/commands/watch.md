@@ -11,7 +11,7 @@ watch -d -n 5 "ps -eo pid,%cpu,%mem,comm --sort=-pcpu | head -10"
 watch -d -n 5 "free -om; yes = | head -80 | paste -s -d '' -; df -h"
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 watch date                  # Run date command repeatedly, displaying  its  output and errors (the first screenfull).
                             # By default, the program is run every 2 seconds.

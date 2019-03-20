@@ -9,7 +9,7 @@ head path/to/filename
 head -5 path/to/filename
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 head                        # With no FILE, or when FILE is -, read the standard input.
 head path/to/filename       # Print the first 10 lines of the file to standard output.

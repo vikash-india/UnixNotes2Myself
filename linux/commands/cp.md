@@ -9,7 +9,7 @@ cp path/to/source path/to/destination
 cp -r dir_1 dir_e
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 cp path/to/source path/to/destination   # Copy source file or directory to destination.
 cp -i source destination                # Warn before overwriting.

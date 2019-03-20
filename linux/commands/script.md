@@ -9,7 +9,7 @@ script -a typescript.log
 script -c ls
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 script              # Starts an interactive typescript session by writing everything typed into the terminal to a file
                     # called typescript. Type exit or CTRL-D to come out.

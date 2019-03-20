@@ -13,7 +13,7 @@ crontab -l
 crontab -e
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 crontab -l              # Use -l switch to display the crontab list for the logged in user.
 sudo crontab -u mars -l # Use -u switch to display the crontab list for the user 'mars'.

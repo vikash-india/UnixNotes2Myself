@@ -19,7 +19,7 @@ nslookup -type=any microsoft.com
 nslookup -type=soa microsoft.com
 ```
 
-### Examples with details
+### Examples With Details
 #### Display Short DNS Summary
 ```shell
 nslookup microsoft.com

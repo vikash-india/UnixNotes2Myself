@@ -15,7 +15,7 @@
 nohup command > logfile_name &
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 nohup command > logfile_name &                  # Run a program in background even after ssh or session is terminated.
 nohup sh custom-script.sh &                     # Execute without using redirection will create nohup.out for standard

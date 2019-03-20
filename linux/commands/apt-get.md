@@ -8,7 +8,7 @@
 sudo apt-get --only-upgrade install openssl
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 sudo apt-get update                 # Update the package database. Shows Hit, Ign and Get similar to apt.
 

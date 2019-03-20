@@ -22,7 +22,7 @@ ssh-keygen -t rsa -b 4096 -f my-ssh-key -N "A Long Pass Phrase"
 ssh-keygen -lf my-ssh-key.pub
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 ssh-keygen                  # 1. Without any arguments, it will generate an RSA key pair for SSH protocol version 2.
                             # 2. ssh-keygen will prompt the user for a file in which to store the private key. If left

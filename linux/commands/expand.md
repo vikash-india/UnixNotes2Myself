@@ -8,7 +8,7 @@
 unexpand -t4 file1 > file2
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 expand                  # Convert tabs to 8 spaces from the standard input and print the output to the standard output.
 expand filename         # Convert tabs to 8 spaces and prints the output to the standard output.

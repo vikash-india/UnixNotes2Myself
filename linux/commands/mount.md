@@ -18,7 +18,7 @@ sudo chown -R dilbert:dilbert /data
 sudo mount -t ext4 /dev/sdb /data
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 sudo mount                          # Display the currently mounted filesystems.
 sudo mount /dev/sdb /data           # Mount the disk /dev/sdb to the directory/mount point on /data. Create directory

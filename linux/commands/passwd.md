@@ -8,7 +8,7 @@
 passwd
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 passwd                          # Updates the user password.
 passwd -n10 -x365 -w5 dilbert   # Change password for the user dilbert.

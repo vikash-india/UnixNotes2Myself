@@ -10,7 +10,7 @@ echo "Hello World"
 echo 'Hello World'
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 echo <string>               # Displays text. <string> can be in single quotes, double quotes or without quotes.
 echo "Hello"" World"        # Concatenate two stings - "Hello" and " World".

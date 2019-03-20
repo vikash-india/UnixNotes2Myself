@@ -8,7 +8,7 @@
 gpg --decrypt <filename.gpg>
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 gpg --gen-key                                           # Create a key (It will ask a bunch of questions)
 gpg --list-keys                                         # List the keys in the key database (or keyring).

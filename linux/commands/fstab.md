@@ -10,7 +10,7 @@
 ```shell
 ```
 
-### Examples with details
+### Examples With Details
 # Example 1: Add the following entries in /etc/fstab
 ```shell
 sudo gvim /etc/fstab

@@ -10,7 +10,7 @@ host -t any example.com
 host 93.184.216.34
 ```
 
-### Examples with details
+### Examples With Details
 #### Display Short DNS Summary
 ```shell
 host example.com                        # Without arguments, a short DNS summary is displayed.

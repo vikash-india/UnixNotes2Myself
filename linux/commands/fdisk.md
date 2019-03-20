@@ -21,7 +21,7 @@ sudo fdisk -l
 sudo fdisk /dev/sda
 ```
 
-### Examples with details
+### Examples With Details
 ```shell
 fdisk -l            # Use -l option to list or view all existing disk partitions. The partitions shown are ordered by
                     # device label as /dev/sda, /dev/sdb or /dev/sdc etc.

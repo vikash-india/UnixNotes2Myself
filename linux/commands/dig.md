@@ -12,7 +12,7 @@
 dig example.com
 ```
 
-### Examples with details
+### Examples With Details
 #### Display Short DNS Summary
 ```shell                                # Display DNS Summary Record.
 dig example.com
