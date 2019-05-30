@@ -3,6 +3,10 @@
 # Abash Library Version
 ABASH_VERSION='0.1'
 
+# Global Function Variables
+FUNCTION_RETURN_VALUE=''
+FUNCTION_RETURN_MESSAGE=''
+
 # Log Levels
 LOG_LEVEL_INFO="INFO"
 LOG_LEVEL_WARNING="WARNING"

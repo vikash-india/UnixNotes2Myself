@@ -16,3 +16,8 @@ function error_exit {
     echo "${error_message}"
     exit "${error_code}"
 }
+
+function reset_function_values {
+    FUNCTION_RETURN_VALUE=''
+    FUNCTION_RETURN_MESSAGE=''
+}
