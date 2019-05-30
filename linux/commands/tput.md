@@ -32,5 +32,11 @@ tput -S <<!
 > !
 ```
 
+* Get current height and width of the terminal and adjust the Terminal settings to get a maximised window on startup.
+```bash
+tput lines      # 54. Get the height.
+tput cols       # 205. Get the height.
+```
+
 ### TODO
 * Explore tset and reset commands.
