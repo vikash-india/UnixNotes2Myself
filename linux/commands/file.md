@@ -2,6 +2,9 @@
 
 ### Notes
 * The file command determines the file type of a file. 
+* There are three sets of tests, performed in this order: filesystem tests, magic tests, and language tests.
+* Any file that cannot be identified as having been written in any of the character sets listed above is simply said to 
+  be “data”.
 * It reports the file type in human readable format (Eg 'ASCII text') or MIME type (Eg 'text/plain; charset=us-ascii').
 * The file name along with the file type will be printed to standard output.
 
