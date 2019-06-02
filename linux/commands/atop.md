@@ -17,6 +17,9 @@ The process level network analysis can be done using the netatop kernel module.
 * Incidental issues like system SOMETIME slow .
 * Analysis of historical data.
 
+### Atop Vs Peer Comparison
+![](images/atop_vs_peers_comparison.png)
+
 ### Rule of Thumb for Hardware Resources Overload 
 * Processor(s)          : Less than 80% per CPU.
 * Memory                : Limited swapout (preferably none).
