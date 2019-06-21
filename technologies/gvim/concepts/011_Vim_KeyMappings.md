@@ -1,18 +1,26 @@
-# Description: Mapping Keys in Vim
-----------------------------------
+# Description: Key Mappings in Vim
 
-### Mapping Keys
-- The map command is used to bind key(s) as a shortcut for repeating a sequence of other keys or commands.
-- The map command is similar to abbreviation command except that it defines a macro for Vim’s command mode instead of
-  insert mode.
+### Note
+* Mapping Keys
+    - The map command is used to bind key(s) as a shortcut for repeating a sequence of other keys or commands.
+    - The map command is similar to abbreviation command except that it defines a macro for Vim’s command mode instead 
+      of insert mode.
+* The simple syntax to define a map is `:map key command_sequence`.
+* Following keys in Vim are available for user-defined maps
+    - Letters       : g, K, q, V, and v
+    - Control keys  : ^A, ^K, ^O, ^W, and ^X
+    - Symbols       : _, *, \, and =
 
-### Define maps using :map command.
-- The simple syntax to define a map is `:map key command_sequence`.
-- Following keys in Vim are available for user-defined maps
-    * Letters       : g, K, q, V, and v
-    * Control keys  : ^A, ^K, ^O, ^W, and ^X
-    * Symbols       : _, *, \, and =
+### List ALL Key Mappings
+```
+# Display maps defined for normal, visual, select or operator pending mode.
+:map
 
+# Display maps defined for insert mode or command-line mode.
+:map!
+```
+
+### Create Key Mappings
 ```
 # Map normal keys like g, K, q etc.
 :map K :cd /home/dilbert/work<ENTER>
@@ -27,7 +35,7 @@
 # Map function keys like F2, F3...F12.
 :map <F-2> :pwd
 
-# Same as above.
+# Same as above
 :map #2 :pwd
 
 # Map special keys like HOME, END, PAGE UP, and PAGE DOWN
@@ -37,18 +45,9 @@
 :map ^V<Home> :pwd<CR>
 ```
 
-### Remove a map definition for the key K.
+### Remove ONE Key Mapping
 ```
-:unmap K
-```
-
-### List all key mappings.
-```
-# Display maps defined for normal, visual, select or operator pending mode.
-:map
-
-# Display maps defined for insert mode or command-line mode.
-:map!
+:unmap K                # Removes the definition for the key K
 ```
 
 ### Note
@@ -101,5 +100,8 @@ vmapclear - Clear all visual and select mode maps.
 xmapclear - Clear all visual mode maps.
 ```
 
+### Cool Tricks
+* None
+
 ### TODO
-- Read this [URL](http://vim.wikia.com/wiki/Mapping_keys_in_Vim_-_Tutorial_%28Part_1%29)
+* Read this [URL](http://vim.wikia.com/wiki/Mapping_keys_in_Vim_-_Tutorial_%28Part_1%29)

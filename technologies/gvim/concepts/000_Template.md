@@ -1,14 +1,15 @@
-# Description: Add Title Here in Vim
-------------------------------------
+# Description: Write Here
 
-### Add Subtitle Here
+### Note
+* None
+
+### Write Here
 ```
 Add code snippet here.
 ```
 
-### Note
-- Add notes here.
-- Use this file as the template for creating other files in this directory.
+### Cool Tricks
+* None
 
 ### TODO
-- Add TODOs here.
+* None

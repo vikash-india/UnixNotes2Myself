@@ -1,15 +1,22 @@
-# Description: Abbreviation Command in Vim
-------------------------------------------
+# Description: Abbreviation Commands in Vim
+
+### Note
+* None
 
 ### Abbreviations
-- Abbreviations are shortcuts that vi automatically expands into the full text or commands whenever an abbreviation
+* Abbreviations are shortcuts that vi automatically expands into the full text or commands whenever an abbreviation
   is typed in insert mode.
-- The general syntax to define an abbreviation is `:ab abbreviation phrase`.
-- Abbreviation will be expanded in insert mode only if it is typed as a full word. Abbreviations will not be expanded
+* The general syntax to define an abbreviation is `:ab abbreviation phrase`.
+* Abbreviation will be expanded in insert mode only if it is typed as a full word. Abbreviations will not be expanded
   within a word.
-- To avoid expansion of an abbreviation in insert mode, type Ctrl-V after the last character of the abbreviation.
+* To avoid expansion of an abbreviation in insert mode, type Ctrl-V after the last character of the abbreviation.
 
-### Define abbreviations using :abbreviate command.
+### List ALL Abbreviations
+```
+:ab                     # Use :abbreviation command                         
+```
+
+### Define Abbreviations
 ```
 # Abbreviations can save typing.
 :ab aqbf A quick brown fox jumps right over the lazy dog.
@@ -19,25 +26,24 @@
 
 # Abbreviation can be used as shortcut to an often use command.
 :ab hw    <Esc>:cd /home/dilbert/work/<CR>
+
+# The below abbreviation will NOT keep on expanding Ace recursively.
+:ab Ace Ace Code Editor 
 ```
 
-### List ALL abbreviations.
-```
-:ab
-```
-
-### Remove a particular abbreviation using :unabbreviate command.
+### Remove One Abbreviations
 ```
 :una teh
 ```
 
-### Remove ALL abbreviations using :abclear command.
+### Remove ALL Abbreviations
 ```
-:abc
+:abclear                # Use abclear command
+:abc                    # Same as above. Use short form of :abclear
 ```
 
-### Note
-- `:ab Ace Ace Code Editor` will not keep on expanding Ace recursively.
+### Cool Tricks
+* None
 
 ### TODO
-- Use :abbreviation command creatively to automate daily mundane tasks.
+* Use :abbreviation command creatively to automate daily mundane tasks.

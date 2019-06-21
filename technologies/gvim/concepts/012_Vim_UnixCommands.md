@@ -1,62 +1,60 @@
-# Description: Executing Unix Commands in Vim
----------------------------------------------
+# Description: Unix Commands in Vim
 
-### Execute Unix shell commands from Vim.
-- Special character % specify the current file.
-- Special character # specify the last edited file.
+### Note
+* Unix shell commands can be executed from within Vim.
 
-### Execute a single Unix command using the syntax `:!command`.
+### Execute One Unix Command
+* The general syntax is `:!command`.
+* Special character % specify the current file.
+* Special character # specify the last edited file.
 ```
-:!cd
-:!date
-:!ls
+:!cd                    # Change to home directory.
+:!date                  # Print date
+:!ls                    # List files and directories
 
-:! wc %
-```
-
-### Execute multiple Unix commands from Vim.
-- Use CTRL-D to exit the shell mode.
-
-```
-:sh
-
-# Followed by one or more Unix commands without the need for :!
-cd
-date
-ls
+:! wc %                 # Count lines, words and character in the current file.
 ```
 
-### Read and execute Unix commands from a file.
-- File should be a shell script
+### Execute Multiple Unix Commands
+* Use CTRL-D to exit the shell mode.
+```
+:sh                     # Invoke shell
 
+cd                      # Change to home directory. Followed by one or more Unix commands without the need for :!.
+date                    # Print date
+ls                      # List files and directories
+```
+
+### Read and Execute Unix Commands From a File.
+* The `file` should be a shell script.
 ```
 :so file
 ```
 
-### Read the output of a Unix command using the syntax `:r! command`.
+### Read the Output of a Unix Command 
+* The general syntax is `:r! command`.
 ```
-:r! date
-:r! sort filename
+:r! date                # Get the output of the date command.
+:r! sort filename       # Get the output after executing sort command on a file.
 
-# Execute and show the output of last Unix command.
-```
-:!!
-```
-
-### Mix file operations with Unix commands in Vim.
-```
-# Read the content from another file.
-:r path/to/file
-
-# Rename the current file to newfile.
-:f newfile
-
-# Send currently edited file to command as standard input and execute the command.
-:w !command
+:!!                     # Execute and show the output of last Unix command.
 ```
 
-### Apply motion commands to send text block to Unix command using the syntax `!Motion_Command Command`.
+### Combine Vim File Operation Commands with Unix Commands
 ```
-# Sort from current position to end of file and replace text with the sorted text.
-!G sort
+:r path/to/file         # Read the content from another file.
+:f newfile              # Rename the current file to newfile.
+:w !command             # Send currently edited file to command as standard input and execute the command.
 ```
+
+### Use Motion Commands to Send Text Block to Unix Commands
+* The general syntax is `!Motion_Command Command`.
+```
+!G sort                 # Sort from current position to end of file and replace text with the sorted text.
+```
+
+### Cool Tricks
+* None
+
+### TODO
+* None
