@@ -1,16 +1,19 @@
 # Description: Vim References
 
 ### References
-* Documentation: [TODO](#)
-* Tricks: [TODO](#)
-* Forums: [TODO](#)
+* Vim Official Website: [Vim Website](https://www.vim.org/)
+* Vim Documentation: [Vim Help](https://vimhelp.org/)
+* Vim Game: [Vim Adventures](https://vim-adventures.com/)
 
-### Follow Sources
-* YouTube
+### Connect
+* Conference: [Vim Conf](https://vimconf.org/)
 * Twitter
-* Blog
-* GitHub
-* Follow Global Conference
+    - [Mastering Vim](https://twitter.com/masteringvim?lang=en)
+    - [Vim Links](https://twitter.com/VimLinks?lang=en)
+    - [vimtips](https://twitter.com/vimtips?lang=en)
+
+### Miscellaneous
+* None
 
 ### TODO
 * None

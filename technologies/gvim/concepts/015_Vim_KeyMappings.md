@@ -6,8 +6,9 @@
     - The map command is similar to abbreviation command except that it defines a macro for Vim’s command mode instead 
       of insert mode.
 * The simple syntax to define a map is `:map key command_sequence`.
+* The keys g, q, v, K, V and Z are the only unmapped keys.
 * Following keys in Vim are available for user-defined maps
-    - Letters       : g, K, q, V, and v
+    - Letters       : g, q, v, K, V 
     - Control keys  : ^A, ^K, ^O, ^W, and ^X
     - Symbols       : _, *, \, and =
 

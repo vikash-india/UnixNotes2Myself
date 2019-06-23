@@ -1,4 +1,4 @@
-# Description: Vim Cheatsheet
+# Description: Vim Cheat Sheet
 
 ### Cheatsheet
 * None

@@ -18,10 +18,10 @@ sudo apt-get install vim
 
 ### Install Gvim on Ubuntu
 ```
-# Full libraries
+# Vim with Full Gnome Libraries
 sudo apt-get install vim-gnome
 
-# For lightweigtht Gvim
+# Vim with Basic Libraries
 sudo apt-get install vim-gtk
 ```
 
