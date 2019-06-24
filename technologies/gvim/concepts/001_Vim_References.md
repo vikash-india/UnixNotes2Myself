@@ -4,6 +4,7 @@
 * Vim Official Website: [Vim Website](https://www.vim.org/)
 * Vim Documentation: [Vim Help](https://vimhelp.org/)
 * Vim Game: [Vim Adventures](https://vim-adventures.com/)
+* Vim Regular Expressions: [Vim Regex](http://vimregex.com/)
 
 ### Connect
 * Conference: [Vim Conf](https://vimconf.org/)
