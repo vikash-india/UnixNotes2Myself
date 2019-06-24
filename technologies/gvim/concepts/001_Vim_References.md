@@ -6,6 +6,9 @@
 * Vim Game: [Vim Adventures](https://vim-adventures.com/)
 * Vim Regular Expressions: [Vim Regex](http://vimregex.com/)
 
+### Books
+* [Vim Books](https://www.barbarianmeetscoding.com/blog/2019/01/06/exploring-vim-6-great-books-to-improve-your-vim-fu)
+
 ### Connect
 * Conference: [Vim Conf](https://vimconf.org/)
 * Twitter
