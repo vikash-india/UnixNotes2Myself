@@ -1,17 +1,17 @@
-# Description: The WriteHere Command
+# Description: The tree Command
 
 ### Notes
-* None
+* Install using the command `sudo apt  install tree`.
 
 ### Common Examples
 ```shell
-# Check below
+tree .
 ```
 
 ### Examples With Details
-#### Write Here
 ```shell
-Write here
+tree .                          # Show tree from the current directory.
+tree /path/to/directory         # Show tree from the directory mentioned.
 ```
 
 ### Cool Tricks
